@@ -1,0 +1,23 @@
+{
+  "name": "k2so-complex-synthesis",
+  "version": "0.3.0",
+  "factorio_version": "2.1",
+  "title": "K2SO: Complex Synthesis",
+  "author": "Rex",
+  "description": "K2SO: Heavy Metallurgy and Industrial Refining on Nauvis",
+  "dependencies": [
+    "base >= 2.1",
+    "? space-age",
+    "? aai-industry",
+    "? aai-signal-transmission",
+    "? Krastorio2-spaced-out",
+    "? advanced-centrifuge",
+    "? elevated-pipes",
+    "? Lighted-Poles-Plus",
+    "? Repair_Turret_2",
+    "? Transport_Drones_Continued_Unofficial"    
+  ],
+  "data_extensions": {
+    "data.lua": true
+  }  
+}
