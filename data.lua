@@ -5,6 +5,6 @@ if mods["Krastorio2"] then
     require("prototypes.rx-crushing")   -- kr-crusher
     require("prototypes.rx-filtration") -- kr-filtration-plant
     require("prototypes.rx-chemistry")  -- chemical-plant    
-    require("prototypes.rx-smelting")  -- furnace
+    -- require("prototypes.rx-smelting")  -- furnace
 end
 

@@ -1,6 +1,6 @@
 -- File: /overrides/krastorio2/k2-smelting.lua
 
-local update_recipe = require("rex-util").update_recipe
+local update_recipe = require("rx-util").update_recipe
 
 --[[
 smelting recipes:

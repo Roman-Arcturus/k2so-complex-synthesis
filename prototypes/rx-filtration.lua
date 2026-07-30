@@ -3,8 +3,8 @@
 -- New tech is based on Krastorio2 buildings & intermediaries
 if not mods["Krastorio2"] then return end
 
--- K2 graphics, temporary
-local k2_assets = "__Krastorio2Assets__" 
+local mod_name = "__k2so-complex-synthesis__"
+local rx_assets = mod_name .. "/graphics/icons/"
 
 -- ============================= Stage 1/2: ============================= 
 -- ========================= Define new items: ==========================
@@ -13,7 +13,8 @@ data:extend({
   {
     type = "item",
     name = "rx-wood-pulp", -- kr-filtration-plant
-    icon = k2_assets .. "/icons/items/biomass-1.png", 
+    -- icon = k2_assets .. "/icons/items/biomass-1.png", 
+    icon = rx_assets .. "rx-wood-pulp.png", 
     subgroup = "intermediate-product",
     order = "a[biomaterial]-c[wood-pulp]",
     stack_size = 200,

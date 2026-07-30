@@ -25,13 +25,13 @@ end
 ]]
 
 if mods["Krastorio2"] then
-
-    --require("overrides.krastorio2.k2-smelting")
-    -- require("overrides.krastorio2.k2-intermediaries") -- factorio intermediaries
+    require("overrides.krastorio2.k2-smelting-tier1")
+    -- require("overrides.krastorio2.k2-intermediaries")
     -- require("overrides.krastorio2.k2-fluids") -- 
     -- require("overrides.krastorio2.k2-buildings")
     -- require("overrides.krastorio2.k2-science")
 end
+
 if mods["advanced-centrifuge"] then
 --    require("overrides.advanced-centrifuge")
 end
