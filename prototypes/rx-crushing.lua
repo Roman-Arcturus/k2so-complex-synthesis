@@ -31,7 +31,8 @@ data:extend({
   {
     type = "item",
     name = "rx-pulverized-carbon",
-    icon = rx_assets .. "/rx-pulverized-carbon.png",
+    --icon = rx_assets .. "/rx-pulverized-carbon.png",
+    icon = k2_assets .. "/icons/items/imersite-1-light.png",
     subgroup = "intermediate-product",
     order = "a[carbon]-a[pulverized]",
     stack_size = 200,

@@ -1,5 +1,9 @@
 -- File: /overrides/krastorio2/k2-smelting-tier1.lua
 
+local k2_assets = "__Krastorio2Assets__" -- K2 graphics
+local mod_name = "__k2so-complex-synthesis__"
+local rx_assets = mod_name .. "/graphics/icons"
+
 local update_recipe = require("rx-util").update_recipe
 
 -- =========================== Basic Metals: ============================

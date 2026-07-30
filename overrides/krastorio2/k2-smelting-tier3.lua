@@ -1,9 +1,11 @@
--- File: /overrides/krastorio2/k2-smelting-tier2.lua
+-- File: /overrides/krastorio2/k2-smelting-tier3.lua
 
+local k2_assets = "__Krastorio2Assets__" -- K2 graphics
 local mod_name = "__k2so-complex-synthesis__"
 local rx_assets = mod_name .. "/graphics/icons"
 
 local update_recipe = require("rx-util").update_recipe
+
 
 data:extend({
   {
@@ -27,3 +29,46 @@ data:extend({
   }
 })
 
+data:extend({
+  {
+    type = "recipe",
+    name = "rx-purified-glass-melting",
+    icon = rx_assets .. "/rx-purified-glass.png",    
+    categories = { "smelting" },
+    enabled = true,                    
+    energy_required = 119.7, -- Calculated via 0.7 base * 19 items * 3 melt * 3 slow cool
+    ingredients = {
+      { type = "item", name = "kr-quartz", amount = 6 },
+      { type = "item", name = "rx-pulverized-carbon", amount = 3 },
+      { type = "item", name = "kr-glass", amount = 1 },
+    },
+    results = {
+      { type = "item", name = "kr-glass", amount = 9 },
+    },
+    main_product = "kr-glass",
+    allow_productivity = true,         
+    allow_decomposition = false,
+  }
+})
+
+data:extend({
+  {
+    type = "recipe",
+    name = "rx-purified-silicon-melting",
+    icon = rx_assets .. "/rx-purified-silicon.png",        
+    categories = { "smelting" },
+    enabled = true,                    
+    energy_required = 113.4, -- Calculated via 0.6 base * 21 items * 3 melt * 3 slow crystallize
+    ingredients = {
+      { type = "item", name = "kr-quartz", amount = 6 },
+      { type = "item", name = "rx-pulverized-carbon", amount = 3 },
+      { type = "item", name = "rx-solid-oxidizer", amount = 3 },
+    },
+    results = {
+      { type = "item", name = "kr-silicon", amount = 9 },
+    },
+    main_product = "kr-silicon",
+    allow_productivity = true,         
+    allow_decomposition = false,
+  }
+})

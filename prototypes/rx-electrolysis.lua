@@ -28,7 +28,8 @@ data:extend({
   {
     type = "item",
     name = "rx-enriched-steel-mix",
-    icon = rx_assets .. "/rx-enriched-steel-mix.png",
+    --icon = rx_assets .. "/rx-enriched-steel-mix.png",
+    icon = k2_assets .. "/icons/items/imersite-crystal-4-light.png",
     subgroup = "intermediate-product",
     order = "a[chemical]-c[steel-mix]",
     stack_size = 200,
@@ -36,6 +37,8 @@ data:extend({
     weight = 1,
   }
 })
+
+
 
 -- ============================= Stage 2/2: =============================
 -- ======================== Define new recipes: =========================
@@ -88,6 +91,28 @@ data:extend({
     crafting_machine_tint = {
       primary = { r = 0.08, g = 0.16, b = 0.92, a = 0.50 },
     },        
+  }
+})
+
+data:extend({
+  {
+    type = "recipe",
+    name = "rx-advanced-quartz-electrolysis",
+    categories = { "kr-electrolysis" }, -- Expanded usage for the Electrolysis Plant
+    enabled = true,                     -- Active for immediate runtime testing
+    energy_required = 8.0,              -- High-throughput industrial separation speed
+    ingredients = {
+      { type = "item", name = "kr-sand", amount = 12 },
+      { type = "item", name = "rx-pulverized-carbon", amount = 3 },
+      { type = "fluid", name = "kr-hydrogen-chloride", amount = 30 },
+    },
+    results = {
+      { type = "item", name = "kr-quartz", amount = 18 },
+      { type = "fluid", name = "chlorine", amount = 20 },
+    },
+    main_product = "kr-quartz",
+    allow_productivity = true,         -- Vital for compounding resource conservation loops
+    allow_decomposition = false,
   }
 })
 

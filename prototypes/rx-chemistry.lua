@@ -23,18 +23,6 @@ data:extend({
   }
 })
 
-data:extend({
-  {
-    type = "item",
-    name = "rx-enriched-steel-mix",
-    icon = k2_assets .. "/icons/resources/rare-metal-ore.png", 
-    subgroup = "intermediate-product",
-    order = "z[steel]-c",
-    stack_size = 200,
-    default_request_amount = 50,
-    weight = 1 * kg, 
-  }
-})
 
 
 
@@ -59,26 +47,6 @@ data:extend({
     },
     main_product = "rx-bakelite",
     allow_productivity = true,          -- Critical for compounding yield benefits
-    allow_decomposition = false,
-  }
-})
-
-data:extend({
-  {
-    type = "recipe",
-    name = "rx-enriched-steel-mix",
-    categories = { "chemistry" }, 
-    enabled = true,         
-    energy_required = 12,
-    ingredients = { 
-      { type = "item", name = "kr-enriched-iron", amount = 6 }, -- Costs 9 Raw Iron Ore
-      { type = "item", name = "steel-plate", amount = 1 }, -- For Crystallization
-      { type = "fluid", name = "sulfuric-acid", amount = 12 }, 
-    },
-    results = {
-      { type = "item", name = "rx-enriched-steel-mix", amount = 6 }, -- 1-to-1 conversion
-    },
-    allow_productivity = true,
     allow_decomposition = false,
   }
 })
