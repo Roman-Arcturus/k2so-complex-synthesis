@@ -16,7 +16,7 @@ update_recipe({
     results = {
         { type = "item", name = "iron-plate", amount = 6 },
     },  
-    energy = 16, 
+    energy = 24, 
     stack_size = 200, -- 200
     rocket_capacity = 1000, -- 1k  
 })
@@ -32,7 +32,7 @@ update_recipe({
     results = {
         { type = "item", name = "copper-plate", amount = 6 },
     },  
-    energy = 16, 
+    energy = 24, 
     stack_size = 200, 
     rocket_capacity = 1000, -- 1k  
 })
@@ -50,7 +50,7 @@ update_recipe({
     results = {
         { type = "item", name = "kr-rare-metals", amount = 6 },
     },  
-    energy = 16,
+    energy = 27.2,
     stack_size = 200,
     rocket_capacity = 1000,
 })

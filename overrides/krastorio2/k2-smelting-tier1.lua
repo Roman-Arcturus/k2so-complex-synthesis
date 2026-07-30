@@ -13,8 +13,8 @@ update_recipe({
         { type = "item", name = "stone", amount = 1 }, -- basic flux
     },
     result_amount = 3,
-    energy = 12, -- 3.2
-    stack_size = 200, -- 200
+    energy = 11, 
+    stack_size = 200, 
     rocket_capacity = 1000, 
 })
 
@@ -27,23 +27,9 @@ update_recipe({
         { type = "item", name = "stone", amount = 1 }, -- basic flux
     },
     result_amount = 3,
-    energy = 12, 
+    energy = 11, 
     stack_size = 200, -- 200
     rocket_capacity = 1000, -- 1000
-})
-
-update_recipe({
-    name = "kr-rare-metals", 
-    categories = { "smelting" },
-    allow_productivity = true,  
-    ingredients = {
-        { type = "item", name = "kr-rare-metal-ore", amount = 12 }, --
-        { type = "item", name = "copper-ore", amount = 3 },
-    },
-    result_amount = 6,
-    energy = 36, 
-    stack_size = 200, -- 200
-    rocket_capacity = 800, -- 1000
 })
 
 update_recipe({
@@ -55,12 +41,40 @@ update_recipe({
         { type = "item", name = "kr-coke", amount = 3 },
     },
     result_amount = 6,
-    energy = 36, 
+    energy = 65.1, 
     stack_size = 200, -- 200
     rocket_capacity = 600, -- 400
 })
 
+update_recipe({
+    name = "kr-rare-metals", 
+    categories = { "smelting" },
+    allow_productivity = true,  
+    ingredients = {
+        { type = "item", name = "kr-rare-metal-ore", amount = 12 }, --
+        { type = "item", name = "copper-ore", amount = 3 },
+    },
+    result_amount = 6,
+    energy = 23.1, 
+    stack_size = 200, -- 200
+    rocket_capacity = 800, -- 1000
+})
+
 -- =========================== Basic Minerals: ============================
+
+update_recipe({
+    name = "stone-brick",
+    categories = { "smelting" },
+    allow_productivity = true,
+    ingredients = {
+        { type = "item", name = "stone", amount = 12 },
+        { type = "item", name = "iron-ore", amount = 3 }, 
+    },
+    result_amount = 6,
+    energy = 23.1, 
+    stack_size = 200,
+    rocket_capacity = 600, 
+})
 
 update_recipe({
     name = "kr-coke", 
@@ -70,35 +84,23 @@ update_recipe({
         { type = "item", name = "wood", amount = 6 }, 
         { type = "item", name = "coal", amount = 6 }, 
     },
-    energy = 16, 
+    energy = 18.9, 
     result_amount = 6, 
     stack_size = 200, 
     rocket_capacity = 1000, 
 })
 
-update_recipe({
-    name = "stone-brick",
-    categories = { "smelting" },
-    allow_productivity = true,
-    ingredients = {
-        { type = "item", name = "stone", amount = 12 },
-        { type = "item", name = "iron-ore", amount = 2 }, 
-    },
-    result_amount = 6,
-    energy = 12, 
-    stack_size = 200,
-    rocket_capacity = 600, 
-})
 
 update_recipe({
     name = "kr-glass",
     categories = { "smelting" },
     allow_productivity = true,
     ingredients = {
-        { type = "item", name = "kr-sand", amount = 16 }, -- Clean mineral melt
+        { type = "item", name = "kr-sand", amount = 16 }, 
+        { type = "item", name = "copper-ore", amount = 2 }, 
     },
     result_amount = 8,
-    energy = 16,
+    energy = 18.2,
     stack_size = 200,
     rocket_capacity = 1000, 
 })
@@ -109,10 +111,10 @@ update_recipe({
     allow_productivity = true,
     ingredients = {
         { type = "item", name = "kr-quartz", amount = 18 },
-        { type = "item", name = "kr-coke", amount = 4 }, -- Dense mid-game carbon drain
+        { type = "item", name = "kr-coke", amount = 4 }, -- Dense coke drain
     },
     result_amount = 9,
-    energy = 16,
+    energy = 18.6,
     stack_size = 200,
     rocket_capacity = 1000, 
 })
