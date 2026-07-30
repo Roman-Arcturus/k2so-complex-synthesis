@@ -1,7 +1,7 @@
 -- File: /data-final-fixes.lua 
 
 -- Check if a mod is active via the global `mods` table.
-
+--[[
 if mods["aai-industry"] then
     require("overrides.aai-industry.aai-items")
     require("overrides.aai-industry.aai-logistics")
@@ -18,15 +18,17 @@ if mods["aai-industry"] then
     require("overrides.aai-industry.aai-tiles")
 end
 
+
 if mods["aai-signal-transmission"] then
     require("overrides.aai-industry.aai-signal-transmission")
 end
+]]
 
 if mods["Krastorio2"] then
-    require("overrides.rex.rx-items") -- new intermediaries
+    require("prototypes.rx-items") -- new prototypes, based on K2 machinery and recipes
 
-    -- require("overrides.krastorio2.k2-kr-intermediaries") -- krastorio intermediaries
-    require("overrides.krastorio2.k2-smelting")
+
+    --require("overrides.krastorio2.k2-smelting")
     -- require("overrides.krastorio2.k2-intermediaries") -- factorio intermediaries
     -- require("overrides.krastorio2.k2-fluids") -- 
     -- require("overrides.krastorio2.k2-buildings")

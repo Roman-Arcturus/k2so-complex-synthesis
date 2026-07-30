@@ -2,26 +2,29 @@
 
 --[[=================================================================
 new entities:
-  rx-wood-chips
-  rx-wood-pulp
-  rx-enriched-steel-mix
+  rx-wood-chips  / cr-crusher
+  rx-pulverized-carbon  / cr-crusher
+
+  rx-wood-pulp  / kr-filtration-plant
+  rx-phenolic-resin  / chemical-plant
+
+  rx-enriched-steel-mix  / disabled for now
 
 new recipes through k2 internal lib:
   kr-crush-wood
-  
+  kr-crush-coke
+
 new recipes through extend({}) :
   rx-steel-from-enriched-mix
 =================================================================]]
 
 -- Exit immediately if neither version of Krastorio 2 is present
--- if not mods["Krastorio2-spaced-out"] and not mods["Krastorio2"] then return end
 if not mods["Krastorio2"] then return end
+-- if not mods["Krastorio2-spaced-out"] and not mods["Krastorio2"] then return end
+
 
 local k2_assets = "__Krastorio2Assets__" -- K2 graphics, temporary
 
--- ============================================================================
--- ITEM DEFINITION: WOOD CHIPS
--- Subgroup: Intermediates / Raw Material
 -- ============================================================================
 data:extend({
   {
@@ -35,34 +38,73 @@ data:extend({
     weight = 0.5 * kg, -- Densified for rocket and city-block road transport
   }
 })
+-- ============================================================================
 
--- cr-crusher recipes require K2 internal lib
+-- ============================================================================
+data:extend({
+  {
+    type = "item",
+    name = "rx-pulverized-carbon",
+    icon = k2_assets .. "/icons/recipes/coal-filtration.png",
+    subgroup = "intermediate-product",
+    order = "a[carbon]-a[pulverized]",
+    stack_size = 200,
+    default_request_amount = 50,
+    weight = 0.5 * kg,
+  }
+})
+-- ============================================================================
+
+-- kr-crusher recipes require K2 internal lib
 local crushing_lib = require("__Krastorio2__.prototypes.libraries.crushing")
-if crushing_lib and crushing_lib.make_recipe then
-  -- Run Krastorio's native recipe generator for the target item.
-  -- This handles the recipe database entry AND binds the item mechanics safely.
-    crushing_lib.make_recipe(
-      data.raw.item["wood"], {
-        subgroup = "intermediate-product",
-        order = "a[biomaterial]-b[wood-chips]",
-        energy_required = 2,
-        results = {
-            { type = "item", name = "rx-wood-chips", amount = 2 },
-        },
-      }
-    )
-  
-  local raw_recipe = data.raw["recipe"]["kr-crush-wood"]
-  if raw_recipe then
-      raw_recipe.ingredients = {
-          { type = "item", name = "wood", amount = 12 }
-      }
-      raw_recipe.results = {
-          { type = "item", name = "rx-wood-chips", amount = 18 }
-      }
-      raw_recipe.allow_productivity = true
-      raw_recipe.enabled = true
-  end
+if not crushing_lib and not crushing_lib.make_recipe then return end
+
+-- Run Krastorio's native recipe generator for the target item.
+-- This handles the recipe database entry AND binds the item mechanics safely.
+crushing_lib.make_recipe(
+  data.raw.item["wood"], {
+    subgroup = "intermediate-product",
+    order = "a[biomaterial]-b[wood-chips]",
+    energy_required = 2,
+    results = {
+        { type = "item", name = "rx-wood-chips", amount = 2 },
+    },
+  }
+)
+
+crushing_lib.make_recipe(
+  data.raw.item["coal"], {
+    subgroup = "intermediate-product",
+    order = "a[carbon]-a[pulverized]",
+    energy_required = 2,
+    results = {
+        { type = "item", name = "rx-pulverized-carbon", amount = 2 },
+    },
+  }
+)
+
+local raw_recipe = data.raw["recipe"]["kr-crush-wood"]
+if raw_recipe then
+    raw_recipe.ingredients = {
+        { type = "item", name = "wood", amount = 12 }
+    }
+    raw_recipe.results = {
+        { type = "item", name = "rx-wood-chips", amount = 18 }
+    }
+    raw_recipe.allow_productivity = true
+    raw_recipe.enabled = true
+end
+
+local raw_recipe = data.raw["recipe"]["kr-crush-coal"]
+if raw_recipe then
+    raw_recipe.ingredients = {
+        { type = "item", name = "coal", amount = 12 }
+    }
+    raw_recipe.results = {
+        { type = "item", name = "rx-pulverized-carbon", amount = 18 }
+    }
+    raw_recipe.allow_productivity = true
+    raw_recipe.enabled = true
 end
 
 -- ============================================================================
@@ -72,7 +114,7 @@ end
 data:extend({
   {
     type = "item",
-    name = "rx-wood-pulp",
+    name = "rx-wood-pulp", -- kr-filtration-plant
     icon = k2_assets .. "/icons/items/biomass-1.png", 
     subgroup = "intermediate-product",
     order = "a[biomaterial]-c[wood-pulp]",
@@ -82,7 +124,26 @@ data:extend({
   }
 })
 
+-- ============================================================================
+-- ITEM DEFINITION: Phenolic Resin (Bakelite). rx-phenolic-resin
+data:extend({
+  {
+    type = "item",
+    name = "rx-phenolic-resin", -- chemistry
+    icon = k2_assets .. "/icons/items/black-reinforced-plate-kl.png", 
+    subgroup = "intermediate-product",
+    order = "a[biomaterial]-d[phenolic-resin]",
+    stack_size = 200,
+    default_request_amount = 50,
+    weight = 0.5 * kg, 
+  }
+})
+-- ============================================================================
 
+-- ============================================================================
+-- ============================================================================
+
+--[[
 -- ============================================================================
 -- ITEM DEFINITION: Enriched Steel Mix. rx-enriched-steel-mix
 -- Subgroup: Intermediates / Raw Material
@@ -150,3 +211,4 @@ data:extend({
   }
 })
 
+]]
