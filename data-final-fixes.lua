@@ -25,8 +25,6 @@ end
 ]]
 
 if mods["Krastorio2"] then
-    require("prototypes.rx-items") -- new prototypes, based on K2 machinery and recipes
-
 
     --require("overrides.krastorio2.k2-smelting")
     -- require("overrides.krastorio2.k2-intermediaries") -- factorio intermediaries

@@ -1,0 +1,94 @@
+-- File: prototypes/rx-crushing.lua
+
+-- New tech is based on Krastorio2 buildings & intermediaries
+if not mods["Krastorio2"] then return end
+
+-- kr-crusher recipes require K2 internal lib to define
+local crushing_lib = require("__Krastorio2__.prototypes.libraries.crushing")
+if not crushing_lib and not crushing_lib.make_recipe then return end
+
+-- K2 graphics, temporary
+local k2_assets = "__Krastorio2Assets__" 
+
+-- ============================= Stage 1/3: ============================= 
+-- ========================== Define new items ==========================
+
+data:extend({
+  {
+    type = "item",
+    name = "rx-wood-chips",
+    icon = k2_assets .. "/icons/recipes/wood-with-fertilizer.png", 
+    subgroup = "intermediate-product",
+    order = "a[biomaterial]-b[wood-chips]",
+    stack_size = 200,
+    default_request_amount = 50,
+    weight = 0.5, -- Densified for rocket and city-block road transport
+  }
+})
+
+data:extend({
+  {
+    type = "item",
+    name = "rx-pulverized-carbon",
+    icon = k2_assets .. "/icons/recipes/coal-filtration.png",
+    subgroup = "intermediate-product",
+    order = "a[carbon]-a[pulverized]",
+    stack_size = 200,
+    default_request_amount = 50,
+    weight = 0.5,
+  }
+})
+
+-- ============================= Stage 2/3: ============================= 
+-- ===== Register basic materials as usable input for kr-crusher ========
+
+crushing_lib.make_recipe(
+  data.raw.item["wood"], {
+    subgroup = "intermediate-product",
+    order = "a[biomaterial]-b[wood-chips]",
+    energy_required = 2,
+    results = {
+        { type = "item", name = "rx-wood-chips", amount = 2 },
+    },
+  }
+)
+
+crushing_lib.make_recipe(
+  data.raw.item["coal"], {
+    subgroup = "intermediate-product",
+    order = "a[carbon]-a[pulverized]",
+    energy_required = 2,
+    results = {
+        { type = "item", name = "rx-pulverized-carbon", amount = 2 },
+    },
+  }
+)
+
+-- ============================= Stage 3/3: =============================
+-- ==== Update the newly created recipes with ingredients and amounts ===
+
+local raw_recipe = data.raw["recipe"]["kr-crush-wood"]
+if raw_recipe then
+    raw_recipe.ingredients = {
+        { type = "item", name = "wood", amount = 12 }
+    }
+    raw_recipe.results = {
+        { type = "item", name = "rx-wood-chips", amount = 18 }
+    }
+    raw_recipe.allow_productivity = true
+    raw_recipe.enabled = true
+end
+
+local raw_recipe = data.raw["recipe"]["kr-crush-coal"]
+if raw_recipe then
+    raw_recipe.ingredients = {
+        { type = "item", name = "coal", amount = 12 }
+    }
+    raw_recipe.results = {
+        { type = "item", name = "rx-pulverized-carbon", amount = 18 }
+    }
+    raw_recipe.allow_productivity = true
+    raw_recipe.enabled = true
+end
+
+-- ============================ End of file =============================
