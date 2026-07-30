@@ -7,8 +7,9 @@ if not mods["Krastorio2"] then return end
 local crushing_lib = require("__Krastorio2__.prototypes.libraries.crushing")
 if not crushing_lib and not crushing_lib.make_recipe then return end
 
--- K2 graphics, temporary
-local k2_assets = "__Krastorio2Assets__" 
+local k2_assets = "__Krastorio2Assets__" -- K2 graphics, temporary
+local mod_name = "__k2so-complex-synthesis__"
+local rx_assets = mod_name .. "/graphics/icons"
 
 -- ============================= Stage 1/3: ============================= 
 -- ========================== Define new items ==========================
@@ -17,7 +18,7 @@ data:extend({
   {
     type = "item",
     name = "rx-wood-chips",
-    icon = k2_assets .. "/icons/recipes/wood-with-fertilizer.png", 
+    icon = rx_assets .. "/rx-wood-chips.png",
     subgroup = "intermediate-product",
     order = "a[biomaterial]-b[wood-chips]",
     stack_size = 200,
@@ -30,7 +31,7 @@ data:extend({
   {
     type = "item",
     name = "rx-pulverized-carbon",
-    icon = k2_assets .. "/icons/recipes/coal-filtration.png",
+    icon = rx_assets .. "/rx-pulverized-carbon.png",
     subgroup = "intermediate-product",
     order = "a[carbon]-a[pulverized]",
     stack_size = 200,

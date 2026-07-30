@@ -1,5 +1,6 @@
 # Ignore local zip packaging testing files
 *.zip
+*.psd
 # Ignore automatic Factorio blueprint cash or temp folders
 .DS_Store
 Thumbs.db
