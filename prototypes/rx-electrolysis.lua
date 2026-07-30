@@ -24,6 +24,18 @@ data:extend({
   }
 })
 
+data:extend({
+  {
+    type = "item",
+    name = "rx-enriched-steel-mix",
+    icon = rx_assets .. "/rx-enriched-steel-mix.png",
+    subgroup = "intermediate-product",
+    order = "a[chemical]-c[steel-mix]",
+    stack_size = 200,
+    default_request_amount = 50,
+    weight = 1,
+  }
+})
 
 -- ============================= Stage 2/2: =============================
 -- ======================== Define new recipes: =========================
@@ -52,5 +64,32 @@ data:extend({
     },    
   }
 })
+
+data:extend({
+  {
+    type = "recipe",
+    name = "rx-enriched-steel-mix-synthesis",
+    categories = { "kr-electrolysis" }, -- Shifted to Electrolysis Plant to expand machine utility
+    enabled = true,                     
+    energy_required = 12,               
+    ingredients = {
+      { type = "item", name = "kr-enriched-iron", amount = 6 },
+      { type = "item", name = "steel-plate", amount = 1 },
+      { type = "fluid", name = "kr-hydrogen-chloride", amount = 42 }, -- 6*7
+    },
+    results = {
+      { type = "item", name = "rx-enriched-steel-mix", amount = 6 },
+      { type = "fluid", name = "kr-dirty-water", amount = 24 }, -- 6*4
+      { type = "fluid", name = "chlorine", amount = 12 }, -- 6*2 
+    },
+    main_product = "rx-enriched-steel-mix",
+    allow_productivity = true,          
+    allow_decomposition = false,
+    crafting_machine_tint = {
+      primary = { r = 0.08, g = 0.16, b = 0.92, a = 0.50 },
+    },        
+  }
+})
+
 
 -- ============================ End of file =============================
