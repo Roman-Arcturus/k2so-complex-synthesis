@@ -65,14 +65,16 @@ data:extend({
     enabled = true,                    -- Enabled for immediate runtime testing
     energy_required = 12,                
     ingredients = {
-      { type = "item", name = "rx-wood-pulp", amount = 24 },
       { type = "item", name = "plastic-bar", amount = 4 },
-      { type = "fluid", name = "sulfuric-acid", amount = 24 },
+      { type = "fluid", name = "rx-wood-pulp", amount = 48 },      
+      { type = "fluid", name = "sulfuric-acid", amount = 12 },
     },
     results = {
-      { type = "item", name = "rx-bakelite", amount = 12 },
+      { type = "item", name = "rx-bakelite", amount = 4 },
     },
     main_product = "rx-bakelite",
+    stack_size = 200,
+    weight = 1,
     allow_productivity = true,          -- Critical for compounding yield benefits
     allow_decomposition = false,
   }
