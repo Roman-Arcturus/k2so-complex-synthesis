@@ -56,7 +56,8 @@ data:extend({
       { type = "fluid", name = "water", amount = 144 }, -- 
     },
     results = {
-      { type = "fluid", name = "rx-wood-pulp", amount = 162 },
+      { type = "fluid", name = "rx-wood-pulp", amount = 128 },
+      { type = "item", name = "kr-biomass", amount = 12 }, -- Solid byproduct extraction
     },
     main_product = "rx-wood-pulp",     -- Tells the UI to prioritize the pulp icon
     allow_productivity = true,         -- Enables your compounding yield strategy

@@ -16,7 +16,6 @@ data:extend({
     name = "rx-nitro-cellulose",
     subgroup = "ammo",
     icon = rx_assets .. "/rx-guncotton-mesh.png", -- Mesh
-    subgroup = "intermediate-product",
     order = "a[biomaterial]-e[nitro-cellulose]",
     stack_size = 200,
     default_request_amount = 50,
@@ -34,10 +33,10 @@ data:extend({
     categories = { "chemistry" },
     enabled = true,            -- for testing
     energy_required = 8,     
-    subgroup = "ammo",           
+    -- subgroup = "ammo",           
     ingredients = {
-      { type = "fluid", name = "rx-wood-pulp", amount = 256 },
-      { type = "fluid", name = "kr-nitric-acid", amount = 32 },
+      { type = "fluid", name = "rx-wood-pulp", amount = 64 },
+      { type = "fluid", name = "kr-nitric-acid", amount = 96 },
     },
     results = {
       { type = "item", name = "rx-nitro-cellulose", amount = 16 },
