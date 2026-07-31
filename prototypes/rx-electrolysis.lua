@@ -14,6 +14,19 @@ local rx_assets = mod_name .. "/graphics/icons"
 data:extend({
   {
     type = "item",
+    name = "rx-bakelite", 
+    icon = k2_assets .. "/icons/items/black-reinforced-plate-kl.png", 
+    subgroup = "intermediate-product",
+    order = "a[biomaterial]-d[bakelite]",
+    stack_size = 200,
+    default_request_amount = 50,
+    weight = 0.5, 
+  }
+})
+
+data:extend({
+  {
+    type = "item",
     name = "rx-solid-oxidizer",
     subgroup = "raw-material",
     icon = rx_assets .. "/rx-solid-oxidizer.png",
@@ -43,6 +56,27 @@ data:extend({
 -- ============================= Stage 2/2: =============================
 -- ======================== Define new recipes: =========================
 
+
+data:extend({
+  {
+    type = "recipe",
+    name = "rx-bakelite-synthesis",
+    categories = { "kr-electrolysis" }, 
+    enabled = true,                    -- Enabled for immediate runtime testing
+    energy_required = 12,                
+    ingredients = {
+      { type = "item", name = "rx-wood-pulp", amount = 24 },
+      { type = "item", name = "plastic-bar", amount = 4 },
+      { type = "fluid", name = "sulfuric-acid", amount = 24 },
+    },
+    results = {
+      { type = "item", name = "rx-bakelite", amount = 12 },
+    },
+    main_product = "rx-bakelite",
+    allow_productivity = true,          -- Critical for compounding yield benefits
+    allow_decomposition = false,
+  }
+})
 
 data:extend({
   {

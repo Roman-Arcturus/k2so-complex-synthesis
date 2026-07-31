@@ -22,8 +22,8 @@ data:extend({
     subgroup = "intermediate-product",
     order = "a[biomaterial]-b[wood-chips]",
     stack_size = 200,
-    default_request_amount = 50,
-    weight = 0.5, -- Densified for rocket and city-block road transport
+    weight = 0.25, 
+    default_request_amount = 50,    
   }
 })
 
@@ -36,8 +36,8 @@ data:extend({
     subgroup = "intermediate-product",
     order = "a[carbon]-a[pulverized]",
     stack_size = 200,
-    default_request_amount = 50,
     weight = 0.5,
+    default_request_amount = 50,    
   }
 })
 
@@ -72,10 +72,10 @@ crushing_lib.make_recipe(
 local raw_recipe = data.raw["recipe"]["kr-crush-wood"]
 if raw_recipe then
     raw_recipe.ingredients = {
-        { type = "item", name = "wood", amount = 12 }
+        { type = "item", name = "wood", amount = 6 }
     }
     raw_recipe.results = {
-        { type = "item", name = "rx-wood-chips", amount = 18 }
+        { type = "item", name = "rx-wood-chips", amount = 24 }
     }
     raw_recipe.allow_productivity = true
     raw_recipe.enabled = true
