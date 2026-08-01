@@ -1,16 +1,16 @@
--- File: /overrides/krastorio2/k2-smelting-tier3.lua
+-- File: prototypes/rx-smelting-t3.lua
 
-local k2_assets = "__Krastorio2Assets__" -- K2 graphics
+-- New tech is based on Krastorio2 buildings & intermediaries
+if not mods["Krastorio2"] then return end
+
+local k2_assets = "__Krastorio2Assets__" -- K2 graphics, temporary
 local mod_name = "__k2so-complex-synthesis__"
 local rx_assets = mod_name .. "/graphics/icons"
-
-local update_recipe = require("rx-util").update_recipe
-
 
 data:extend({
   {
     type = "recipe",
-    name = "rx-purified-steel-melting",
+    name = "rx-smelt-steel",
     icon = rx_assets .. "/rx-purified-steel.png",
     categories = { "smelting" },
     enabled = true,                    -- Set to true for runtime sandbox testing
@@ -32,7 +32,7 @@ data:extend({
 data:extend({
   {
     type = "recipe",
-    name = "rx-purified-glass-melting",
+    name = "rx-smelt-glass",
     icon = rx_assets .. "/rx-purified-glass.png",    
     categories = { "smelting" },
     enabled = true,                    
@@ -54,7 +54,7 @@ data:extend({
 data:extend({
   {
     type = "recipe",
-    name = "rx-purified-silicon-melting",
+    name = "rx-smelt-silicon",
     icon = rx_assets .. "/rx-purified-silicon.png",        
     categories = { "smelting" },
     enabled = true,                    

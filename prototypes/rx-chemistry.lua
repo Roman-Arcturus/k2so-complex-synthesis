@@ -19,7 +19,7 @@ data:extend({
     order = "a[biomaterial]-e[nitro-cellulose]",
     stack_size = 200,
     default_request_amount = 50,
-    weight = 0.5,
+    weight = 0.5 * kg,
   }
 })
 
@@ -29,7 +29,7 @@ data:extend({
 data:extend({
   {
     type = "recipe",
-    name = "rx-nitro-cellulose-synthesis",
+    name = "rx-synthesize-nitro-cellulose",
     categories = { "chemistry" },
     enabled = true,            -- for testing
     energy_required = 8,     

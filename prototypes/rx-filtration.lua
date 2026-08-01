@@ -10,21 +10,6 @@ local rx_assets = mod_name .. "/graphics/icons"
 -- ============================= Stage 1/2: ============================= 
 -- ========================= Define new items: ==========================
 
---[[
-data:extend({
-  {
-    type = "item",
-    name = "rx-wood-pulp", 
-    -- icon = k2_assets .. "/icons/items/biomass-1.png", 
-    icon = rx_assets .. "/rx-wood-pulp.png", 
-    subgroup = "intermediate-product",
-    order = "a[biomaterial]-c[wood-pulp]",
-    stack_size = 200,
-    default_request_amount = 50,
-    weight = 0.25, 
-  }
-})
-]]
 data:extend({
   {
     type = "fluid",
@@ -47,7 +32,7 @@ data:extend({
 data:extend({
   {
     type = "recipe",
-    name = "rx-wood-pulp-filtration",
+    name = "rx-filter-wood-pulp",
     categories = { "kr-fluid-filtration" }, -- K2 filtration plant category
     enabled = true, -- Temporary set to true for immediate ingame testing
     energy_required = 8, -- Washing and spinning duration
@@ -56,8 +41,8 @@ data:extend({
       { type = "fluid", name = "water", amount = 144 }, -- 
     },
     results = {
-      { type = "fluid", name = "rx-wood-pulp", amount = 128 },
-      { type = "item", name = "kr-biomass", amount = 12 }, -- Solid byproduct extraction
+      { type = "fluid", name = "rx-wood-pulp", amount = 144 },
+      { type = "item", name = "kr-biomass", amount = 6 }, -- Solid byproduct extraction
     },
     main_product = "rx-wood-pulp",     -- Tells the UI to prioritize the pulp icon
     allow_productivity = true,         -- Enables your compounding yield strategy

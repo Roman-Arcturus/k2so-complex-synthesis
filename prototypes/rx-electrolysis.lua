@@ -19,8 +19,8 @@ data:extend({
     subgroup = "intermediate-product",
     order = "a[biomaterial]-d[bakelite]",
     stack_size = 200,
-    default_request_amount = 50,
-    weight = 0.5, 
+    weight = 0.5 * kg, 
+    default_request_amount = 50,    
   }
 })
 
@@ -32,8 +32,8 @@ data:extend({
     icon = rx_assets .. "/rx-solid-oxidizer.png",
     order = "a[chemical]-b[oxidizer]",
     stack_size = 200,
-    default_request_amount = 50,
-    weight = 0.5,
+    weight = 0.5 * kg,
+    default_request_amount = 50,    
   }
 })
 
@@ -46,11 +46,10 @@ data:extend({
     subgroup = "intermediate-product",
     order = "a[chemical]-c[steel-mix]",
     stack_size = 200,
-    default_request_amount = 50,
-    weight = 1,
+    weight = 1 * kg,
+    default_request_amount = 50,    
   }
 })
-
 
 
 -- ============================= Stage 2/2: =============================
@@ -60,7 +59,7 @@ data:extend({
 data:extend({
   {
     type = "recipe",
-    name = "rx-bakelite-synthesis",
+    name = "rx-synthesize-bakelite",
     categories = { "kr-electrolysis" }, 
     enabled = true,                    -- Enabled for immediate runtime testing
     energy_required = 12,                
@@ -73,8 +72,6 @@ data:extend({
       { type = "item", name = "rx-bakelite", amount = 4 },
     },
     main_product = "rx-bakelite",
-    stack_size = 200,
-    weight = 1,
     allow_productivity = true,          -- Critical for compounding yield benefits
     allow_decomposition = false,
   }
@@ -83,7 +80,7 @@ data:extend({
 data:extend({
   {
     type = "recipe",
-    name = "rx-oxidizer-production",
+    name = "rx-synthesize-oxidizer",
     categories = { "kr-electrolysis" }, 
     enabled = true,                     
     energy_required = 60,               
@@ -107,19 +104,20 @@ data:extend({
 data:extend({
   {
     type = "recipe",
-    name = "rx-enriched-steel-mix-synthesis",
-    categories = { "kr-electrolysis" }, -- Shifted to Electrolysis Plant to expand machine utility
+    name = "rx-enrich-steel-mix",
+    categories = { "kr-electrolysis" },
     enabled = true,                     
     energy_required = 12,               
     ingredients = {
       { type = "item", name = "kr-enriched-iron", amount = 6 },
-      { type = "item", name = "steel-plate", amount = 1 },
+      { type = "item", name = "steel-plate", amount = 1 }, -- crystallization seed
+      { type = "item", name = "rx-bakelite", amount = 2 },
       { type = "fluid", name = "kr-hydrogen-chloride", amount = 42 }, -- 6*7
     },
     results = {
       { type = "item", name = "rx-enriched-steel-mix", amount = 6 },
       { type = "fluid", name = "kr-dirty-water", amount = 24 }, -- 6*4
-      { type = "fluid", name = "chlorine", amount = 12 }, -- 6*2 
+      { type = "fluid", name = "kr-chlorine", amount = 12 }, -- 6*2 
     },
     main_product = "rx-enriched-steel-mix",
     allow_productivity = true,          
@@ -133,10 +131,10 @@ data:extend({
 data:extend({
   {
     type = "recipe",
-    name = "rx-advanced-quartz-electrolysis",
-    categories = { "kr-electrolysis" }, -- Expanded usage for the Electrolysis Plant
-    enabled = true,                     -- Active for immediate runtime testing
-    energy_required = 8.0,              -- High-throughput industrial separation speed
+    name = "rx-purify-quartz-halogen",
+    categories = { "kr-electrolysis" }, 
+    enabled = true,                     
+    energy_required = 12,
     ingredients = {
       { type = "item", name = "kr-sand", amount = 12 },
       { type = "item", name = "rx-pulverized-carbon", amount = 3 },
@@ -144,13 +142,12 @@ data:extend({
     },
     results = {
       { type = "item", name = "kr-quartz", amount = 18 },
-      { type = "fluid", name = "chlorine", amount = 20 },
+      { type = "fluid", name = "kr-chlorine", amount = 20 },
     },
     main_product = "kr-quartz",
     allow_productivity = true,         -- Vital for compounding resource conservation loops
     allow_decomposition = false,
   }
 })
-
 
 -- ============================ End of file =============================

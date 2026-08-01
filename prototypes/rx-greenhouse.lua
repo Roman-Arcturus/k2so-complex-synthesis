@@ -17,7 +17,7 @@ local rx_assets = mod_name .. "/graphics/icons"
 data:extend({
   {
     type = "recipe",
-    name = "rx-advanced-seed-germination",
+    name = "rx-grow-tree-seed",
     categories = { "kr-growing" },
     enabled = true,                     -- Active for validation tests
     energy_required = 32.0,             -- long growing of sappling
@@ -41,7 +41,7 @@ data:extend({
 data:extend({
   {
     type = "recipe",
-    name = "rx-optimized-wood-growth",
+    name = "rx-grow-wood",
     categories = { "kr-growing" },
     icon = k2_assets .. "/icons/decorations/tree-09.png",
     enabled = true,                     -- Kept unlocked for early validation tests
@@ -55,7 +55,7 @@ data:extend({
       { type = "item", name = "wood", amount = 32 },
     },
     main_product = "wood",
-    allow_productivity = true,          
+    allow_productivity = false,          
     allow_decomposition = false,
   }
 })

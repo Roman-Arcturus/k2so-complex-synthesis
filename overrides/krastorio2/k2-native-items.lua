@@ -6,7 +6,7 @@ local rx_assets = mod_name .. "/graphics/icons"
 
 local update_recipe = require("rx-util").update_recipe
 
--- =========================== Basic Metals: ============================
+-- ======================== Basic Ingredients: ==========================
 
 -- Overwrite the entry-level assembler seed recipe
 update_recipe({

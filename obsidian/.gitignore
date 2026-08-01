@@ -1,0 +1,7 @@
+# ------------------------------
+# Obsidian Vault .gitignore File
+# ------------------------------
+
+.obsidian/
+.trash/
+

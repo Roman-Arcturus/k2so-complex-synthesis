@@ -22,7 +22,7 @@ data:extend({
     subgroup = "intermediate-product",
     order = "a[biomaterial]-b[wood-chips]",
     stack_size = 200,
-    weight = 0.25, 
+    weight = 0.25 * kg, 
     default_request_amount = 50,    
   }
 })
@@ -36,7 +36,7 @@ data:extend({
     subgroup = "intermediate-product",
     order = "a[carbon]-a[pulverized]",
     stack_size = 200,
-    weight = 0.5,
+    weight = 0.5 * kg,
     default_request_amount = 50,    
   }
 })

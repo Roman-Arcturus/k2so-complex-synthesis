@@ -5,8 +5,9 @@ if mods["Krastorio2"] then
     require("prototypes.rx-crushing")       -- kr-crusher
     require("prototypes.rx-filtration")     -- kr-filtration-plant
     require("prototypes.rx-electrolysis")   -- kr-electrolysis-plant    
-    require("prototypes.rx-chemistry")   -- kr-electrolysis-plant    
+    require("prototypes.rx-chemistry")      -- kr-electrolysis-plant    
     require("prototypes.rx-greenhouse")     -- kr-greenhouse
+    require("prototypes.rx-smelting-t3")     -- kr-greenhouse
     
     -- require("prototypes.rx-centrifuge")     -- centrifuge
 end
