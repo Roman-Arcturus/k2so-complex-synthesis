@@ -26,8 +26,8 @@ end
 
 if mods["Krastorio2"] then
     require("overrides.krastorio2.k2-native-items")   
-    -- require("overrides.krastorio2.k2-smelting-tier1")
-    -- require("overrides.krastorio2.k2-smelting-tier2")
+    require("overrides.krastorio2.k2-smelting-t1")
+    require("overrides.krastorio2.k2-smelting-t2")
     require("overrides.krastorio2.k2-filtration")    
     
       

@@ -24,4 +24,5 @@ update_recipe({
         { type = "fluid", name = "kr-dirty-water", amount = 60 }, 
         -- needs to be stacked or burned until kr-enriched-minerals tech is unlocked
     },
+    energy = 12,
 })

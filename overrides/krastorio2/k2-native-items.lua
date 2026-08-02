@@ -20,5 +20,7 @@ update_recipe({
         { type = "item", name = "tree-seed", amount = 1 },
     },
     energy = 12.0, -- longer logs cutting and growing seeds
+    stack_size = 200,
+    rocket_capacity = 2000,
 })
 

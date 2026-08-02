@@ -42,7 +42,7 @@
 ### 🗂️ Recipes made in [[facility_kr-electrolysis-plant]]
 
 [[recipe_rx-synthesize-bakelite]] : ⏳12s
-	→ 📦4 [[item_plastic-bar]] + 💧48 [[fluid_rx-wood-pulp]] + 💧12 [[fluid_sulfuric-acid]]
+	→ 📦4 [[item_plastic-bar]] + 💧48 [[fluid_rx-wood-pulp]] + 💧12 [[_fluids_k2/fluid_sulfuric-acid]]
 	← 💎4 [[item_rx-bakelite]]
 
 [[recipe_rx-synthesize-oxidizer]] : ⏳60s
