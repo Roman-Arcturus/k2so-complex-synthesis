@@ -85,11 +85,14 @@ update_recipe({
     categories = { "smelting" }, 
     allow_productivity = true,  
     ingredients = {
-        { type = "item", name = "wood", amount = 6 }, 
-        { type = "item", name = "coal", amount = 6 }, 
+        { type = "item", name = "rx-wood-chips", amount = 12 }, 
+        { type = "item", name = "rx-pulverized-carbon", amount = 6 }, 
+        { type = "item", name = "kr-sand", amount = 3 }, 
     },
-    energy = 18.9, 
-    result_amount = 6, 
+    energy = 27, 
+    results = {
+        { type = "item", name = "kr-coke", amount = 9 },
+    },    
     stack_size = 200, 
     rocket_capacity = 1000, 
 })

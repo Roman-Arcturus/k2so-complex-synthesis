@@ -11,55 +11,35 @@ data:extend({
   {
     type = "recipe",
     name = "rx-smelt-steel",
+    categories = { "smelting" }, 
+    enabled = false,
+    energy_required = 292, --🧮292.0s = 3.12 factor * 3 slow melt/cool * (6 + 6 + 6 + 3.6 + 12-6 + 3.6)
+    ingredients = {
+      { type = "item", name = "kr-enriched-iron", amount = 6 },
+      { type = "item", name = "kr-coke", amount = 6 },
+      { type = "item", name = "steel-plate", amount = 6 }, -- Seed Crystal, not consumed
+      { type = "fluid", name = "kr-oxygen", amount = 36 },
+    },
+    results = {
+      { type = "item", name = "steel-plate", amount = 12 }, -- Net + 6
+      { type = "fluid", name = "kr-dirty-water", amount = 36 }
+    },
     icon = rx_assets .. "/rx-purified-steel.png",
-    categories = { "smelting" },
-    enabled = true,                    -- Set to true for runtime sandbox testing
-    energy_required = 195.3,           -- Preserved K2 time factor with triple blast modifier
-    ingredients = {
-      { type = "item", name = "rx-enriched-steel-mix", amount = 6 },
-      { type = "item", name = "rx-pulverized-carbon", amount = 3 },
-      { type = "item", name = "rx-solid-oxidizer", amount = 3 },
-    },
-    results = {
-      { type = "item", name = "steel-plate", amount = 9 },
-    },
-    main_product = "steel-plate",
-    allow_productivity = true,         -- Enables compounding yield loops with prod modules
-    allow_decomposition = false,
-  }
-})
-
---[[
-data:extend({
-  {
-    type = "recipe",
-    name = "rx-smelt-glass",
-    icon = rx_assets .. "/rx-purified-glass.png",    
-    categories = { "smelting" },
-    enabled = true,                    
-    energy_required = 119.7, -- Calculated via 0.7 base * 19 items * 3 melt * 3 slow cool
-    ingredients = {
-      { type = "item", name = "kr-quartz", amount = 6 },
-      { type = "item", name = "rx-pulverized-carbon", amount = 3 },
-      { type = "item", name = "kr-glass", amount = 1 },
-    },
-    results = {
-      { type = "item", name = "kr-glass", amount = 9 },
-    },
-    main_product = "kr-glass",
+    icon_size = 64,
+    subgroup = "raw-material",
+    order = "a[steel]-b[enriched]",
     allow_productivity = true,         
     allow_decomposition = false,
   }
 })
-]]
 
 data:extend({
   {
     type = "recipe",
     name = "rx-smelt-glass",
-    category = "industrial-furnace", -- Enforces machine requirement
+    categories = { "smelting" }, 
     enabled = false,
-    energy_required = 75.2, --🧮 0.7 factor * 3 slow melt/cool * (12 + 4 + 3 + 2.4 + 15-3 + 2.4)
+    energy_required = 75.2, --🧮75.2s = 0.7 factor * 3 slow melt/cool * (12 + 4 + 3 + 2.4 + 15-3 + 2.4)
     ingredients = {
       { type = "item", name = "kr-quartz", amount = 12 },
       { type = "item", name = "rx-pulverized-carbon", amount = 4 },
@@ -73,28 +53,34 @@ data:extend({
     icon = rx_assets .. "/rx-purified-glass.png",
     icon_size = 64,
     subgroup = "raw-material",
-    order = "a[glass]-b[purified]"
+    order = "a[glass]-b[purified]",
+    allow_productivity = true,         
+    allow_decomposition = false,
   }
 })
-
 
 data:extend({
   {
     type = "recipe",
     name = "rx-smelt-silicon",
-    icon = rx_assets .. "/rx-purified-silicon.png",        
-    categories = { "smelting" },
-    enabled = true,                    
-    energy_required = 113.4, -- Calculated via 0.6 base * 21 items * 3 melt * 3 slow crystallize
+    categories = { "smelting" }, 
+    enabled = false,
+    energy_required = 99.4, --🧮99.4s = 0.6 factor * 3 slow melt/cool * (18 + 6 + 6 + 3.6 + 24-6 + 3.6)
     ingredients = {
-      { type = "item", name = "kr-quartz", amount = 6 },
-      { type = "item", name = "rx-pulverized-carbon", amount = 3 },
-      { type = "item", name = "rx-solid-oxidizer", amount = 3 },
+      { type = "item", name = "kr-quartz", amount = 18 },
+      { type = "item", name = "rx-pulverized-carbon", amount = 6 },
+      { type = "item", name = "kr-silicon", amount = 6 }, -- Seed Crystal, not consumed
+      { type = "fluid", name = "kr-hydrogen-chloride", amount = 36 },
     },
     results = {
-      { type = "item", name = "kr-silicon", amount = 9 },
+      { type = "item", name = "kr-silicon", amount = 24 }, -- net + 18
+      { type = "fluid", name = "kr-dirty-water", amount = 36 }
     },
     main_product = "kr-silicon",
+    icon = rx_assets .. "/rx-purified-silicon.png",    
+    icon_size = 64,
+    subgroup = "raw-material",
+    order = "a[silicon]-b[purified]",
     allow_productivity = true,         
     allow_decomposition = false,
   }
