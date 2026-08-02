@@ -29,6 +29,7 @@ data:extend({
   }
 })
 
+--[[
 data:extend({
   {
     type = "recipe",
@@ -50,6 +51,32 @@ data:extend({
     allow_decomposition = false,
   }
 })
+]]
+
+data:extend({
+  {
+    type = "recipe",
+    name = "rx-smelt-glass",
+    category = "industrial-furnace", -- Enforces machine requirement
+    enabled = false,
+    energy_required = 75.2, --🧮 0.7 factor * 3 slow melt/cool * (12 + 4 + 3 + 2.4 + 15-3 + 2.4)
+    ingredients = {
+      { type = "item", name = "kr-quartz", amount = 12 },
+      { type = "item", name = "rx-pulverized-carbon", amount = 4 },
+      { type = "item", name = "kr-glass", amount = 3 }, -- Seed Crystal, not consumed
+      { type = "fluid", name = "kr-hydrogen-chloride", amount = 24 },
+    },
+    results = {
+      { type = "item", name = "kr-glass", amount = 15 }, -- 12 + 3 (seed) 
+      { type = "fluid", name = "kr-dirty-water", amount = 24 }
+    },
+    icon = rx_assets .. "/rx-purified-glass.png",
+    icon_size = 64,
+    subgroup = "raw-material",
+    order = "a[glass]-b[purified]"
+  }
+})
+
 
 data:extend({
   {

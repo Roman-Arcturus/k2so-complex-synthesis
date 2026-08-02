@@ -30,7 +30,7 @@ Original recipe for reference and RX recipe override.
 ---
 
 [[recipe_kr-enriched-iron]] : ⏳3s, 📚200/1000  
-→ 9 [[item_iron-ore]] + 3 [[_fluids_k2/fluid_sulfuric-acid]] + 25 [[fluid_water]]
+→ 9 [[item_iron-ore]] + 3 [[fluid_sulfuric-acid]] + 25 [[fluid_water]]
 ← 6 [[item_kr-enriched-iron]] + 25 [[fluid_kr-dirty-water]]
 
 ---

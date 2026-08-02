@@ -1,11 +1,22 @@
 #### 📜 Thematic description:
-Thermal reduction of quartz using pulverized carbon and solid oxidizer in high-temperature furnaces yields high-purity silicon required for advanced semiconductor manufacturing.
+Thermal reduction and acid-flux purification of quartz crystals using pulverized carbon and hydrogen chloride inside an industrial furnace yields high-purity glass while venting dirty wastewater byproduct.
 
-#### 🧪Result:
-* [[item_kr-silicon]]
+#### 🏭 Facility: [[facility_kr-industrial-furnace]]
+
+#### 📥 Inputs:
+* 📦 12 [[item_kr-quartz]]
+* 📦 4 [[item_rx-pulverized-carbon]]
+* 📦 3 [[item_kr-glass]]
+* 💧 24 [[fluid_kr-hydrogen-chloride]]
+
+#### 💎 Results:
+* 📦 15 [[item_kr-glass]]
+* 💧 24 [[fluid_kr-dirty-water]]
+
+--
 
 #### 🧩 Used in new recipes:
-* None
+* ➡️ [[recipe_rx-synthesize-bakelite]]
 
-#### 🔱Derivatives:
+#### 🔱 Derivatives:
 * None

@@ -20,7 +20,7 @@ Vanilla and AAI-Industry items. Their recipes are overwritten by K2.
 
 (blue circuit / processing-unit)
   * [[recipe_processing-unit]] : ⏳12s, 📚200/300
-→ 6 [[item_advanced-circuit]] + 3 [[item_kr-rare-metals]] + 10 [[_fluids_k2/fluid_sulfuric-acid]]
+→ 6 [[item_advanced-circuit]] + 3 [[item_kr-rare-metals]] + 10 [[fluid_sulfuric-acid]]
 ← 2 [[item_processing-unit]]
 
 ---

@@ -19,7 +19,7 @@ Original recipe for reference and RX recipe override.
 
 [[recipe_sulfuric-acid]] :⏳1s
 → 1 [[item_iron-plate]] + 5 [[item_sulfur]] + 100 [[fluid_water]]
-← 50 [[_fluids_k2/fluid_sulfuric-acid]]
+← 50 [[fluid_sulfuric-acid]]
 
 
 ----
@@ -32,7 +32,7 @@ Original recipe for reference and RX recipe override.
 
 
 [[recipe_battery]] :⏳4s, 📚200/400
-→ 1 [[item_iron-plate]] + 1 [[item_copper-plate]] + 20 [[_fluids_k2/fluid_sulfuric-acid]]
+→ 1 [[item_iron-plate]] + 1 [[item_copper-plate]] + 20 [[fluid_sulfuric-acid]]
 ← 1 [[item_battery]]
 
 
