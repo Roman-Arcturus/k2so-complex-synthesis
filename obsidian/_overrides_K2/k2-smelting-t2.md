@@ -1,17 +1,42 @@
-*file: k2-smelting-t2.lua*
+*file:  /overrides/krastorio2/k2-smelting-t2.lua*
 
-**from K2SO basic metals:** *general rule: 1 input item → 1 result item*, metal enrichment already increased productivity: 9 input raw ore → 6 output enriched ore.
+### 📜 Thematic description:
+Krastorio2 enriched metal smelts. 
+General rule: 1 enriched ore → 1 result plate. 
+Metal ore enrichment already increased productivity: 9 input raw ore → 6 output enriched ore.
 
-* 1 [[item_kr-enriched-iron]] → 1 [[item_iron-plate]] ⏳**3.2s**, time_factor: 3.2s / 2 items total = **1.6**
-* 1 [[item_kr-enriched-copper]] → 1 [[item_copper-plate]] ⏳**3.2s**, time_factor: 3.2s / 2 items total = **1.6**
-* 1 [[item_kr-enriched-rare-metals]] → 1 [[item_kr-rare-metals]] ⏳**3.2s**, time_factor: 3.2s / 2 items total = **1.6**
+RX overrides does preserve the proportions of volume and time. But add flux/coking for realism.
+### 🔱 Recipes
 
-**to RX tier-2:** *general rule: 6 input items + 3 flux → 6 result items, preserve time_factor*
+> [!Iron plate from enriched iron ore]
+> K2: 1 [[item_kr-enriched-iron]] → 1 [[item_iron-plate]]
+> ⏳3.2s, time_factor: $3.2s / 2 \approx 1.6$
+> 
+> RX: 6 [[item_kr-enriched-iron]] + 1 [[item_kr-quartz]] + 2 [[item_kr-coke]] → 6 [[item_iron-plate]]
+> ⏳$24s \approx  1.6 * (6+1+2+6)$
+> 📚200/1000
+> 
 
-6 [[item_kr-enriched-iron]] + 1 [[item_kr-quartz]] + 2 [[item_kr-coke]] → 6 [[item_iron-plate]] ⏳**24s** = 15 items total * **1.6**
-6 [[item_kr-enriched-copper]] + 3 [[item_kr-quartz]]  → 6 [[item_copper-plate]] ⏳**24s** = 15 items total * **1.6**
-6 [[item_kr-enriched-rare-metals]] + 3 [[item_kr-enriched-copper]] + 2 [[item_kr-quartz]]
-	→ 6 [[item_kr-rare-metals]] ⏳**27.2s** = 17 items total * **1.6**
+> [!Copper plate from enriched copper ore]
+> K2: 1 [[item_kr-enriched-copper]] → 1 [[item_copper-plate]]
+> ⏳3.2s, time_factor: $3.2s / 2 \approx 1.6$
+> 
+> RX: 6 [[item_kr-enriched-copper]] + 3 [[item_kr-quartz]] → 6 [[item_copper-plate]]
+> ⏳$24s \approx  1.6 * (6+1+2+6)$
+> 📚200/1000
+> 
+
+
+> [!Rare metals from enriched rare metal ore]
+> K2: 1 [[item_kr-enriched-rare-metals]] → 1 [[item_kr-rare-metals]]
+> ⏳3.2s, time_factor: $3.2s / 2 \approx 1.6$
+> 
+> RX: 6 [[item_kr-enriched-rare-metals]] + 3 [[item_kr-enriched-copper]] + 3 [[item_kr-quartz]] → 6 [[item_kr-rare-metals]]
+> ⏳$29s \approx  1.6 * (6+3+3+6)$
+> 📚200/1000
+> 
+> 
+
 
 
 

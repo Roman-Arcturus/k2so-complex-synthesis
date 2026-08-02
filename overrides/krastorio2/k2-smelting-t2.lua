@@ -49,13 +49,13 @@ update_recipe({
     ingredients = 
     {
         { type = "item", name = "kr-enriched-rare-metals", amount = 6 }, --
-        { type = "item", name = "kr-enriched-copper", amount = 2 }, --
-        { type = "item", name = "kr-quartz", amount = 1 }, --        
+        { type = "item", name = "kr-enriched-copper", amount = 3 }, --
+        { type = "item", name = "kr-quartz", amount = 3 }, --        
     },
     results = {
         { type = "item", name = "kr-rare-metals", amount = 6 },
     },  
-    energy = 27.2,
+    energy = 29.0,
     stack_size = 200,
     rocket_capacity = 1000,
 })
