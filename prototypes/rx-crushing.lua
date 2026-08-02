@@ -30,8 +30,8 @@ data:extend({
 data:extend({
   {
     type = "item",
-    name = "rx-pulverized-carbon",
-    --icon = rx_assets .. "/rx-pulverized-carbon.png",
+    name = "rx-crushed-carbon",
+    --icon = rx_assets .. "/rx-crushed-carbon.png",
     icon = k2_assets .. "/icons/items/imersite-1-light.png",
     subgroup = "intermediate-product",
     order = "a[carbon]-a[pulverized]",
@@ -61,7 +61,7 @@ crushing_lib.make_recipe(
     order = "a[carbon]-a[pulverized]",
     energy_required = 2,
     results = {
-        { type = "item", name = "rx-pulverized-carbon", amount = 2 },
+        { type = "item", name = "rx-crushed-carbon", amount = 2 },
     },
   }
 )
@@ -87,7 +87,7 @@ if raw_recipe then
         { type = "item", name = "coal", amount = 12 }
     }
     raw_recipe.results = {
-        { type = "item", name = "rx-pulverized-carbon", amount = 18 }
+        { type = "item", name = "rx-crushed-carbon", amount = 18 }
     }
     raw_recipe.allow_productivity = true
     raw_recipe.enabled = true

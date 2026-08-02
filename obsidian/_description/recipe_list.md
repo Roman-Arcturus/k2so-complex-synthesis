@@ -9,7 +9,7 @@
 
 [[recipe_kr-crush-coal]] : ⏳2s 
 	→ 📦12 [[item_coal]]
-	← 💎18 [[item_rx-pulverized-carbon]]
+	← 💎18 [[item_rx-crushed-carbon]]
 
 ---
 ### 🗂️ Recipes made in [[facility-kr-greenhouse]]
@@ -46,7 +46,7 @@
 	← 💎4 [[item_rx-bakelite]]
 
 [[recipe_rx-synthesize-oxidizer]] : ⏳60s
-	→ 💧360 [[fluid_kr-oxygen]] + 💧36 [[fluid_kr-nitric-acid]] + 📦6 [[item_rx-pulverized-carbon]]
+	→ 💧360 [[fluid_kr-oxygen]] + 💧36 [[fluid_kr-nitric-acid]] + 📦6 [[item_rx-crushed-carbon]]
 	← 💎18 [[item_rx-solid-oxidizer]]
 
 
@@ -59,7 +59,7 @@
 	← 🧪12 [[fluid_kr-chlorine]]
 
 [[recipe_rx-purify-quartz-halogen]] : ⏳12s
-	→ 📦12 [[item_kr-sand]] + 📦3 [[item_rx-pulverized-carbon]] + 💧30 [[fluid_kr-hydrogen-chloride]]
+	→ 📦12 [[item_kr-sand]] + 📦3 [[item_rx-crushed-carbon]] + 💧30 [[fluid_kr-hydrogen-chloride]]
 	← 💎18 [[item_kr-quartz]]
 	← 🧪20 [[fluid_kr-chlorine]]
 
@@ -69,16 +69,16 @@
 ### 🗂️ Recipes made in [[facility_furnaces]]
 
 [[recipe_rx-smelt-steel]] : ⏳195.3s
-	→ 📦6 [[item_rx-enriched-steel-mix]] + 📦3 [[item_rx-pulverized-carbon]] 
+	→ 📦6 [[item_rx-enriched-steel-mix]] + 📦3 [[item_rx-crushed-carbon]] 
 	+ 📦3 [[item_rx-solid-oxidizer]]
 	← 💎9 [[item_steel-plate]]
 
 [[recipe_rx-smelt-glass]] : ⏳119.7s
-	→ 📦6 [[item_kr-quartz]] + 📦3 [[item_rx-pulverized-carbon]] + 📦1 [[item_kr-glass]]
+	→ 📦6 [[item_kr-quartz]] + 📦3 [[item_rx-crushed-carbon]] + 📦1 [[item_kr-glass]]
 	← 💎9 [[item_kr-glass]]
 
 [[recipe_rx-smelt-silicon]] : ⏳113.4s
-	→ 📦6 [[item_kr-quartz]] + 📦3 [[item_rx-pulverized-carbon]] + 📦3 [[item_rx-solid-oxidizer]]
+	→ 📦6 [[item_kr-quartz]] + 📦3 [[item_rx-crushed-carbon]] + 📦3 [[item_rx-solid-oxidizer]]
 	← 💎9 [[item_kr-silicon]]
 
 ---

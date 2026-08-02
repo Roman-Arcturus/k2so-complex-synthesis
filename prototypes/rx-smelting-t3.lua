@@ -12,7 +12,7 @@ data:extend({
     type = "recipe",
     name = "rx-smelt-steel",
     categories = { "smelting" }, 
-    enabled = false,
+    enabled = true,
     energy_required = 292, --🧮292.0s = 3.12 factor * 3 slow melt/cool * (6 + 6 + 6 + 3.6 + 12-6 + 3.6)
     ingredients = {
       { type = "item", name = "kr-enriched-iron", amount = 6 },
@@ -38,17 +38,17 @@ data:extend({
     type = "recipe",
     name = "rx-smelt-glass",
     categories = { "smelting" }, 
-    enabled = false,
-    energy_required = 75.2, --🧮75.2s = 0.7 factor * 3 slow melt/cool * (12 + 4 + 3 + 2.4 + 15-3 + 2.4)
-    ingredients = {
-      { type = "item", name = "kr-quartz", amount = 12 },
-      { type = "item", name = "rx-pulverized-carbon", amount = 4 },
-      { type = "item", name = "kr-glass", amount = 3 }, -- Seed Crystal, not consumed
-      { type = "fluid", name = "kr-hydrogen-chloride", amount = 24 },
-    },
+    enabled = true,
+    energy_required = 75.2, --🧮75.2s = 0.7 factor *(36+12+7.2+45+7.2)
+    ingredients = { -- x3
+      { type = "item", name = "kr-quartz", amount = 36 },
+      { type = "item", name = "rx-crushed-carbon", amount = 12 },
+      { type = "item", name = "kr-glass", amount = 9 }, -- Seed Crystal, not consumed
+      { type = "fluid", name = "kr-hydrogen-chloride", amount = 72 },
+    },-- 116.4 
     results = {
-      { type = "item", name = "kr-glass", amount = 15 }, -- 12 + 3 (seed) 
-      { type = "fluid", name = "kr-dirty-water", amount = 24 }
+      { type = "item", name = "kr-glass", amount = 45 }, -- 12 + 3 (seed) 
+      { type = "fluid", name = "kr-dirty-water", amount = 72 }
     },
     icon = rx_assets .. "/rx-purified-glass.png",
     icon_size = 64,
@@ -64,11 +64,11 @@ data:extend({
     type = "recipe",
     name = "rx-smelt-silicon",
     categories = { "smelting" }, 
-    enabled = false,
+    enabled = true,
     energy_required = 99.4, --🧮99.4s = 0.6 factor * 3 slow melt/cool * (18 + 6 + 6 + 3.6 + 24-6 + 3.6)
     ingredients = {
       { type = "item", name = "kr-quartz", amount = 18 },
-      { type = "item", name = "rx-pulverized-carbon", amount = 6 },
+      { type = "item", name = "rx-crushed-carbon", amount = 6 },
       { type = "item", name = "kr-silicon", amount = 6 }, -- Seed Crystal, not consumed
       { type = "fluid", name = "kr-hydrogen-chloride", amount = 36 },
     },

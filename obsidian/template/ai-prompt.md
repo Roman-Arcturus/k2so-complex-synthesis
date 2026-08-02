@@ -24,7 +24,7 @@ Our files are encapsulated neatly into self-contained modules organized strictly
 ### 📦 Current Stabilized Database State
 
 #### 1. The Carbon Processing Track (Crusher Matrix)
-*   `coal` (12) $\rightarrow$ **`[[kr-crush-coal]]`** $\rightarrow$ `rx-pulverized-carbon` (18) | ⏳ 4s (Pure Coal Powder)
+*   `coal` (12) $\rightarrow$ **`[[kr-crush-coal]]`** $\rightarrow$ `rx-crushed-carbon` (18) | ⏳ 4s (Pure Coal Powder)
 
 #### 2. The Forestry Ecosystem Track (Greenhouse & Filtration Matrix)
 *   `rx-wood-chips` (24) $\rightarrow$ **`[[tree-seed]]`** (1) | ⏳ 12s inside `assembling-machine-1` (Fluidless early friction loop)
@@ -35,18 +35,18 @@ Our files are encapsulated neatly into self-contained modules organized strictly
 
 #### 3. The Synthetic Bakelite & Chemical Tracks
 *   `rx-wood-pulp` (24) + `plastic-bar` (4) + `sulfuric-acid` (20) $\rightarrow$ **`[[rx-bakelite-synthesis]]`** $\rightarrow$ `rx-bakelite` (12) | ⏳ 8s (Thermoset Insulation Matrix)
-*   `kr-oxygen-gas` (200) + `kr-nitric-acid` (40) + `rx-pulverized-carbon` (4) $\rightarrow$ **`[[rx-solid-oxidizer-production]]`** $\rightarrow$ `rx-solid-oxidizer` (2) | ⏳ 12s in Electrolysis (`kr-electrolysis`)
-*   `kr-sand` (12) + `rx-pulverized-carbon` (3) + `kr-hydrogen-chloride` (30) $\rightarrow$ **`[[rx-advanced-quartz-electrolysis]]`** $\rightarrow$ `kr-quartz` (18) + `chlorine` (20) | ⏳ 8s in Electrolysis (`kr-electrolysis`)
+*   `kr-oxygen-gas` (200) + `kr-nitric-acid` (40) + `rx-crushed-carbon` (4) $\rightarrow$ **`[[rx-solid-oxidizer-production]]`** $\rightarrow$ `rx-solid-oxidizer` (2) | ⏳ 12s in Electrolysis (`kr-electrolysis`)
+*   `kr-sand` (12) + `rx-crushed-carbon` (3) + `kr-hydrogen-chloride` (30) $\rightarrow$ **`[[rx-advanced-quartz-electrolysis]]`** $\rightarrow$ `kr-quartz` (18) + `chlorine` (20) | ⏳ 8s in Electrolysis (`kr-electrolysis`)
 *   `kr-enriched-iron` (6) + `steel-plate` (1) + `kr-hydrogen-chloride` (40) $\rightarrow$ **`[[rx-enriched-steel-mix-synthesis]]`** $\rightarrow$ `rx-enriched-steel-mix` (6) + `kr-dirty-water` (20) + `chlorine` (10) | ⏳ 12s in Electrolysis (`kr-electrolysis`)
 
 #### 4. The Tier 3 Purified Smelting Tracks
-*   `rx-enriched-steel-mix` (6) + `rx-pulverized-carbon` (3) + `rx-solid-oxidizer` (3) $\rightarrow$ **`[[rx-purified-steel-melting]]`** $\rightarrow$ `steel-plate` (9) | ⏳ 195.3s
-*   `kr-quartz` (6) + `rx-pulverized-carbon` (3) + `kr-glass` (1) $\rightarrow$ **`[[rx-purified-glass-melting]]`** $\rightarrow$ `kr-glass` (9) | ⏳ 119.7s
-*   `kr-quartz` (6) + `rx-pulverized-carbon` (3) + `rx-solid-oxidizer` (3) $\rightarrow$ **`[[rx-purified-silicon-melting]]`** $\rightarrow$ `kr-silicon` (9) | ⏳ 113.4s
+*   `rx-enriched-steel-mix` (6) + `rx-crushed-carbon` (3) + `rx-solid-oxidizer` (3) $\rightarrow$ **`[[rx-purified-steel-melting]]`** $\rightarrow$ `steel-plate` (9) | ⏳ 195.3s
+*   `kr-quartz` (6) + `rx-crushed-carbon` (3) + `kr-glass` (1) $\rightarrow$ **`[[rx-purified-glass-melting]]`** $\rightarrow$ `kr-glass` (9) | ⏳ 119.7s
+*   `kr-quartz` (6) + `rx-crushed-carbon` (3) + `rx-solid-oxidizer` (3) $\rightarrow$ **`[[rx-purified-silicon-melting]]`** $\rightarrow$ `kr-silicon` (9) | ⏳ 113.4s
 
 #### 5. Multi-Industry Integration Tracks
-*   `steel-plate` (2) + `rx-wood-pulp` (4) + `rx-pulverized-carbon` (2) + `kr-biomass` (3) $\rightarrow$ **`[[kr-pollution-filter]]`** (1) | ⏳ 4s
-*   `kr-used-pollution-filter` (1) + `rx-wood-pulp` (3) + `rx-pulverized-carbon` (1) + `water` (30) $\rightarrow$ **`[[kr-recharged-pollution-filter]]`** $\rightarrow$ `kr-pollution-filter` (1) + `kr-dirty-water` (20) | ⏳ 6s inside `kr-biomedical`
+*   `steel-plate` (2) + `rx-wood-pulp` (4) + `rx-crushed-carbon` (2) + `kr-biomass` (3) $\rightarrow$ **`[[kr-pollution-filter]]`** (1) | ⏳ 4s
+*   `kr-used-pollution-filter` (1) + `rx-wood-pulp` (3) + `rx-crushed-carbon` (1) + `water` (30) $\rightarrow$ **`[[kr-recharged-pollution-filter]]`** $\rightarrow$ `kr-pollution-filter` (1) + `kr-dirty-water` (20) | ⏳ 6s inside `kr-biomedical`
 *   `rx-wood-pulp` (24) + `kr-nitric-acid` (30) $\rightarrow$ **`[[rx-nitro-cellulose-synthesis]]`** $\rightarrow$ `rx-nitro-cellulose` (12) | ⏳ 8s (Guncotton Propulsion Matrix)
 
 ---

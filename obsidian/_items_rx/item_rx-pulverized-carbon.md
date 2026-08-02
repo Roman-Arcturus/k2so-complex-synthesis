@@ -1,4 +1,4 @@
-# 🧪 [[item_rx-pulverized-carbon]]
+# 🧪 [[item_rx-crushed-carbon]]
 
 > **Thematic Description**: Created by mechanically milling high-purity solid carbon down into an ultra-fine microscopic dust. In advanced chemistry and blast furnace metallurgy, pulverized carbon provides a massive surface area that drastically accelerates chemical reduction reactions. It is critical for the uniform distribution of carbon atoms during steel smelting, synthetic rubber processing, and electronic grid molding.
 
@@ -6,7 +6,7 @@
 
 ## 📊 Logistical Properties
 
-- **Internal Item Name**: `rx-pulverized-carbon`
+- **Internal Item Name**: `rx-crushed-carbon`
 - **Subgroup & Order**: `intermediate-product` / `a[carbon]-a[pulverized]`
 - **Inventory Stack Size**: `200`
 - **Rocket Shipping Capacity**: `2000 units` (Payload Weight: `0.5 * kg`)
@@ -23,7 +23,7 @@
 	- 📥 **Required Inputs**:
 		- 📦 `coal` (12)
 	- 📤 **Yield Outputs**:
-		- 💎 `[[rx-pulverized-carbon]]` (18)
+		- 💎 `[[rx-crushed-carbon]]` (18)
 
 ---
 
@@ -40,7 +40,7 @@ if not crushing_lib and not crushing_lib.make_recipe then return end
 data:extend({
   {
     type = "item",
-    name = "rx-pulverized-carbon",
+    name = "rx-crushed-carbon",
     icon = k2_assets .. "/icons/recipes/coal-filtration.png",
     subgroup = "intermediate-product",
     order = "a[carbon]-a[pulverized]",
@@ -57,7 +57,7 @@ crushing_lib.make_recipe(
     order = "a[carbon]-a[pulverized]",
     energy_required = 2,
     results = {
-	  { type = "item", name = "rx-pulverized-carbon", amount = 2 },
+	  { type = "item", name = "rx-crushed-carbon", amount = 2 },
     },
   }
 )
@@ -71,7 +71,7 @@ if raw_recipe then
         { type = "item", name = "coal", amount = 12 }
     }
     raw_recipe.results = {
-        { type = "item", name = "rx-pulverized-carbon", amount = 18 }
+        { type = "item", name = "rx-crushed-carbon", amount = 18 }
     }
     raw_recipe.allow_productivity = true
     raw_recipe.enabled = true
@@ -82,7 +82,7 @@ end
 ### 3. English Interface Localization (`locale/en/config.cfg`)
 ```ini
 [item-name]
-rx-pulverized-carbon=Pulverized Carbon
+rx-crushed-carbon=Pulverized Carbon
 
 [recipe-name]
 kr-crush-coal=Industrial Coal Pulverization Milling

@@ -24,6 +24,7 @@ data:extend({
   }
 })
 
+--[[
 data:extend({
   {
     type = "item",
@@ -36,6 +37,7 @@ data:extend({
     default_request_amount = 50,    
   }
 })
+
 
 data:extend({
   {
@@ -50,7 +52,7 @@ data:extend({
     default_request_amount = 50,    
   }
 })
-
+]]
 
 -- ============================= Stage 2/2: =============================
 -- ======================== Define new recipes: =========================
@@ -77,6 +79,7 @@ data:extend({
   }
 })
 
+--[[
 data:extend({
   {
     type = "recipe",
@@ -87,7 +90,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "kr-oxygen", amount = 360 }, -- raw oxygen
       { type = "fluid", name = "kr-nitric-acid", amount = 36 }, -- chemical oxidizer
-      { type = "item", name = "rx-pulverized-carbon", amount = 6 }, -- binding
+      { type = "item", name = "rx-crushed-carbon", amount = 6 }, -- binding
     },
     results = {
       { type = "item", name = "rx-solid-oxidizer", amount = 18 },
@@ -127,6 +130,7 @@ data:extend({
     },        
   }
 })
+]]
 
 data:extend({
   {
@@ -137,7 +141,7 @@ data:extend({
     energy_required = 12,
     ingredients = {
       { type = "item", name = "kr-sand", amount = 12 },
-      { type = "item", name = "rx-pulverized-carbon", amount = 3 },
+      { type = "item", name = "rx-crushed-carbon", amount = 3 },
       { type = "fluid", name = "kr-hydrogen-chloride", amount = 30 },
     },
     results = {

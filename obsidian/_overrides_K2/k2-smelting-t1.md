@@ -93,7 +93,7 @@ Smelting of Vanilla and K2 ingredients. RX overrides does preserve the proportio
 > ⏳**16s**, time_factor: $16s / (6+6+6) \approx 0.9$
 > 📚200/1000
 > 
-> RX: 12 [[item_rx-pulverized-carbon]] + 6 [[item_rx-wood-chips]] + 3 [[item_kr-sand]] → 9 [[item_kr-coke]] 
+> RX: 12 [[item_rx-crushed-carbon]] + 6 [[item_rx-wood-chips]] + 3 [[item_kr-sand]] → 9 [[item_kr-coke]] 
 > ⏳$16.0s \approx 0.9 * (12 + 6 + 3 + 9)$
 > 📚200/1000
 > 

@@ -101,7 +101,7 @@ Here are three tightly integrated, realistic chemical processing ideas that cons
 * **The Interconnection Matrix**:
 	- 📥 **Required Inputs**: 
 		- 📦 `[[rx-wood-pulp]]` (The porous cellulose fiber bed)
-		- 📦 `[[rx-pulverized-carbon]]` (Activated carbon coating to capture sulfur gas)
+		- 📦 `[[rx-crushed-carbon]]` (Activated carbon coating to capture sulfur gas)
 		- 🧪 `[[kr-dirty-water]]` (Washing fluid)
 	- 📤 **Yield Outputs**: 
 		- 💎 `[[kr-pollution-filter]]` (High-yield extraction)
@@ -153,7 +153,7 @@ Let me know your choice, and we can map out the proportional equations!
 K2 filter recipe is:
 	5x biomass, 2x steel-late, 2x plastic-bar → 1 kr-pollution-filter
 plastic-bar doesn't make sense here, so instead we will use:
-	-  [[fluid_rx-wood-pulp]] + [[item_rx-pulverized-carbon]] + [[item_kr-biomass]] as consumable part of the filter.
+	-  [[fluid_rx-wood-pulp]] + [[item_rx-crushed-carbon]] + [[item_kr-biomass]] as consumable part of the filter.
 	- steel-plate for structure
 
 after filter is used it is transformed into kr-used-pollution-filter.

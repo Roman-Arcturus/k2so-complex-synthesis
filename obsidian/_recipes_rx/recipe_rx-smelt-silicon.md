@@ -9,7 +9,7 @@ High-yield carbothermic reduction and seed-assisted crystallization of quartz us
 
 #### 📥 Inputs:
 * 📦 18 [[item_kr-quartz]]
-* 📦 6 [[item_rx-pulverized-carbon]]
+* 📦 6 [[item_rx-crushed-carbon]]
 * 📦 6 [[item_kr-silicon]] *(Seed Crystal Input)*
 * 💧 36 [[fluid_kr-hydrogen-chloride]]
 
