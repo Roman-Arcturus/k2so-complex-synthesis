@@ -55,17 +55,17 @@ Trains bring raw ores/fluids from far away to the Factory's frontier.
 The initial facilities crushes/washes them (also adding compression ratio) and then #transportation-drones distribute the resources throughout the #city-blocks.
 
 #logistic-bots should be used only inside the specialized #malls and #rocket-silo and never carry low-density primordial ingredients. It is not forbidden but it breaks the role-play immersion.
-Adding #robot-attrition mod and making #flying-robots really expensive - is a must.
+Adding #mod_robot-attrition and making #flying-robots really expensive - is a must.
 
 In my personal play-through I always start the game with 50 #construction-robots in my inventory and t2 #personal-roboport to make them work. It is no more cheating than constructing building with bare hands out of stone and iron-plates. Also they are very slow and their power requirements are way higher than my suit can provide through #kr-small-portable-generator so their batteries deplete in seconds.
 
+#Krastorio2 idea of umbrella items like #item_kr-rare-metals and #fluid_kr-dirty-water is far more engaging than having countless intermediary ingredients. We should use extensively what we already have, creating tighter, more complex interdependence of production columns. 
+The mod idea is to deepen the play, not widen.
 
+#fluid_kr-dirty-water may be considered #Tier2 waste. For #Tier3 there will be more complex waste, or maybe two variants: #item_waste-solid for slag/ash/impurities and #fluid_waste-liquid for strong acid/alkaline mixes. 
+#fluid_waste-liquid will have to be washed into some solid and liquid ingredients and #fluid_kr-dirty-water . The similar process will need to be used for #item_waste-solid .
 
-
-
-
-
-
+Each stage of production should act as a compression mechanism. However this doesn't mean that abstract numbers should be lower on each stage. This moment will need to be well-though to re-balance #Nauvis production.
 
 
 
