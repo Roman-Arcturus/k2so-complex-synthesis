@@ -6,19 +6,19 @@ Restricting RX-specific additions on Nauvis to just two umbrella fluids (**`flui
 [Raw Resources / Chemistry]
 │
 ├─► Forestry Branch 
-│	─► item_wood ─► fluid_rx-wood-pulp ─► item_kr-biomass / guncotton
+│	─► wood ─► rx-wood-pulp ─► rx-bakelite / rx-guncotton
 │
 ├─► Aqueous Chemistry 
-│	─► fluid_kr-mineral-water ─► Glass Flux / Pulp Digestion / Leaching
+│	─► kr-mineral-water ─► Glass Flux / Pulp Digestion / Leaching
 │
 ├─► Atmospheric Gas Loop 
-│	─► fluid_kr-nitrogen / oxygen ─► Acid Nitration / T3 Smelting
+│	─► kr-nitrogen / oxygen ─► Acid Nitration / T3 Smelting
 │
 ├─► Tier 3 Processing 
-│	─► [6 Raw + Fluids] ─► 12 Output + fluid_rx-liquid-waste
+│	─► [6 Input + Fluids] ─► 12 Output + rx-liquid-waste
 │
 └─► Tier 3 Waste
-	─► fluid_rx-liquid-waste ─► fluid_kr-dirty-water ──► Stone/Sand
+	─► rx-liquid-waste ─► kr-dirty-water ──► Stone/Sand
 ```
 
 ### 1. Organic & Forestry Chain (`fluid_rx-wood-pulp`)
