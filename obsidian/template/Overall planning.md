@@ -14,7 +14,7 @@ With Space Age, I also want to make [[planet_Nauvis]] a planet that has it's uni
 	→  [[kr-lithium-chloride]]
 		→  [[kr-lithium]]
 
-[[planet_Nauvis]] has [[kr-greenhouse]] tech, so we need to make it an important and irreplaceable resource until [[planet_Gleba]] is secured.
+[[planet_Nauvis]] has [[rc_rx_kr-greenhouse]] tech, so we need to make it an important and irreplaceable resource until [[planet_Gleba]] is secured.
 
 ## Wood production overhaul
 

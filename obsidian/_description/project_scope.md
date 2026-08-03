@@ -7,6 +7,7 @@ To build a clean, transparent, and interconnected **Obsidian Vault** directly bu
 ### 🧱 Key Structural & Design Standards
 
 - **Standardized Obsidian Linking Protocol**:
+	- `[[tech_...]]` technology
     - `[[facility_...]]` for crafting machines.
     - `[[recipe_...]]` for production recipes.
     - `[[item_...]]` for solid items.

@@ -6,7 +6,7 @@ Nitrating organic wood pulp with nitric acid creates nitrocellulose, an explosiv
 →💧64 [[fluid_rx-wood-pulp]]
 →💧96 [[fluid_kr-nitric-acid]]
 #### outputs:
-← 💎16 [[item_rx-nitro-cellulose]]
+← 💎16 [[item_rx-guncotton]]
 
 ### 🧩 Used in new recipes:
 * ➡️ [[recipe_military-science-pack]]

@@ -55,7 +55,7 @@ Below are the baseline reference recipes used to establish branch-specific time 
 
 - **Inputs:**
     - 📦 12 `[[item_kr-quartz]]`
-    - 📦 4 `[[item_rx-crushed-carbon]]`
+    - 📦 4 `[[item_rx-crushed-coal]]`
     - 📦 3 `[[item_kr-glass]]` _(Seed Crystal)_
     - 💧 32 `[[fluid_kr-hydrogen-chloride]]`
     

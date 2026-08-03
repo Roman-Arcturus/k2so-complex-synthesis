@@ -57,13 +57,11 @@ data:extend({
 -- ============================= Stage 2/2: =============================
 -- ======================== Define new recipes: =========================
 
-
 data:extend({
   {
     type = "recipe",
     name = "rx-synthesize-bakelite",
     categories = { "kr-electrolysis" }, 
-    enabled = true,                    -- Enabled for immediate runtime testing
     energy_required = 12,                
     ingredients = {
       { type = "item", name = "plastic-bar", amount = 4 },
@@ -74,10 +72,40 @@ data:extend({
       { type = "item", name = "rx-bakelite", amount = 4 },
     },
     main_product = "rx-bakelite",
-    allow_productivity = true,          -- Critical for compounding yield benefits
+    enabled = true, -- Enabled for immediate runtime testing    
+    allow_productivity = true, -- Critical for compounding yield benefits
     allow_decomposition = false,
+    crafting_machine_tint = {
+      primary = { r = 0.92, g = 0.16, b = 0.08, a = 0.50 },
+    },    
   }
 })
+
+data:extend({
+  {
+    type = "recipe",
+    name = "rx-purify-quartz-halogen",
+    categories = { "kr-electrolysis" }, 
+    energy_required = 12,
+    ingredients = {
+      { type = "item", name = "kr-sand", amount = 12 },
+      { type = "item", name = "rx-crushed-coal", amount = 3 },
+      { type = "fluid", name = "kr-hydrogen-chloride", amount = 30 },
+    },
+    results = {
+      { type = "item", name = "kr-quartz", amount = 18 },
+      { type = "fluid", name = "kr-chlorine", amount = 20 },
+    },
+    main_product = "kr-quartz",
+    enabled = true,    
+    allow_productivity = true,         -- Vital for compounding resource conservation loops
+    allow_decomposition = false,
+    crafting_machine_tint = {
+      primary = { r = 0.08, g = 0.16, b = 0.92, a = 0.50 },
+    },          
+  }
+})
+
 
 --[[
 data:extend({
@@ -90,7 +118,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "kr-oxygen", amount = 360 }, -- raw oxygen
       { type = "fluid", name = "kr-nitric-acid", amount = 36 }, -- chemical oxidizer
-      { type = "item", name = "rx-crushed-carbon", amount = 6 }, -- binding
+      { type = "item", name = "rx-crushed-coal", amount = 6 }, -- binding
     },
     results = {
       { type = "item", name = "rx-solid-oxidizer", amount = 18 },
@@ -132,26 +160,5 @@ data:extend({
 })
 ]]
 
-data:extend({
-  {
-    type = "recipe",
-    name = "rx-purify-quartz-halogen",
-    categories = { "kr-electrolysis" }, 
-    enabled = true,                     
-    energy_required = 12,
-    ingredients = {
-      { type = "item", name = "kr-sand", amount = 12 },
-      { type = "item", name = "rx-crushed-carbon", amount = 3 },
-      { type = "fluid", name = "kr-hydrogen-chloride", amount = 30 },
-    },
-    results = {
-      { type = "item", name = "kr-quartz", amount = 18 },
-      { type = "fluid", name = "kr-chlorine", amount = 20 },
-    },
-    main_product = "kr-quartz",
-    allow_productivity = true,         -- Vital for compounding resource conservation loops
-    allow_decomposition = false,
-  }
-})
 
 -- ============================ End of file =============================

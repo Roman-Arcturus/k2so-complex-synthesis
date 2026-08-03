@@ -31,9 +31,7 @@ data:extend({
     type = "recipe",
     name = "rx-synthesize-nitro-cellulose",
     categories = { "chemistry" },
-    enabled = true,            -- for testing
     energy_required = 8,     
-    -- subgroup = "ammo",           
     ingredients = {
       { type = "fluid", name = "rx-wood-pulp", amount = 64 },
       { type = "fluid", name = "kr-nitric-acid", amount = 96 },
@@ -41,12 +39,14 @@ data:extend({
     results = {
       { type = "item", name = "rx-nitro-cellulose", amount = 16 },
     },
-    --main_product = "rx-nitro-cellulose",
-    allow_productivity = true,          
-    --allow_decomposition = false,
+    main_product = "rx-nitro-cellulose",
+    enabled = true,            -- for testing    
+    allow_productivity = true, 
+    allow_decomposition = false,         
     crafting_machine_tint = {
       primary = { r = 0.11, g = 0.77, b = 0.77, a = 0.77 },
     },       
+    --allow_decomposition = false,    
   }
 })
 

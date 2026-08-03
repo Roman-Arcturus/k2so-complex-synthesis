@@ -86,7 +86,7 @@ update_recipe({
     allow_productivity = true,  
     ingredients = {
         { type = "item", name = "rx-wood-chips", amount = 12 }, 
-        { type = "item", name = "rx-crushed-carbon", amount = 6 }, 
+        { type = "item", name = "rx-crushed-coal", amount = 6 }, 
         { type = "item", name = "kr-sand", amount = 3 }, 
     },
     energy = 27, 

@@ -1,0 +1,1 @@
+RX recipes produced in [[facility_kr-greenhouse]]

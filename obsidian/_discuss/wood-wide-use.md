@@ -3,9 +3,9 @@
 Lets get back to wood processing. so:
 [[item_wood]] → **[[facility_kr-crusher]]** → [[item_rx-wood-chips]]
 
-[[item_rx-wood-chips]] → **[[kr-filtration-plant]]** → [[fluid_rx-wood-pulp]]
+[[item_rx-wood-chips]] → **[[rc_rx_kr-filtration-plant]]** → [[fluid_rx-wood-pulp]]
 
-[[fluid_rx-wood-pulp]] → **[[chemical-plant]]** → [[item_rx-bakelite]]
+[[fluid_rx-wood-pulp]] → **[[rc_rx_chemical-plant]]** → [[item_rx-bakelite]]
 
 This process makes sense in real-life, but for the game it creates two items that has only one purpose. [[item_rx-wood-chips]] can only be washed in [[fluid_rx-wood-pulp]], and [[fluid_rx-wood-pulp]] can only be used to create [[item_rx-bakelite]]. This is bad design, we need to give them other purpose as well.
 Any ideas?
@@ -101,7 +101,7 @@ Here are three tightly integrated, realistic chemical processing ideas that cons
 * **The Interconnection Matrix**:
 	- 📥 **Required Inputs**: 
 		- 📦 `[[rx-wood-pulp]]` (The porous cellulose fiber bed)
-		- 📦 `[[rx-crushed-carbon]]` (Activated carbon coating to capture sulfur gas)
+		- 📦 `[[rx-crushed-coal]]` (Activated carbon coating to capture sulfur gas)
 		- 🧪 `[[kr-dirty-water]]` (Washing fluid)
 	- 📤 **Yield Outputs**: 
 		- 💎 `[[kr-pollution-filter]]` (High-yield extraction)
@@ -153,7 +153,7 @@ Let me know your choice, and we can map out the proportional equations!
 K2 filter recipe is:
 	5x biomass, 2x steel-late, 2x plastic-bar → 1 kr-pollution-filter
 plastic-bar doesn't make sense here, so instead we will use:
-	-  [[fluid_rx-wood-pulp]] + [[item_rx-crushed-carbon]] + [[item_kr-biomass]] as consumable part of the filter.
+	-  [[fluid_rx-wood-pulp]] + [[item_rx-crushed-coal]] + [[item_kr-biomass]] as consumable part of the filter.
 	- steel-plate for structure
 
 after filter is used it is transformed into kr-used-pollution-filter.

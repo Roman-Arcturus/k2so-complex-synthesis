@@ -23,7 +23,7 @@
 	- 📥 **Required Inputs**:
 		- 🧪 `kr-oxygen-gas` (200)
 		- 🧪 `kr-nitric-acid` (40)
-		- 📦 `[[rx-crushed-carbon]]` (4)
+		- 📦 `[[rx-crushed-coal]]` (4)
 	- 📤 **Yield Outputs**:
 		- 💎 `[[rx-solid-oxidizer]]` (2)
 
@@ -59,7 +59,7 @@ data:extend({
     ingredients = {
       { type = "fluid", name = "kr-oxygen", amount = 360 }, -- raw oxygen
       { type = "fluid", name = "kr-nitric-acid", amount = 36 }, -- chemical oxidizer
-      { type = "item", name = "rx-crushed-carbon", amount = 6 }, -- binding
+      { type = "item", name = "rx-crushed-coal", amount = 6 }, -- binding
     },
     results = {
       { type = "item", name = "rx-solid-oxidizer", amount = 18 },

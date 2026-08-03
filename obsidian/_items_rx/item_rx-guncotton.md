@@ -1,5 +1,5 @@
 
-# 🧪 [[item_rx-nitro-cellulose]]
+# 🧪 [[item_rx-guncotton]]
 
 > **Thematic Description**: An ultra-volatile organic compound synthesized by nitrating processed plant cellulose slurry with highly concentrated industrial acids. Natively known as guncotton, nitro-cellulose burns entirely residue-free with extreme thermodynamic expansion velocity. It serves as the primary energetic chemical propulsive matrix required to transition away from crude sulfur gunpowder into heavy, high-velocity military munitions and advanced explosive artillery payloads.
 
