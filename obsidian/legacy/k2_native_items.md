@@ -5,13 +5,11 @@ Recipe name is the same as the resulting item name.
 
 ---
 
-K2 [[recipe_kr-tree-seed]] :⏳2s, 📚200/100
+K2: [[recipe_kr-tree-seed]] :⏳2s, 📚200/100
 → 2 [[item_wood]] 
 ← 1 [[item_tree-seed]] 
 
----
-
-RX [[recipe_kr-tree-seed]] :⏳12s, 📚200/2000
+RX: [[recipe_kr-tree-seed]] :⏳12s, 📚200/2000
 → 24 [[item_rx-wood-chips]] 
 ← 1 [[item_tree-seed]] 
 

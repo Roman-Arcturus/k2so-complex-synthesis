@@ -1,17 +1,17 @@
-*file: aai-items.lua*
+*file: rc_aai_assembling-machine.lua*
 
-Vanilla and AAI-Industry items recipes. These are the first items that everything else is based on.
-These recipes use no K2 items so I decided to keep them in a separate *.md* file.
+Recipes produced in #facility_assembling-machine using Vanilla/AAI-Industry items. 
+Their original recipes for reference and RX overwrites.
 
-**`recipe-name`** is equal to the name of the output item.
+📚: Items in Stack / Rocket_capacity. K2 stacks are usually set to 200.
+The baseline for #rocket-capacity is 1000 #iron-plate per rocket.
+Composite Items weight more or have more volume, so less #rocket-capacity.
 
-(Internal Obsidian links are replaced with tags. There will be no another Factoriopedia.)
 
 ---
 
 ### Recipe list with possible RX overrides
 
-```lua
 
 AAI: 1 #item_stone-brick → 4 #item_stone-tablet :⏳0.5s
 RX: 1 #item_stone-brick + 2 #item_iron-stick → 3 #item_stone-tablet
@@ -64,14 +64,14 @@ RX: 1 #item_iron-plate + 2 #item_iron-gear-wheel + 8 #item_copper-cable + 1 item
 
 -- --- --- ---
 
-(At this moment player has developed chemistry)
+(At this moment player has #tech_advanced-oil-processing)
 AAI: 2 #item_steel-plate + 4 #item_electronic-circuit + 2 #item_electric-motor + 40 #fluid_lubricant → 1 #item_electric-engine-unit :⏳10s (tf: 10s/13 = 0.8)
 
 RX recipe will be written in K2 recipes override section. Here is only the possible recipe with its logic.
 1 #item_steel-plate -- casing
 + 4 #item_electric-motor -- stacking 4 small electric motors on one shaft
 + 2 #item_kr-steel-gear-wheel -- gearbox
-+ 1 #item_electronic-circuit -- control-box
++ 1 #item_advanced-circuit -- control-box
 + 32 #fluid_lubricant -- I don't know why electric motor needs so much lubricant
 → 1 #item_electric-engine-unit :⏳9.8s (0.8 * 12.2)
 
@@ -84,5 +84,4 @@ AAI: 1 #item_stone-tablet + 3 item_copper-cable
 
 RX: This recipe with stone-tablet, allows to jump-start #item_electronic-circuit production before having wood. K2 recipe uses wood and copper-cable.
 We will make a proper recipe in K2 section later on.
-
 
