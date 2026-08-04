@@ -47,7 +47,7 @@ data:extend({
 crushing_lib.make_recipe(
   data.raw.item["wood"], {
     subgroup = "intermediate-product",
-    order = "a[biomaterial]-b[wood-chips]",
+    order = "a[wood]-b[wood-chips]",
     energy_required = 2,
     results = {
         { type = "item", name = "rx-wood-chips", amount = 2 },
@@ -58,7 +58,7 @@ crushing_lib.make_recipe(
 crushing_lib.make_recipe(
   data.raw.item["coal"], {
     subgroup = "intermediate-product",
-    order = "a[carbon]-a[pulverized]",
+    order = "a[coal]-a[crushed]",
     energy_required = 2,
     results = {
         { type = "item", name = "rx-crushed-coal", amount = 2 },
@@ -84,10 +84,11 @@ end
 local raw_recipe = data.raw["recipe"]["kr-crush-coal"]
 if raw_recipe then
     raw_recipe.ingredients = {
-        { type = "item", name = "coal", amount = 12 }
+        { type = "item", name = "coal", amount = 6 }
     }
     raw_recipe.results = {
-        { type = "item", name = "rx-crushed-coal", amount = 18 }
+        { type = "item", name = "rx-crushed-coal", amount = 18 },
+        { type = "item", name = "kr-sand", amount = 2 },
     }
     raw_recipe.allow_productivity = true
     raw_recipe.enabled = true

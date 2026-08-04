@@ -8,7 +8,7 @@
 - **Structural Shielding**: Used as a rigid stabilizer binding compound inside advanced [[item_rx-enriched-steel-mix]] and advanced chemical refineries.
 
 #### 🧪Result:
-* [[item_rx-bakelite]]
+* [[legacy/_items_rx/item_rx-bakelite]]
 
 #### 🧩 Used in new recipes:
 * ➡️ 

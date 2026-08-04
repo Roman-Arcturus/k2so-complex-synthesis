@@ -1,81 +1,35 @@
-# 🧪 [[item_rx-bakelite]]
+**Bakelite** is umbrella item for early plastics. Insulation/construction material, binding flux for high tier smelting. Completely independent of oil production.
 
-> **Thematic Description**: Synthesized by combining biological cellulose plant fibers with high-purity petroleum polymers under an acid catalyst. Historically known as Bakelite, this compound represents the birth of modern synthetic material science. Entirely heat-resistant, physically rigid, and an absolute non-conductor, it serves as the ultimate high-performance substrate for advanced electronics, insulated casings, and structural framework.
+#Tier1 of insulation will be #item_kr-glass , then we will switch to #item_rx-bakelite .
 
----
+### tech tree
 
-## 📊 Logistical Properties
+> **the very first techs unlock #facility_kr-crusher**
 
-- **Internal Item Name**: `rx-bakelite`
-- **Subgroup & Order**: `intermediate-product` / `a[biomaterial]-d[bakelite]`
-- **Inventory Stack Size**: `200`
-- **Rocket Shipping Capacity**: `2000 units` (Payload Weight: `0.5` per unit)
-- **Productivity Allowed**: ✅ Yes (Compounding Loop Stage)
+#recipe_rx-crush-wood in #facility_kr-crusher :⏳2s 
+→ 6 #item_wood 
+← 24 #item_rx-wood-chips 
 
----
+#recipe_rx-crush-coal in #facility_kr-crusher :⏳2s 
+→ 6 #item_coal 
+← 18 #item_rx-crushed-coal + 6 #item_kr-sand
 
-## 🗺️ Production Process Flow
+> making steel unlocks #facility_chemical-plant and #facility_kr-electrolysis-plant and unlocks #recipe_kr-water-electrolysis ,  which allows splitting #item_kr-sand + #fluid_water into #fluid_kr-nitrogen+ #fluid_kr-chlorine.
 
-- **Machine Category**: `chemistry` (Chemical Plant)
-- **Manufacturing Duration**: `8 seconds`
-- **Logistical Impact**: High volume compression. It aggregates a massive quantity of loose biological fibers and highly volatile liquids into a solid, rigid, high-density matrix item. This drastically reduces transport frequency and clears drone/train routing networks.
-- **Recipe Ratios**:
-	- 📥 **Required Inputs**:
-		- 📦 `[[rx-wood-pulp]]` (24)
-		- 📦 `plastic-bar` (4)
-		- 🧪 `sulfuric-acid` (20)
-	- 📤 **Yield Outputs**:
-		- 💎 `[[rx-bakelite]]` (12)
+#recipe_rx-filter-wood-pulp in #facility_chemical-plant :⏳?s 
+→ ? #item_rx-wood-chips +  ? #fluid_kr-chlorine + ?
+← ? #fluid_rx-wood-pulp + ? #item_kr-biomass
 
----
+#recipe_rx-synthesize-bakelite in #facility_kr-electrolysis-plant :⏳?s 
+→ ? #fluid_rx-wood-pulp + ? #item_rx-crushed-coal + ? #fluid_steam 
+← ? #item_rx-bakelite 
 
-## ⚙️ Lua Prototype Manifest
+> from this moment forward #item_rx-bakelite should be used extensively
 
-### 1. Item Declaration (`/prototypes/rx-chemistry.lua`)
-```lua
-data:extend({
-  {
-    type = "item",
-    name = "rx-bakelite", 
-    icon = k2_assets .. "/icons/items/black-reinforced-plate-kl.png", 
-    subgroup = "intermediate-product",
-    order = "a[biomaterial]-d[bakelite]",
-    stack_size = 200,
-    default_request_amount = 50,
-    weight = 0.5, 
-  }
-})
-```
+> by researching #tech_advanced-chemistry Player unlocks more productive recipe for #item_rx-bakelite .
 
-### 2. Recipe Declaration (`/prototypes/rx-chemistry.lua`)
-```lua
-data:extend({
-  {
-    type = "recipe",
-    name = "[[rx-bakelite-synthesis]]",
-    categories = { "chemistry" },      -- Standard chemical plant category
-    enabled = true,                    -- Enabled for immediate runtime testing
-    energy_required = 8,                
-    ingredients = {
-      { type = "item", name = "rx-wood-pulp", amount = 24 },
-      { type = "item", name = "plastic-bar", amount = 4 },
-      { type = "fluid", name = "sulfuric-acid", amount = 20 },
-    },
-    results = {
-      { type = "item", name = "rx-bakelite", amount = 12 },
-    },
-    main_product = "rx-bakelite",
-    allow_productivity = true,          -- Critical for compounding yield benefits
-    allow_decomposition = false,
-  }
-})
-```
+#recipe_rx-synthesize-bakelite in #facility_kr-electrolysis-plant :⏳?s 
+→ ? #fluid_rx-wood-pulp + ? #item_rx-crushed-coal + ? #fluid_kr-biomethanol 
+← ? #item_rx-bakelite + #fluid_kr-dirty-water 
 
-### 3. English Interface Localization (`locale/en/config.cfg`)
-```ini
-[item-name]
-rx-bakelite=Bakelite Insulation Substrate
 
-[recipe-name]
-rx-bakelite-synthesis=Synthetic Bakelite Chemical Formulation
-```

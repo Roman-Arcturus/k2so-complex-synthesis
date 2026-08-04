@@ -68,7 +68,7 @@ By narrowing Tier 3 down to **Steel, Glass, and Silicon**, we align the recipes 
 
 3. **Productivity Module 1 Consumables**: Since Yellow Science forces the automation of Tier 1 [[productivity-module]], the player already has a steady supply. Encouraging them through multi-stage loops allows these modules to compound exponentially, making the **3x technology cost** run satisfying. 
 
-4. By this stage in the game, [[item_rx-bakelite]] must be used extensively, because [[item_wood]] is not a part of [[kr-coke]] or new [[electronic-circuit]] production anymore. So large wood production, crushing & washing is now necessary for [[item_rx-bakelite]] and should be used for something else.
+4. By this stage in the game, [[legacy/_items_rx/item_rx-bakelite]] must be used extensively, because [[item_wood]] is not a part of [[kr-coke]] or new [[electronic-circuit]] production anymore. So large wood production, crushing & washing is now necessary for [[legacy/_items_rx/item_rx-bakelite]] and should be used for something else.
 
 5. We will need to make use of every new ingredient, there should be no "one use ingredient" in the game, like [[stone-tablet]] from AAI, or [[item_kr-quartz]] that is used only for [[kr-silicon]] and some minor use in heat-pipes and lasers in K2.
 

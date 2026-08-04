@@ -1,4 +1,4 @@
-The purpose of this mod is to **deepen** the #Krastorio2 game-play on #Nauvis.
+The purpose of this mod is to **deepen** the #Krastorio2 game-play on #planet_Nauvis.
 It's focus on the immersive role-play of an engineer lost on a distant solar-system.  
 
 There will a handful of new items but no new ores / resources.
@@ -23,9 +23,9 @@ The idea if ore-enrichment will be applied to more ingredients.
 >This productivity will be considered #Tier2 : 
    **9 main raw input + catalyst/flux/fluids >> 6 enriched output + byproduct.**
 
-#Tier3 will address this stage of the game and will play it's role until #Vulcanus production will generate infinite base metals, so production of metals on #Nauvis will loose it's importance.
+#Tier3 will address this stage of the game and will play it's role until #planet_Vulcanus production will generate infinite base metals, so production of metals on #planet_Nauvis will loose it's importance.
 
-#Tier3 recipes will have highest complexity and productivity. As play-through on #Nauvis approaches #SpaceAge, the 3x cost of technology and infrastructure will bottleneck production. Building more factory, more resource outposts, more logistics is a never-ending cycle of Warcraft's "We need more gold!". 
+#Tier3 recipes will have highest complexity and productivity. As play-through on #planet_Nauvis approaches #SpaceAge, the 3x cost of technology and infrastructure will bottleneck production. Building more factory, more resource outposts, more logistics is a never-ending cycle of Warcraft's "We need more gold!". 
 It's time-consuming, inefficient and boring.
 
 >This productivity will be considered #Tier3 : 
@@ -36,11 +36,11 @@ It's time-consuming, inefficient and boring.
 
 ---
 
-The #Nauvis specific resources like #item_uranium-ore, #item_kr-imersite, #fluid_kr-mineral-water, #item_kr-rare-metals will keep #Nauvis factory as irreplaceable part of #SpaceAge .
+The #planet_Nauvis specific resources like #item_uranium-ore, #item_kr-imersite, #fluid_kr-mineral-water, #item_kr-rare-metals will keep #planet_Nauvis factory as irreplaceable part of #SpaceAge .
 
-#RX mod adds a bit more complexity and usage of #item_wood as well, so industrial production of #item_wood on #Nauvis will play important role. For example all explosives/gunpowder beyond basic and armour-piercing ammo will require #guncotton, which is made primarily out of #item_wood.
+#RX mod adds a bit more complexity and usage of #item_wood as well, so industrial production of #item_wood on #planet_Nauvis will play important role. For example all explosives/gunpowder beyond basic and armour-piercing ammo will require #item_rx-guncotton, which is made primarily out of #item_wood.
 
-The production facilities recipes will need to be heavily re-balanced. The situation that they costs less than a single cycle worth of their work is ridiculous. Having 50 facilities in one stack, and allowing a stack or two of these machines to be loaded into a rocket, while #rocket-capacity of for example #steel-plate is limited to 400 - breaks the immersion.
+The production facilities recipes will need to be heavily re-balanced. The situation that they costs less than a single cycle worth of their work is ridiculous. Having 50 facilities in one stack, and allowing a stack or two of these machines to be loaded into a rocket, while #rocket-capacity of for example #item_steel-plate is limited to 400 - breaks the immersion.
 
 #AAI-Industry idea of using the previous facility tier as ingredient makes all in-game items useful through-out the game. No things become obsolete and wasted. The same applies to all logistic items. 
 
@@ -65,7 +65,7 @@ The mod idea is to deepen the play, not widen.
 #fluid_kr-dirty-water may be considered #Tier2 waste. For #Tier3 there will be more complex waste, or maybe two variants: #item_waste-solid for slag/ash/impurities and #fluid_waste-liquid for strong acid/alkaline mixes. 
 #fluid_waste-liquid will have to be washed into some solid and liquid ingredients and #fluid_kr-dirty-water . The similar process will need to be used for #item_waste-solid .
 
-Each stage of production should act as a compression mechanism. However this doesn't mean that abstract numbers should be lower on each stage. This moment will need to be well-though to re-balance #Nauvis production.
+Each stage of production should act as a compression mechanism. However this doesn't mean that abstract numbers should be lower on each stage. This moment will need to be well-though to re-balance #planet_Nauvis production.
 
 
 

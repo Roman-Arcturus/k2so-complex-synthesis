@@ -5,9 +5,9 @@ Lets get back to wood processing. so:
 
 [[item_rx-wood-chips]] → **[[rc_rx_kr-filtration-plant]]** → [[fluid_rx-wood-pulp]]
 
-[[fluid_rx-wood-pulp]] → **[[rc_rx_chemical-plant]]** → [[item_rx-bakelite]]
+[[fluid_rx-wood-pulp]] → **[[rc_rx_chemical-plant]]** → [[legacy/_items_rx/item_rx-bakelite]]
 
-This process makes sense in real-life, but for the game it creates two items that has only one purpose. [[item_rx-wood-chips]] can only be washed in [[fluid_rx-wood-pulp]], and [[fluid_rx-wood-pulp]] can only be used to create [[item_rx-bakelite]]. This is bad design, we need to give them other purpose as well.
+This process makes sense in real-life, but for the game it creates two items that has only one purpose. [[item_rx-wood-chips]] can only be washed in [[fluid_rx-wood-pulp]], and [[fluid_rx-wood-pulp]] can only be used to create [[legacy/_items_rx/item_rx-bakelite]]. This is bad design, we need to give them other purpose as well.
 Any ideas?
 
 -------

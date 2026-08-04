@@ -43,7 +43,7 @@
 
 [[recipe_rx-synthesize-bakelite]] : ⏳12s
 	→ 📦4 [[item_plastic-bar]] + 💧48 [[fluid_rx-wood-pulp]] + 💧12 [[fluid_sulfuric-acid]]
-	← 💎4 [[item_rx-bakelite]]
+	← 💎4 [[legacy/_items_rx/item_rx-bakelite]]
 
 [[recipe_rx-synthesize-oxidizer]] : ⏳60s
 	→ 💧360 [[fluid_kr-oxygen]] + 💧36 [[fluid_kr-nitric-acid]] + 📦6 [[item_rx-crushed-coal]]
@@ -52,7 +52,7 @@
 
 
 [[recipe_rx-enrich-steel-mix]] : ⏳12s
-	→ 📦6 [[item_kr-enriched-iron]] + 📦1 [[item_steel-plate]] + 📦2 [[item_rx-bakelite]] 
+	→ 📦6 [[item_kr-enriched-iron]] + 📦1 [[item_steel-plate]] + 📦2 [[legacy/_items_rx/item_rx-bakelite]] 
 	+💧42 [[fluid_kr-hydrogen-chloride]]
 	← 💎6 [[item_rx-enriched-steel-mix]]
 	← 🧪24 [[fluid_kr-dirty-water]]
