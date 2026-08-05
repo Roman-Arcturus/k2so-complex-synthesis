@@ -57,7 +57,7 @@ K2:  ⏳0.5s, 📚100/100
 RX: ⏳2s, 📚100/500
 → 2 #item_transport-belt (previous tier)
 	+ 2 #item_kr-iron-beam (structure)
-	+ 4 #item_kr-bakelite (rollers)
+	+ 4 #item_rx-bakelite (rollers)
 	+ 2 #item_kr-steel-gear-wheel (bearings)
 ← 2 #item_fast-transport-belt
 
@@ -121,7 +121,7 @@ RX: ⏳6s, 📚50/100
 1 #item_kr-steel-beam = 2 #item_steel-plate 
 
 a possible recipe:
-1 #item_kr-rare-metals-gears =  1 #item_kr-steel-gear-wheel + 1 #item_kr-rare-metals 
+1 #item_rx-rare-metals-gears =  1 #item_kr-steel-gear-wheel + 1 #item_kr-rare-metals 
 
 
 ---
