@@ -4,6 +4,7 @@ Yes, the `kr-atmospheric-condenser` can be configured to produce new gases, cons
 
 Under the hood in Factorio, the `kr-atmospheric-condenser` is built on an `assembling-machine` prototype tied to a specific crafting category (typically `atmosphere-condensation`). Because of this, its capabilities can be expanded in your mod:
 
+----
 ### 1. Adding New Extraction Recipes
 
 You can assign any new recipe to its crafting category without changing the machine's model or structure.
