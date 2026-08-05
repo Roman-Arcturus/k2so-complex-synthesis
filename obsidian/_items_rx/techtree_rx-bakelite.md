@@ -32,4 +32,20 @@
 → ? #fluid_rx-wood-pulp + ? #item_rx-crushed-coal + ? #fluid_kr-biomethanol 
 ← ? #item_rx-bakelite + #fluid_kr-dirty-water 
 
+---
+
+When I played in Factorio 2.0 K2 one full #city-block of #item_kr-greenhouse was enough to supply #item_wood up to #SpaceAge . The only constant use for #item_wood was #item_electronic-circuit and #item_kr-coke. I didn't even need to use #item_kr-fertilizer .
+
+In Factorio 1.x K2 I needed two #city-block worth of wood production to supply #item_electronic-circuit , because they were consumed in much higher quantities.
+
+Question, what is the better change for #item_plastic-bar recipe:
+To replace #item_coal with #item_rx-crushed-coal or make a direct progression of plastics by using #item_rx-bakelite?
+
+[[usecase_plastic-bar]]
+
+------
+
+
+
+
 

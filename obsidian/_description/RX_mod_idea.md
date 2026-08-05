@@ -46,13 +46,13 @@ The production facilities recipes will need to be heavily re-balanced. The situa
 
 Instead of leaving obsolete production columns and moving to a new place it makes more sense to deconstruct them and use as ingredients for higher tier machines. Especially when the cost of machinery will increase exponentially.
 
-Player may have any factory style, but using #city-blocks with #transportation-drones for in-base logistics is the logical choice. Dealing with multiple inputs/outputs and recycling of waste quickly wears Players out and keeps complex mods unplayable just because of the insane logistics.
+Player may have any factory style, but using #city-block with #transportation-drones for in-base logistics is the logical choice. Dealing with multiple inputs/outputs and recycling of waste quickly wears Players out and keeps complex mods unplayable just because of the insane logistics.
 
 With #transportation-drones available from the very early game, even monster overhaul mods with hundreds of new intermediaries becomes playable without needing hundreds upon hundreds of hours to play it.
 
 This also creates layered logistics that makes sense.
 Trains bring raw ores/fluids from far away to the Factory's frontier.
-The initial facilities crushes/washes them (also adding compression ratio) and then #transportation-drones distribute the resources throughout the #city-blocks.
+The initial facilities crushes/washes them (also adding compression ratio) and then #transportation-drones distribute the resources throughout the #city-block.
 
 #logistic-bots should be used only inside the specialized #malls and #rocket-silo and never carry low-density primordial ingredients. It is not forbidden but it breaks the role-play immersion.
 Adding #mod_robot-attrition and making #flying-robots really expensive - is a must.
