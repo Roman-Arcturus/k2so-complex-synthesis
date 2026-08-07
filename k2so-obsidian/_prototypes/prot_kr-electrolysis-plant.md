@@ -11,13 +11,13 @@
 ```lua
 name = "rx-wood-pulp",
 ingredients = {
-  { type = "item", name = "rx-crushed-wood", amount = 18 },
+  { type = "item",  name = "rx-crushed-wood", amount = 18 },
   { type = "fluid", name = "water", amount = 72 },
   { type = "fluid", name = "kr-chlorine", amount = 18 }, -- Chlorine-assisted chemical pulping
 },
 results = {
   { type = "fluid", name = "rx-wood-pulp", amount = 72 },
-  { type = "item", name = "kr-biomass", amount = 6 }, -- Solid byproduct
+  { type = "item",  name = "kr-biomass", amount = 6 }, -- Solid byproduct
 },
 main_product = "rx-wood-pulp",
 energy_required = 6,
@@ -25,7 +25,7 @@ energy_required = 6,
 
 ---
 
-```lua
+```lua 
 name = "rx-bakelite",
 categories = { "kr-electrolysis" }, 
 ingredients = {
@@ -34,9 +34,9 @@ ingredients = {
   { type = "item",  name = "rx-crushed-coal", amount = 4 },
 },
 results = {
-  { type = "item", name = "rx-bakelite", amount = 4 },
+  { type = "item",  name = "rx-bakelite", amount = 4 },
 },
 main_product = "rx-bakelite",
-energy_required = 3,
+energy_required = 3, --⏳3s, 📚200/1000
 ```
 

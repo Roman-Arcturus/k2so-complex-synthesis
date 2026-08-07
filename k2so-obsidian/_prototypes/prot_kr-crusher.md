@@ -40,6 +40,14 @@ Recipe names must follow K2 rule: **kr-crush-<item_name>**
 
 ---
 
+### ![[rx-crushed-uranium-ore.png|32]] #recipe_kr-crush-uranium-ore : ⏳2s, 📚200/1600
+ → 6 #item_uranium-ore 
+ ← 12 #item_rx-crushed-uranium-ore + 6 #item_kr-sand
+
+
+---
+
+
 Crushed variants have more purity and lesser weight. The general rule 6 input ➡️18 output.
 6 raw-item ➡️ 12 crushed-variant + 6 sand as byproduct.
 6 wood ➡️ 18 crushed-wood, as crushed-wood will be needed in high quantities for #fluid_rx-wood-pulp 

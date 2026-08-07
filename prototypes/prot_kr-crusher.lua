@@ -77,6 +77,19 @@ data:extend({
   }
 })
 
+data:extend({
+  {
+    type = "item",
+    name = "rx-crushed-uranium-ore",
+    icon = rx_assets .. "/rx-uranium-ore.png",
+    subgroup = "intermediate-product",
+    -- order = "a[wood]-b[wood-chips]",
+    stack_size = 200,
+    weight = 0.5 * kg, 
+    default_request_amount = 50,    
+  }
+})
+
 
 -- ============================= Stage 2/3: ============================= 
 -- ===== Register basic materials as usable input for kr-crusher ========
@@ -125,7 +138,6 @@ crushing_lib.make_recipe(
   }
 )
 
-
 crushing_lib.make_recipe(
   data.raw.item["kr-rare-metal-ore"], {
     subgroup = "intermediate-product",
@@ -133,6 +145,17 @@ crushing_lib.make_recipe(
     energy_required = 2,
     results = {
         { type = "item", name = "rx-crushed-rare-metal-ore", amount = 6 },
+    },
+  }
+)
+
+crushing_lib.make_recipe(
+  data.raw.item["uranium-ore"], {
+    subgroup = "intermediate-product",
+    order = "a[uranium-ore]-a[crushed]",
+    energy_required = 2,
+    results = {
+        { type = "item", name = "rx-crushed-uranium-ore", amount = 6 },
     },
   }
 )
@@ -161,6 +184,7 @@ if raw_recipe then
         { type = "item", name = "rx-crushed-coal", amount = 12 },
         { type = "item", name = "kr-sand", amount = 6 },
     }
+    raw_recipe.main_result = "rx-crushed-coal"
     raw_recipe.allow_productivity = true
     raw_recipe.enabled = true
 end
@@ -174,6 +198,7 @@ if raw_recipe then
         { type = "item", name = "rx-crushed-iron-ore", amount = 12 },
         { type = "item", name = "kr-sand", amount = 6 },
     }
+    raw_recipe.main_result = "rx-crushed-iron-ore"    
     raw_recipe.allow_productivity = true
     raw_recipe.enabled = true
 end
@@ -187,6 +212,7 @@ if raw_recipe then
         { type = "item", name = "rx-crushed-copper-ore", amount = 12 },
         { type = "item", name = "kr-sand", amount = 6 },
     }
+    raw_recipe.main_result = "rx-crushed-copper-ore"
     raw_recipe.allow_productivity = true
     raw_recipe.enabled = true
 end
@@ -201,8 +227,24 @@ if raw_recipe then
         { type = "item", name = "rx-crushed-rare-metal-ore", amount = 12 },
         { type = "item", name = "kr-sand", amount = 6 },
     }
+    raw_recipe.main_result = "rx-crushed-rare-metal-ore"
     raw_recipe.allow_productivity = true
     raw_recipe.enabled = true
 end
+
+local raw_recipe = data.raw["recipe"]["kr-crush-uranium-ore"]
+if raw_recipe then
+    raw_recipe.ingredients = {
+        { type = "item", name = "uranium-ore", amount = 6 }
+    }
+    raw_recipe.results = {
+        { type = "item", name = "rx-crushed-uranium-ore", amount = 12 },
+        { type = "item", name = "kr-sand", amount = 6 },
+    }
+    raw_recipe.main_result = "rx-crushed-uranium-ore"
+    raw_recipe.allow_productivity = true
+    raw_recipe.enabled = true
+end
+
 
 -- ============================ End of file =============================
