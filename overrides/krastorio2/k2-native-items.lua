@@ -14,7 +14,7 @@ update_recipe({
     categories = { "crafting" },
     allow_productivity = false,
     ingredients = {
-        { type = "item", name = "rx-wood-chips", amount = 24 }, -- instead of wood logs
+        { type = "item", name = "rx-crushed-wood", amount = 24 }, -- instead of wood logs
     },
     results = {
         { type = "item", name = "tree-seed", amount = 1 },

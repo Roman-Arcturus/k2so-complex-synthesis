@@ -4,7 +4,7 @@
 if not mods["Krastorio2"] then return end
 
 local k2_assets = "__Krastorio2Assets__" -- K2 graphics, temporary
-local mod_name = "__k2so-complex-synthesis__"
+local mod_name = "__k2so-rx__"
 local rx_assets = mod_name .. "/graphics/icons"
 
 data:extend({

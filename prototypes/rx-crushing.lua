@@ -17,8 +17,8 @@ local rx_assets = mod_name .. "/graphics/icons"
 data:extend({
   {
     type = "item",
-    name = "rx-wood-chips",
-    icon = rx_assets .. "/rx-wood-chips.png",
+    name = "rx-crushed-wood",
+    icon = rx_assets .. "/rx-crushed-wood.png",
     subgroup = "intermediate-product",
     order = "a[biomaterial]-b[wood-chips]",
     stack_size = 200,
@@ -50,7 +50,7 @@ crushing_lib.make_recipe(
     order = "a[wood]-b[wood-chips]",
     energy_required = 2,
     results = {
-        { type = "item", name = "rx-wood-chips", amount = 2 },
+        { type = "item", name = "rx-crushed-wood", amount = 2 },
     },
   }
 )
@@ -75,7 +75,7 @@ if raw_recipe then
         { type = "item", name = "wood", amount = 6 }
     }
     raw_recipe.results = {
-        { type = "item", name = "rx-wood-chips", amount = 24 }
+        { type = "item", name = "rx-crushed-wood", amount = 24 }
     }
     raw_recipe.allow_productivity = true
     raw_recipe.enabled = true
@@ -88,7 +88,7 @@ if raw_recipe then
     }
     raw_recipe.results = {
         { type = "item", name = "rx-crushed-coal", amount = 18 },
-        { type = "item", name = "kr-sand", amount = 2 },
+        { type = "item", name = "kr-sand", amount = 6 },
     }
     raw_recipe.allow_productivity = true
     raw_recipe.enabled = true

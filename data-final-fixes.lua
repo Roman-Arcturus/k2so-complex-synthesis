@@ -1,5 +1,23 @@
 -- File: /data-final-fixes.lua 
 
+-- Helper function to safely place an RX item directly after a K2 reference item
+local function match_k2_sorting(rx_item_name, k2_reference_name, order_suffix)
+    local rx_item = data.raw.item[rx_item_name] or data.raw.fluid[rx_item_name]
+    local k2_item = data.raw.item[k2_reference_name] or data.raw.fluid[k2_reference_name]
+
+    if rx_item and k2_item then
+        -- Inherit the exact subgroup K2 (or a tweak mod) assigned to it
+        rx_item.subgroup = k2_item.subgroup
+        -- Append a unique sub-order key so RX sits cleanly right next to K2
+        rx_item.order = k2_item.order .. (order_suffix or "-a[rx]")
+    end
+end
+
+-- Examples:
+-- match_k2_sorting("rx-rare-metals-gear", "kr-steel-gear-wheel", "-b[rare-metals]")
+-- match_k2_sorting("fluid_rx-liquid-waste", "kr-dirty-water", "-a[liquid-waste]")
+
+
 -- Check if a mod is active via the global `mods` table.
 --[[
 if mods["aai-industry"] then
@@ -25,10 +43,10 @@ end
 ]]
 
 if mods["Krastorio2"] then
-    require("overrides.krastorio2.k2-native-items")   
-    require("overrides.krastorio2.k2-smelting-t1")
-    require("overrides.krastorio2.k2-smelting-t2")
-    require("overrides.krastorio2.k2-filtration")    
+    -- require("overrides.krastorio2.k2-native-items")   
+    -- require("overrides.krastorio2.k2-smelting-t1")
+    -- require("overrides.krastorio2.k2-smelting-t2")
+    -- require("overrides.krastorio2.k2-filtration")    
     
       
     -- require("overrides.krastorio2.k2-intermediaries")
