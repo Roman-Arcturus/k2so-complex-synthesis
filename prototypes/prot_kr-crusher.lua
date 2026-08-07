@@ -81,7 +81,7 @@ data:extend({
   {
     type = "item",
     name = "rx-crushed-uranium-ore",
-    icon = rx_assets .. "/rx-uranium-ore.png",
+    icon = rx_assets .. "/rx-crushed-uranium-ore.png",
     subgroup = "intermediate-product",
     -- order = "a[wood]-b[wood-chips]",
     stack_size = 200,

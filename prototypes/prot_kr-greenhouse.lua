@@ -21,7 +21,7 @@ data:extend({
     name = "rx-grow-tree-seed",
     categories = { "kr-growing" },
     enabled = true,                     -- Active for validation tests
-    energy_required = 32.0,             -- long growing of sappling
+    energy_required = 32.0,             -- long growing of sapplings
     ingredients = {
       { type = "item", name = "rx-crushed-wood", amount = 16 },
       { type = "item", name = "kr-sand", amount = 8 },
@@ -49,7 +49,8 @@ data:extend({
     energy_required = 128.0,
     ingredients = {
       { type = "item", name = "tree-seed", amount = 8 },
-      { type = "item", name = "kr-sand", amount = 32 },
+      { type = "item",  name = "kr-biomass", amount = 1 },
+      { type = "fluid", name = "rx-wood-pulp", amount = 16 },
       { type = "fluid", name = "water", amount = 640 },
     },
     results = {
