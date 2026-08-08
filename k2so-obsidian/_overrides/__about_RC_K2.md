@@ -1,7 +1,6 @@
-This folder contains recipes defined in Vanilla / #mod_AAI-Industry / #mod_Krastorio2. 
-Split by the facility in which they are used.
+This folder contains RX overrides of the recipes defined by Vanilla / #mod_AAI-Industry / #mod_Krastorio2. 
+Split by the facility in which they are produced.
 
-rc_ prefix: **R**ecipes by **C**ategory
 
 
 

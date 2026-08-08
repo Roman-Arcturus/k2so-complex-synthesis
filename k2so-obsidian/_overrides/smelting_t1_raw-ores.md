@@ -1,13 +1,16 @@
-*file: /overrides/krastorio2/k2-smelting-t1.lua*
+*file: /overrides/krastorio2/smelting-tier1.lua*
 # 📜 Thematic description:
 
 Smelting of Vanilla and #mod_Krastorio2  ingredients mostly using raw ores.
-#mod_RX preserve the proportions of volume, productivity and required time. Only add flux to avoid over-complicating the initial stage of the game. A longer smelting time enables slow inserters to keep up.
+#mod_RX overrides preserve the proportions of volume, productivity and required time. Only add the simplest flux- #item_stone. Larger batches for a single cycle allows slow inserters to keep up.
 
-**from K2 basic smelts:** *general rule: 2 input items → 1 result item*
-**to RX tier-1 smelts:** *general rule: 6 input items + 1 flux→ 3 result items*
+**from K2 basic smelts:** *general rule: 2 input items → 1 result item* **to:**
+**Tier-1 (Raw):** $6 \text{ Raw Ore} + 1 \text{ Flux} \xrightarrow{11\text{s}} 3 \text{ Plates}$ ($0.50 \text{ yield/ore}$)
 
-Player will be encouraged to use crushed-ores instead of raw ores, as soon as he unlocks #facility-steel-furnace.
+Player will be encouraged to use crushed-ores instead of raw ores, as soon as he unlocks #facility-steel-furnace
+[[smelting_t2_crushed-ores]].
+
+Smelting of #item_kr-rare-metals from #item_kr-rare-metal-ore is not available in #mod_RX .
 
 ----
 

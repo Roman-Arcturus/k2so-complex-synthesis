@@ -1,34 +1,47 @@
-*file: /overrides/*
+*file: /overrides/krastorio2/smelting-tier2.lua*
 # 📜 Thematic description:
 
 Smelting of Vanilla and #mod_Krastorio2  ingredients from crushed ores.
+#Tier2 smelting have $+0.25\%$ productivity and $+50\%$ speed of smelting comparing to #Tier1 .
+<u>link: </u>[[smelting_t1_raw-ores]]
 
-Because $6 \text{ raw ore} \rightarrow 12 \text{ crushed ore} + 6 \text{ sand}$ in the crusher, Tier-2 smelting should reward the player with **33% higher plate yields** and **50% faster smelting times** per raw ore unit:
+**Crushing:**  <u>link: </u>[[prot_kr-crusher]]
+→ 4 `Raw Ore` 
+← 8 `Crushed Ore` + 4 #item_kr-sand 
 
-- **Tier-1 (Raw):** $6 \text{ Raw Ore} + 1 \text{ Flux} \xrightarrow{11\text{s}} 3 \text{ Plates}$ ($0.50 \text{ yield/ore}$)
-- **Tier-2 (Crushed):** $6 \text{ Crushed Ore} + 1 \text{ Flux} \xrightarrow{5.5\text{s}} 4 \text{ Plates}$ ($0.66 \text{ yield/ore}$)
+**Smelting:** $3/8 = 0.375$
+→ 8 `Crushed Ore` + 2 #item_kr-sand + 1 #item_kr-coke 
+← 3 `Ingots`
 
-----
-
-## 🔱 Recipes, in order of techs unlocked
+`Crushed ores` are unlocked by #facility_steel-furnace.
 
 -----
-#### ![[item_iron-plate.png|32]] #recipe_iron-plate-t2
 
-RX: 8 #item_rx-crushed-iron-ore + 2 #item_kr-quartz + 1 #item_kr-coke → 6 #item_iron-plate
-⏳$5.5s \approx 11 / 2$
+## 🔱 Recipes list
+
+#### ![[item_iron-plate.png|32]] #recipe_iron-plate-t2 ⏳$7.7s$
+
+→ 8 #item_rx-crushed-iron-ore + 2 #item_kr-sand + 1 #item_kr-coke 
+← 3 #item_iron-plate
+
+🧮 K2 recipe⏳**3.2s**, time-factor: $3.2s / (2+1) \approx 1.1$
+8+2+1+3=14 total items. $14*1.1 \approx 15.4s$
+$15.4s - 50\% = 7.7s$
 
 ---
-#### ![[item_copper-plate.png|32]] #recipe_copper-plate-t2
+#### ![[item_copper-plate.png|32]] #recipe_copper-plate-t2 ⏳$7.7s$
 
-RX: 8 #item_rx-crushed-copper-ore + 2 #item_kr-quartz + 1 #item_kr-coke → 6 #item_copper-plate
-⏳$5.5s \approx 11 / 2$
+→ 8 #item_rx-crushed-copper-ore + 2 #item_kr-sand + 1 #item_kr-coke 
+← 6 #item_copper-plate
 
 ---
-#### ![[item_kr-rare-metals.png|37]] #recipe_kr-rare-metals
+#### ![[item_kr-rare-metals.png|37]] #recipe_kr-rare-metals ⏳$7.7s$
 
-K2: ⏳3.2s, time-factor: $3.2s / (2+1) \approx 1.1$, 📚200/1000
-2 #item_kr-rare-metal-ore → 1 #item_kr-rare-metals
+→ 8 #item_rx-crushed-rare-metal-ore + 2 #item_kr-quartz + 1 #item_kr-coke 
+← 6 #item_kr-rare-metals
 
-RX: ⏳$23.1s \approx 1.1 * (12+3+6)$, 📚200/1000
-12 #item_rx-crushed-rare-metal-ore + 3 #item_kr-quartz + 3 #item_kr-coke → 6 #item_kr-rare-metals
+
+---
+
+
+
