@@ -11,7 +11,7 @@ local tech_unlock_map = {
         "kr-crush-wood",
         "kr-crush-coal",        
         "rx-grow-tree-seed",
-        "rx-grow-wood",    
+        "rx-grow-wood", 
     },
     --[[
     ["kr-crusher"] = {
