@@ -53,6 +53,20 @@ local function update_recipe(definition)
     end
 end
 
+-- Helper function to safely place an RX item directly after a K2 reference item
+local function match_k2_sorting(rx_item_name, k2_reference_name, order_suffix)
+    local rx_item = data.raw.item[rx_item_name] or data.raw.fluid[rx_item_name]
+    local k2_item = data.raw.item[k2_reference_name] or data.raw.fluid[k2_reference_name]
+
+    if rx_item and k2_item then
+        -- Inherit the exact subgroup K2 (or a tweak mod) assigned to it
+        rx_item.subgroup = k2_item.subgroup
+        -- Append a unique sub-order key so RX sits cleanly right next to K2
+        rx_item.order = k2_item.order .. (order_suffix or "-a[rx]")
+    end
+end
+
+
 -- add reach bonus for mod testing
 local function increase_reach(amount)
     if not game then return end
@@ -72,4 +86,8 @@ local function increase_reach(amount)
     end
 end
 
-return { update_recipe = update_recipe, increase_reach = increase_reach }
+return { 
+    update_recipe = update_recipe, 
+    match_k2_sorting = match_k2_sorting,
+    increase_reach = increase_reach, 
+}

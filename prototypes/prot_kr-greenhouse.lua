@@ -50,7 +50,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "tree-seed", amount = 8 },
       { type = "item",  name = "kr-biomass", amount = 1 },
-      { type = "fluid", name = "rx-wood-pulp", amount = 16 },
+      --{ type = "fluid", name = "rx-wood-pulp", amount = 16 },
       { type = "fluid", name = "water", amount = 640 },
     },
     results = {
