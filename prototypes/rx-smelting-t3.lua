@@ -15,14 +15,14 @@ data:extend({
     ingredients = {
       { type = "item", name = "kr-enriched-iron", amount = 6 },
       { type = "item", name = "kr-coke", amount = 6 },
-      { type = "item", name = "steel-plate", amount = 6 }, -- Seed Crystal, not consumed
+      { type = "item", name = "steel-plate", amount = 3 }, -- Seed Crystal, not consumed
       { type = "fluid", name = "kr-oxygen", amount = 36 },
     },
     results = {
-      { type = "item", name = "steel-plate", amount = 12 }, -- Net + 6
+      { type = "item", name = "steel-plate", amount = 9 }, -- Net + 6
       { type = "fluid", name = "kr-dirty-water", amount = 36 }
     },
-    energy_required = 292, --🧮292.0s = 3.12 factor * 3 slow melt/cool * (6 + 6 + 6 + 3.6 + 12-6 + 3.6)
+    energy_required = 88, --🧮87.98s = 3.12 factor * (6 + 6 + 3 + 3.6 + 12-6 + 3.6)
     main_product = "steel-plate",
 
     enabled = true,
