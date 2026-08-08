@@ -32,15 +32,3 @@ K2: ⏳3.2s, time-factor: $3.2s / (2+1) \approx 1.1$, 📚200/1000
 
 RX: ⏳$23.1s \approx 1.1 * (12+3+6)$, 📚200/1000
 12 #item_rx-crushed-rare-metal-ore + 3 #item_kr-quartz + 3 #item_kr-coke → 6 #item_kr-rare-metals
-
------
-#### ![[item_kr-silicon.png|34]] #recipe_kr-silicon
-
-K2: ⏳16s, time-factor: $16s / (18+9) \approx 0.6$, 📚200/1000
-18 #item_kr-quartz → 9 #item_kr-silicon
-
-RX: ⏳$18.6s \approx 0.6 * (18+4+9)$, 📚200/1000
-18 #item_kr-quartz+ 4 #item_kr-coke → 9 #item_kr-silicon
-
-----
-
