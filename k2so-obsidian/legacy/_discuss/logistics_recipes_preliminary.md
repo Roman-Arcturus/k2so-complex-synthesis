@@ -90,7 +90,7 @@ RX: ⏳3s, 📚100/400
 → 1 #item_fast-transport-belt (previous tier)
 	+ 2 #item_kr-steel-beam  (structure)
 	+ 4 #item_rx-bakelite (rollers)
-	+ 4 #item_rx-rare-metals-gears (non-ferrous bearings)
+	+ 4 #item_rx-rare-metals-bearing (non-ferrous bearings)
 	+ 24 #fluid_lubricant 
 ← 1 #item_express-transport-belt 
 
@@ -106,7 +106,7 @@ RX: ⏳6s, 📚50/100
 → 2 #item_fast-underground-belt (previous tier)
 	+ 16 #item_express-transport-belt (reach: 1 in + 14 underground + 1 out)
 	+ 4 #item_kr-steel-beam (structure, 2 per belt)
-	+ 4 #item_rx-rare-metals-gears (non-ferrous bearings)
+	+ 4 #item_rx-rare-metals-bearing (non-ferrous bearings)
 	+ 48 #fluid_lubricant (24 per belt)
 ← 2 #item_express-underground-belt 
 
@@ -121,7 +121,7 @@ RX: ⏳6s, 📚50/100
 1 #item_kr-steel-beam = 2 #item_steel-plate 
 
 a possible recipe:
-1 #item_rx-rare-metals-gears =  1 #item_kr-steel-gear-wheel + 1 #item_kr-rare-metals 
+1 #item_rx-rare-metals-bearing =  1 #item_kr-steel-gear-wheel + 1 #item_kr-rare-metals 
 
 
 ---

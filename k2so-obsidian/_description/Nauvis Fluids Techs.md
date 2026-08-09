@@ -1,6 +1,6 @@
 #### Vanilla/K2 liquids:
 
-### #automation-science-pack
+### #tech_automation-science-pack
 
 #tech_basic-fluid-handling 
 	![[fluid_water.png|32]] #fluid_water 
@@ -19,7 +19,7 @@
 	![[fluid_petroleum-gas.png|32]] #fluid_petroleum-gas 
 	![[fluid_sulfuric-acid.png|32]] #fluid_sulfuric-acid 
 
-###  #chemical-science-pack 
+###  #tech_chemical-science-pack 
 
 #tech_advanced-oil-processing 
 	![[fluid_heavy-oil.png|32]] #fluid_heavy-oil 
@@ -28,7 +28,7 @@
 #tech_lubricant	
 	![[fluid_lubricant.png|32]] #fluid_lubricant 
 
-#tech_kr-advanced-tech-chemistry
+#tech_kr-advanced-chemistry
 	![[fluid_kr-dirty-water.png|32]] #fluid_kr-dirty-water 
 
 #tech_kr-mineral-water-gathering
@@ -44,7 +44,7 @@
 	![[fluid_kr-hydrogen-chloride.png|32]] #fluid_kr-hydrogen-chloride 
 	![[fluid_kr-biomethanol.png|32]] #fluid_kr-biomethanol 
 
-###  #space-science-pack 
+###  #tech_space-science-pack 
 
 #tech_kr-fusion-energy
 	![[fluid_kr-heavy-water.png|32]] #fluid_kr-heavy-water 

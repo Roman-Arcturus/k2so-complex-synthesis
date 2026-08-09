@@ -1,14 +1,17 @@
+# Logistics - Power distribution
 
-*file: rc_logistic-power.lua*
+*file: /overrides/logistics_power-distribution.lua*
+
+## 📜 Thematic description:
 
 Recipes for power-distribution.
 Their original recipes for reference and RX overwrites.
 Produced in #facility_assembling-machine.
 #mod_AAI-Industry style of reusing previous tier is applied to all power poles, except substation.
-
 📚: Items in Stack / Rocket_capacity. K2 stacks are usually set to 50 for logistics.
 
 ---
+
 ## Logistics / Power distribution
 
 K2: #recipe_small-electric-pole ⏳0.5s, 📚50/50

@@ -9,7 +9,7 @@ Vanilla/AAI-Industry recipes for ingredients will be considered #Tier1.
 #mod_Krastorio2  recipes will be considered #Tier2.
 #mod_RX recipes will be considered as #Tier3.
 
-#Tier1 recipes will become slightly more complex, for example, adding one item of flux into smelts. They are for the starter base to reach #chemical-science-pack .
+#Tier1 recipes will become slightly more complex, for example, adding one item of flux into smelts. They are for the starter base to reach #tech_chemical-science-pack .
 K2 updates most of these recipes to make them less efficient.
 
 >This productivity will be considered baseline:
