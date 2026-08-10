@@ -7,9 +7,13 @@ local match_k2_sorting = require("rx-util").match_k2_sorting
 
 
 -- Check if a mod is active via the global `mods` table.
---[[
+
+    
+
+
 if mods["aai-industry"] then
-    require("overrides.aai-industry.aai-items")
+    require("overrides.aai_chemical-plant")
+--[[    
     require("overrides.aai-industry.aai-logistics")
     require("overrides.aai-industry.aai-combinators")
     require("overrides.aai-industry.aai-furnaces")
@@ -22,13 +26,13 @@ if mods["aai-industry"] then
     require("overrides.aai-industry.aai-robotics")
     require("overrides.aai-industry.aai-military")
     require("overrides.aai-industry.aai-tiles")
+]]    
 end
-
 
 if mods["aai-signal-transmission"] then
-    require("overrides.aai-industry.aai-signal-transmission")
+--    require("overrides.aai-industry.aai-signal-transmission")
 end
-]]
+
 
 if mods["Krastorio2"] then
     -- require("overrides.krastorio2.k2-native-items")   

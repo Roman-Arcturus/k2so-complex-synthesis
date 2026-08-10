@@ -28,6 +28,13 @@ local function update_recipe(definition)
         recipe.ingredients = definition.ingredients
     end
 
+    -- Icon handling
+    if definition.icon then
+        recipe.icon = definition.icon
+        recipe.icon_size = definition.icon_size or 64
+        recipe.icons = nil -- Prevents prototype errors if the base recipe used the 'icons' table
+    end    
+
     if definition.results then
         recipe.results = definition.results
     else

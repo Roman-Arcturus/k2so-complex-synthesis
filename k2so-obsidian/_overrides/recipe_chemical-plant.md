@@ -19,7 +19,8 @@ AAI: ⏳2s
 → 40 #fluid_heavy-oil + 30 #fluid_water ← 30 #fluid_light-oil
 
 **RX:** ⏳2.0s
-→ 48 #fluid_heavy-oil + 36 #fluid_steam ← 36 #fluid_light-oil + 12 #fluid_petroleum-gas
+→ 48 #fluid_heavy-oil + 36 #fluid_steam 
+← 36 #fluid_light-oil + 12 #fluid_petroleum-gas
 
 ---
 
@@ -28,7 +29,8 @@ AAI: ⏳2.0s
 → 30 #fluid_light-oil + 30 #fluid_water ← 20 #fluid_petroleum-gas
 
 RX: ⏳2.0s 
-→ 36 #fluid_light-oil + 36 #fluid_steam ← 24 #fluid_petroleum-gas + 12 #fluid_kr-hydrogen
+→ 36 #fluid_light-oil + 36 #fluid_steam 
+← 24 #fluid_petroleum-gas + 12 #fluid_kr-hydrogen
 
 ---
 #### ![[recipe_solid-fuel-from-petroleum-gas.png|32]] #recipe_solid-fuel-from-petroleum-gas
@@ -88,8 +90,8 @@ K2: ⏳5.0s
 → 50 #fluid_kr-hydrogen + 50 #fluid_kr-nitrogen ← 50 #fluid_kr-ammonia
 
 RX: ⏳4.0s 
-→ 72 #fluid_kr-hydrogen + 24 #fluid_kr-nitrogen + 36 #fluid_steam + 1 #item_iron-plate 
-← 48 #fluid_kr-ammonia + 12 #fluid_water 
+→ 84 #fluid_kr-hydrogen + 24 #fluid_kr-nitrogen + 1 #item_iron-plate 
+← 48 #fluid_kr-ammonia + 12 #fluid_kr-hydrogen
 
 
 ---
@@ -101,9 +103,8 @@ K2: ⏳5.0s
 ← 50 #fluid_kr-nitric-acid
 
 RX: ⏳4.0s 
-→ 48 #fluid_kr-ammonia + 36 #fluid_steam + 24 #fluid_kr-mineral-water + 2 #item_kr-rare-metals 
-← 36 #fluid_kr-nitric-acid + 12 #fluid_kr-dirty-water 
-
+→ 48 #fluid_kr-ammonia + 48 #fluid_kr-mineral-water + 2 #item_kr-rare-metals 
+← 36 #fluid_kr-nitric-acid + 12 #fluid_kr-dirty-water
 
 ---
 
@@ -113,9 +114,9 @@ K2: ⏳5.0s
 → 50 #fluid_kr-chlorine + 50 #fluid_kr-hydrogen 
 ← 50 #fluid_kr-hydrogen-chloride
 
-RX: ⏳3.0s 
-→ 36 #fluid_kr-chlorine + 48 #fluid_kr-hydrogen + 24 #fluid_steam + 2 #item_kr-quartz 
-← 48 #fluid_kr-hydrogen-chloride + 12 #fluid_water 
+RX (Excess-Hydrogen Chlorine Burner): ⏳3.0s 
+→ 36 #fluid_kr-chlorine + 48 #fluid_kr-hydrogen + 2 #item_kr-quartz 
+← 48 #fluid_kr-hydrogen-chloride + 12 #fluid_kr-hydrogen
 
 ---
 
@@ -138,9 +139,9 @@ RX: ⏳1.5s, 📚200/2000
 → 1 #item_rx-crushed-coal + 36 #fluid_petroleum-gas + 24 #fluid_steam 
 ← 3 #item_plastic-bar + 12 #fluid_kr-dirty-water 
 
-#### ![[item_plastic-bar.png|32]] #recipe_plastic-bar-advanced (Bakelite Synthesis)
+#### ![[recipe_plastic-bar-with-kr-nitric-acid.png|32]] #recipe_plastic-bar-with-kr-nitric-acid 
 
-RX (Tier 2 - Composite Phenolic Resin): ⏳2.0s, 📚200/2000 
+RX: (Tier 2 - Composite Phenolic Resin): ⏳2.0s, 📚200/2000 
 → 1 #item_rx-bakelite + 48 #fluid_petroleum-gas + 12 #fluid_kr-nitric-acid + 24 #fluid_steam 
 ← 6 #item_plastic-bar + 12 #fluid_kr-dirty-water 
 
