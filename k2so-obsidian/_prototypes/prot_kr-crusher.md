@@ -10,37 +10,37 @@ Recipe names must follow K2 rule: **kr-crush-<item_name>**
 
 ## Recipe List
 
-### ![[rx-crushed-wood.png|32]] #recipe_kr-crush-wood : ⏳2s, 📚200/2000
+### ![[item_rx-crushed-wood.png|32]] #recipe_kr-crush-wood : ⏳2s, 📚200/2000
  → 6 #item_wood
  ← 18 #item_rx-crushed-wood
  
 ---
 
-### ![[rx-crushed-coal.png|32]] #recipe_kr-crush-coal : ⏳2s, 📚200/1600
+### ![[item_rx-crushed-coal.png|32]] #recipe_kr-crush-coal : ⏳2s, 📚200/1600
  → 6 #item_coal
  ← 12 #item_rx-crushed-coal + 6 #item_kr-sand
 
 ---
 
-### ![[rx-crushed-iron-ore.png|32]] #recipe_kr-crush-iron-ore : ⏳2s, 📚200/1600
+### ![[item_rx-crushed-iron-ore.png|32]] #recipe_kr-crush-iron-ore : ⏳2s, 📚200/1600
  → 6 #item_iron-orel
  ← 12 #item_rx-crushed-iron-ore + 6 #item_kr-sand
 
 ---
 
-### ![[rx-crushed-copper-ore.png|32]] #recipe_kr-crush-copper-ore : ⏳2s, 📚200/1600
+### ![[item_rx-crushed-copper-ore.png|32]] #recipe_kr-crush-copper-ore : ⏳2s, 📚200/1600
  → 6 #item_copper-ore
  ← 12 #item_rx-crushed-copper-ore + 6 #item_kr-sand
 
 ---
 
-### ![[rx-crushed-rare-metal-ore.png|32]] #recipe_kr-crush-kr-rare-metal-ore : ⏳2s, 📚200/1600
+### ![[item_rx-crushed-rare-metal-ore.png|32]] #recipe_kr-crush-kr-rare-metal-ore : ⏳2s, 📚200/1600
  → 6 #item_kr-rare-metal-ore
  ← 12 #item_rx-crushed-rare-metal-ore + 6 #item_kr-sand
 
 ---
 
-### ![[rx-crushed-uranium-ore.png|32]] #recipe_kr-crush-uranium-ore : ⏳2s, 📚200/1600
+### ![[item_rx-crushed-uranium-ore.png|32]] #recipe_kr-crush-uranium-ore : ⏳2s, 📚200/1600
  → 6 #item_uranium-ore 
  ← 12 #item_rx-crushed-uranium-ore + 6 #item_kr-sand
 

@@ -11,8 +11,7 @@ Composite Items weight more or have more volume, so less #rocket-capacity.
 
 ### Recipe list with possible RX overrides
 
-
-#### ![[item_stone-tablet.png|64]] #recipe_stone-tablet #tech_burner-mechanics
+#### ![[item_stone-tablet.png|32]] #recipe_stone-tablet #tech_burner-mechanics
 <b>AAI:</b>⏳0.5s, 📚100/4000
 → 1 #item_stone-brick 
 ← 4 #item_stone-tablet
@@ -23,7 +22,7 @@ Composite Items weight more or have more volume, so less #rocket-capacity.
 
 ---
 
-#### ![[item_iron-stick.png|64]] #recipe_iron-stick #tech_burner-mechanics
+#### ![[item_iron-stick.png|32]] #recipe_iron-stick #tech_burner-mechanics
 <b>AAI:</b>⏳0.5s, 📚200/2000
 → 1 #item_iron-plate 
 ← 2 #item_iron-stick
@@ -32,7 +31,7 @@ Composite Items weight more or have more volume, so less #rocket-capacity.
 
 ---
 
-#### ![[item_iron-gear-wheel.png|64]] #recipe_iron-gear-wheel *enabled*
+#### ![[item_iron-gear-wheel.png|32]] #recipe_iron-gear-wheel *enabled*
 <b>AAI:</b> ⏳0.5s, 📚200/2000
 → 1 #item_iron-plate 
 ← 1 #item_iron-gear-wheel
@@ -41,7 +40,7 @@ Composite Items weight more or have more volume, so less #rocket-capacity.
 
 ---
 
-#### ![[item_copper-cable.png|66]] #recipe_copper-cable *enabled*
+#### ![[item_copper-cable.png|32]] #recipe_copper-cable *enabled*
 <b>AAI:</b>  ⏳0.5s, 📚200/4000
 → 1 #item_copper-plate 
 ← 2 #item_copper-cable 
@@ -49,33 +48,32 @@ Composite Items weight more or have more volume, so less #rocket-capacity.
 <b>RX:</b> ⏳0.5s, 📚200/2000
 
 ---
-#### ![[item_electronic-circuit.png|37]] #recipe_electronic-circuit #tech_electronics
+#### ![[item_electronic-circuit.png|32]] #recipe_electronic-circuit #tech_electronics
 <b>AAI:</b>⏳0.5s (tf: $0.5s/5 \approx 0.1$), 📚200/2000
 → 1 #item_stone-tablet + 3 #item_copper-cable 
 ← 1 #item_electronic-circuit 
 
 <b>RX:</b> *unchanged*. The recipe with stone-tablet allows to jump-start #item_electronic-circuit production before having wood production. K2 recipe uses wood and copper-cable.
 
-
 ---
 
-#### ![[item_engine.png|76]]  #recipe_motor #tech_burner-mechanics
+#### ![[item_engine.png|32]]  #recipe_motor #tech_burner-mechanics
 ( #item_motor is `Single-cylinder engine`)
 
 <b>AAI:</b> :⏳0.6s (time_factor: $0.6s/3 \approx  0.2$), 📚50/800
 → 1 #item_iron-plate + 1 #item_iron-gear-wheel 
 ← 1 #item_motor 
 
-<b>RX:</b>⏳$1.0s \approx 0.2 * 5$, 📚100/800
-→ 1 #item_iron-plate + 2 #item_iron-gear-wheel + 1 #item_iron-stick + 1 #item_copper-cable 
-← 1 #item_motor 
+RX: ⏳1.0s, 📚100/800 
+→ 1 #item_iron-plate + 2 #item_iron-gear-wheel + 2 #item_iron-stick 
+← 1 #item_electric-motor 
 
 ---
 
-#### ![[ietm_electric-motor.png|68]] #recipe_electic-motor #tech_electricity
+#### ![[item_electric-motor.png|32]] #recipe_electic-motor #tech_electricity
 ( #item_electric-motor is `Small electric motor`)
 
-<b>AAI:</b>⏳0.8s (time_factor: $0.8s/9 \approx  0.1$), 
+<b>AAI:</b>⏳0.8s (time_factor: $0.8s/9 \approx  0.1$), 📚50/800
 → 1 #item_iron-plate + 1 #item_iron-gear-wheel + 6 #item_copper-cable
 ← 1 #item_electric-motor 
 
@@ -85,7 +83,7 @@ Composite Items weight more or have more volume, so less #rocket-capacity.
 
 ---
 
-#### ![[item_multi-cylinder-engine.png|56]] #recipe_engine-unit #tech_engine
+#### ![[item_engine-unit.png|32]] #recipe_engine-unit #tech_engine
 ( #item_engine-unit is `Multi-cylinder engine`)
 
 <b>AAI:</b>⏳10s (time_factor: $10s/5 \approx 2$), 📚50/400
@@ -98,7 +96,7 @@ Composite Items weight more or have more volume, so less #rocket-capacity.
 
 ---
 
-#### ![[item_electric-motor.png|42]] #recipe_electric-engine-unit 
+#### ![[item_electric-engine-unit.png|32]] #recipe_electric-engine-unit 
 ( #item_electric-engine-unit is `Big electric motor`)
 
 <b>AAI:</b>⏳10s (tf: $10s/13 \approx 0.8$), 📚50/400
@@ -114,3 +112,4 @@ Composite Items weight more or have more volume, so less #rocket-capacity.
 → 1 #item_electric-engine-unit
 
 ---
+

@@ -22,7 +22,7 @@ will also be considered to be at #Tier1 .
 
 ### #Tier2 
 Using crushed ores: 
-![[rx-crushed-iron-ore.png|32]] #item_rx-crushed-iron-ore  ![[rx-crushed-copper-ore.png|32]] #item_rx-crushed-copper-ore ![[rx-crushed-rare-metal-ore.png|32]] #item_rx-crushed-rare-metal-ore 
+![[item_rx-crushed-iron-ore.png|32]] #item_rx-crushed-iron-ore  ![[item_rx-crushed-copper-ore.png|32]] #item_rx-crushed-copper-ore ![[item_rx-crushed-rare-metal-ore.png|32]] #item_rx-crushed-rare-metal-ore 
 To smelt into:
  ![[item_iron-plate.png|32]] #item_iron-plate  ![[item_copper-plate.png|32]] #item_copper-plate ![[item_kr-rare-metals.png|32]] #item_kr-rare-metals 
 
@@ -42,7 +42,7 @@ To smelt into:
 ### #Tier3 
 
 Using crushed ores: 
-![[rx-crushed-iron-ore.png|32]] #item_rx-crushed-iron-ore  ![[rx-crushed-copper-ore.png|32]] #item_rx-crushed-copper-ore ![[rx-crushed-rare-metal-ore.png|32]] #item_rx-crushed-rare-metal-ore 
+![[item_rx-crushed-iron-ore.png|32]] #item_rx-crushed-iron-ore  ![[item_rx-crushed-copper-ore.png|32]] #item_rx-crushed-copper-ore ![[item_rx-crushed-rare-metal-ore.png|32]] #item_rx-crushed-rare-metal-ore 
 To wash them into:
 ![[item_kr-enriched-iron-ore.png|32]] #item_kr-enriched-iron-ore ![[item_kr-enriched-copper-ore.png|32]] #item_kr-enriched-copper-ore ![[item_kr-enriched-rare-metal-ore.png|32]] #item_kr-enriched-rare-metal-ore
 And then smelt them into ingots with 150% productivity, because of the multistage process.
