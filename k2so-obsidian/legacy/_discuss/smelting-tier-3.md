@@ -1,6 +1,6 @@
 ### Purified Steel Blast Melt 
 #### New prototypes
-* [[item_rx-enriched-steel-mix]] is produced in [[rc_rx_chemical-plant]] from [[item_kr-enriched-iron]], small amount of [[item_steel-plate]] for crystallization and [[fluid_kr-nitric-acid]] for reaction.
+* [[item_rx-enriched-steel-mix]] is produced in [[prot_chemical-plant]] from [[item_kr-enriched-iron]], small amount of [[item_steel-plate]] for crystallization and [[fluid_kr-nitric-acid]] for reaction.
 * [[item_rx-solid-oxidizer]] is produced in [[prot_kr-electrolysis-plant]] by [[recipe_rx-synthesize-oxidizer]] process. 
 * Final smelting is formulated & is done by [[recipe_rx-smelt-steel]] process.
 * [[item_rx-crushed-coal]] is used as Flux. [[item_rx-solid-oxidizer]] is used to supply Oxygen into smelting.

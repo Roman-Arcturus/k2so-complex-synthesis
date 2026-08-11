@@ -26,7 +26,7 @@
 
 > from this moment forward #item_rx-bakelite should be used extensively
 
-> by researching #tech_advanced-chemistry Player unlocks more productive recipe for #item_rx-bakelite .
+> by researching #tech_kr-advanced-chemistry Player unlocks more productive recipe for #item_rx-bakelite .
 
 #recipe_rx-synthesize-bakelite in #facility_kr-electrolysis-plant :⏳?s 
 → ? #fluid_rx-wood-pulp + ? #item_rx-crushed-coal + ? #fluid_kr-biomethanol 

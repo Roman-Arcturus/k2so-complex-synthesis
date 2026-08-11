@@ -38,7 +38,7 @@
 	![[fluid_kr-oxygen.png|32]] #fluid_kr-oxygen 
 	![[fluid_kr-nitrogen.png|32]] #fluid_kr-nitrogen 
 
-#tech_advanced-chemistry
+#tech_kr-advanced-chemistry
 	![[fluid_kr-ammonia.png|32]] #fluid_kr-ammonia 
 	![[fluid_kr-nitric-acid.png|32]] #fluid_kr-nitric-acid 
 	![[fluid_kr-hydrogen-chloride.png|32]] #fluid_kr-hydrogen-chloride 
