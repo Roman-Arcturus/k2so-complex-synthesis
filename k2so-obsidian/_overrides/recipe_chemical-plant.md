@@ -196,7 +196,10 @@ RX: ⏳2.0s, 📚200/500
 → 9 #item_iron-ore + 3 #fluid_sulfuric-acid + 25 #fluid_water
 ← 6 #item_kr-enriched-iron + 25 #fluid_kr-dirty-water
 #tech_kr-enriched-ores
-*will be replaced by #Tier3 crushing/ enriching/ smelting recipes.*
+
+**RX**: ⏳3.0s, 📚200/1000 
+→ 8 #item_crushed-iron-ore + 36 #fluid_kr-hydrogen-chloride + 24 #fluid_sulfuric-acid 
+← 6 #item_enriched-iron-ore + 48 #fluid_kr-dirty-water + 12 #fluid_kr-hydrogen
 
 ---
 
@@ -204,15 +207,21 @@ RX: ⏳2.0s, 📚200/500
 → 9 #item_copper-ore + 6 #fluid_kr-hydrogen-chloride + 25 #fluid_water
 ← 6 #item_kr-enriched-rare-metals + 25 #fluid_kr-dirty-water
 #tech_kr-enriched-ores
-*will be replaced by #Tier3 crushing/ enriching/ smelting recipes.
+
+**RX**: ⏳3.0s, 📚200/1000 
+→ 8 #item_crushed-copper-ore + 36 #fluid_kr-nitric-acid + 24 #fluid_kr-ammonia 
+← 6 #item_enriched-copper-ore + 48 #fluid_kr-dirty-water + 12 #fluid_kr-nitrogen
 
 ---
 
 #### K2: ![[item_kr-enriched-rare-metal-ore.png|32]] #recipe_kr-enriched-rare-metals : ⏳3s, 📚200/1000  
-→ 9 #item_copper-ore + 10 #fluid_kr-hydrogen-chloride + 25 #fluid_water
+→ 9 #item_kr-rare-metal-ore + 10 #fluid_kr-hydrogen-chloride + 25 #fluid_water
 ← 6 #item_kr-enriched-rare-metals + 25 #fluid_kr-dirty-water
 #tech_kr-enriched-ores
-*will be replaced by #Tier3 crushing/ enriching/ smelting recipes.
+
+**RX**: ⏳3.0s, 📚200/1000 
+→ 8 #item_rx-crushed-rare-metal-ore + 36 #fluid_kr-hydrogen-chloride + 24 #fluid_kr-nitric-acid
+← 6 #item_kr-enriched-rare-metals + 48 #fluid_kr-dirty-water + 12 #fluid_kr-chlorine
 
 ---
 
