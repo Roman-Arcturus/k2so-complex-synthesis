@@ -37,7 +37,7 @@ Original recipe for reference and RX recipe override.
 
 ---
 
-### 🔱 ![[item_kr-lithium-chloride.png|32]] #recipe_kr-lithium-chloride 
+### 🔱 ![[item_kr-lithium-chloride 1.png|32]] #recipe_kr-lithium-chloride 
 **K2**: ⏳25s 
 → 5 #item_kr-lithium-chloride + 50 #fluid_water 
 ← 5 #item_kr-lithium + 10 #fluid_kr-chlorine 
