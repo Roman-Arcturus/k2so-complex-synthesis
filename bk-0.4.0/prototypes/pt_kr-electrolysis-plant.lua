@@ -1,11 +1,19 @@
--- File: prototypes/prot_kr-electrolysis-plant.lua
+-- File: prototypes/pt_kr-electrolysis-plant.lua
 
 -- New tech is based on Krastorio2 buildings & intermediaries
 if not mods["Krastorio2"] then return end
 
-local k2_assets = "__Krastorio2Assets__" -- K2 graphics, temporary
-local mod_name = "__k2so-rx__"
-local rx_assets = mod_name .. "/graphics/icons"
+--[[New recipes produced in #facility_kr-electrolysis-plant. 
+`categories = { "kr-electrolysis" }`
+Only #planet_Nauvis recipes up to #tech_space-science-pack.]]
+
+local fx = "__base__/graphics/icons"
+local k2_fx = "__Krastorio2Assets__" .. "/icons"
+local rx_fx = "__k2so-rx__" .. "/graphics"
+
+local update_recipe = require("rx-util").update_recipe
+
+
 
 
 -- ============================= Stage 1/2: ============================= 
@@ -15,10 +23,10 @@ data:extend({
   {
     type = "fluid",
     name = "rx-wood-pulp", 
-    icon = rx_assets .. "/rx-wood-pulp.png", 
+    icon = rx_fx .. "/icons/rx-wood-pulp.png", 
     icon_size = 64,
     subgroup = "fluid",
-    order = "a[wood]-c[pulp]",
+    -- order = "a[wood]-c[pulp]",
     default_temperature = 20,
     heat_capacity = "0.1kJ",
     base_color = { r = 0.45, g = 0.32, b = 0.18 }, -- Wood pulp brown
@@ -31,9 +39,10 @@ data:extend({
   {
     type = "item",
     name = "rx-bakelite", 
-    icon = rx_assets .. "/rx-bakelite.png", 
+    icon = rx_fx .. "/icons/item_rx-bakelite.png", 
+    icon_size = 128,
     subgroup = "intermediate-product",
-    order = "a[wood]-d[bakelite]",
+    -- order = "a[wood]-d[bakelite]",
     stack_size = 200,
     weight = 1 * kg, 
     default_request_amount = 50,    
@@ -84,8 +93,10 @@ data:extend({
     main_product = "rx-bakelite",
     energy_required = 3,
 
+    icon = rx_fx .. "/recipes/recipe_rx-bakelite.png", 
+    icon_size = 128,
     subgroup = "raw-material",
-    order = "b[bakelite]-a[synthetic-resin]",
+    --order = "b[bakelite]-a[synthetic-resin]",
     enabled = true, 
     allow_productivity = true, 
     allow_decomposition = false,
@@ -95,6 +106,7 @@ data:extend({
   }
 })
 
+--[[
 data:extend({
   {
     type = "recipe",
@@ -119,5 +131,6 @@ data:extend({
     },          
   }
 })
+]]
 
 -- ============================ End of file =============================

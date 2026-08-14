@@ -13,6 +13,15 @@ local tech_unlock_map = {
         "rx-grow-tree-seed",
         "rx-grow-wood", 
     },
+    --[[
+    ["kr-crusher"] = {
+        "kr-crush-wood",
+        "kr-crush-coal",        
+    },
+    ["kr-greenhouse"] = {
+        "rx-grow-tree-seed",
+        "rx-grow-wood",    
+    },  ]]  
     ["kr-fluids-chemistry"] = { -- #facility_kr-electrolysis-plant, #facility_chemical-plant
         "rx-wood-pulp",
         "rx-bakelite",
@@ -38,6 +47,17 @@ for tech_name, recipe_list in pairs(tech_unlock_map) do
     local tech = data.raw.technology[tech_name]
     if tech then
         tech.effects = tech.effects or {}
+        for _, recipe in ipairs(recipe_list) do
+            table.insert(tech.effects, { type = "unlock-recipe", recipe = recipe })
+        end
+    end
+end
+]]
+
+for tech_name, recipe_list in pairs(tech_unlock_map) do
+    local tech = data.raw.technology[tech_name]
+    if tech then
+        tech.effects = tech.effects or {}
         for _, recipe_name in ipairs(recipe_list) do
             -- 1. Ensure recipe is hidden until unlocked
             if data.raw.recipe[recipe_name] then
@@ -50,7 +70,8 @@ for tech_name, recipe_list in pairs(tech_unlock_map) do
         log("RX ERROR: Tech prototype '" .. tech_name .. "' does not exist in data.raw!")
     end
 end
-]]
+
+
 
 
 --[[
@@ -76,7 +97,7 @@ local function remove_recipe_from_tech(tech_name, recipe_name)
     end
 end
 
--- remove unlocks from specific technologies
+
 local tech_removal_map = {
     ["electronics"] = {
         "stone-tablet",
@@ -85,10 +106,8 @@ local tech_removal_map = {
     --["automation"] = { "basic-circuit-board", },
 }
 
---[[
 for tech_name, recipe_list in pairs(tech_removal_map) do
     for _, recipe_name in ipairs(recipe_list) do
         remove_recipe_from_tech(tech_name, recipe_name)
     end
 end
-]]

@@ -16,7 +16,7 @@ RX recipes produced in #facility_chemical-plant
 ← 4 #item_rx-guncotton + 24 #fluid_kr-dirty-water 
 
 ---
-### 🔱 ![[item_rx-rare-metals-bearing.png|36]] #recipe_rx-rare-metals-bearing 
+### 🔱 ![[rx-rare-metals-bearing.png|36]] #recipe_rx-rare-metals-bearing 
 **RX**:⏳2s, 📚200/600  
 → 1 #item_kr-steel-gear-wheel (structure)
 	+ 1 #item_kr-rare-metals 

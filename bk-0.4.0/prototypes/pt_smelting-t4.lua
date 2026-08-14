@@ -1,11 +1,14 @@
--- File: prototypes/rx-smelting-t3.lua
+-- File: prototypes/rx-smelting-t4.lua
 
 -- New tech is based on Krastorio2 buildings & intermediaries
 if not mods["Krastorio2"] then return end
 
-local k2_assets = "__Krastorio2Assets__" -- K2 graphics, temporary
-local mod_name = "__k2so-rx__"
-local rx_assets = mod_name .. "/graphics/icons"
+local fx = "__base__/graphics/icons"
+local k2_fx = "__Krastorio2Assets__" .. "/icons"
+local rx_fx = "__k2so-rx__" .. "/graphics"
+
+local update_recipe = require("rx-util").update_recipe
+
 
 data:extend({
   {
@@ -26,8 +29,8 @@ data:extend({
     main_product = "steel-plate",
 
     enabled = true,
-    icon = rx_assets .. "/rx-purified-steel.png",
-    icon_size = 64,
+    icon = rx_fx .. "/recipes/rx-purified-steel.png",
+    icon_size = 128,
     subgroup = "raw-material",
     order = "a[steel]-b[enriched]",
     allow_productivity = true,         
@@ -54,8 +57,8 @@ data:extend({
     main_product = "kr-glass",
 
     enabled = true,
-    icon = rx_assets .. "/rx-purified-glass.png",
-    icon_size = 64,
+    icon = rx_fx .. "/recipes/rx-purified-glass.png",
+    icon_size = 128,
     subgroup = "raw-material",
     order = "a[glass]-b[purified]",
     allow_productivity = true,         
@@ -82,8 +85,8 @@ data:extend({
     main_product = "kr-silicon",
 
     enabled = true,
-    icon = rx_assets .. "/rx-purified-silicon.png",    
-    icon_size = 64,
+    icon = rx_fx .. "/recipes/rx-purified-silicon.png",    
+    icon_size = 128,
     subgroup = "raw-material",
     order = "a[silicon]-b[purified]",
     allow_productivity = true,         

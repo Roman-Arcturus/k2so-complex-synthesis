@@ -23,6 +23,7 @@ data:extend({
   }
 })
 
+--[[
 data:extend({
   {
     type = "item",
@@ -34,7 +35,7 @@ data:extend({
     weight = 1.5 * kg,
     default_request_amount = 50,
   }
-})
+})]]
 
 
 -- ============================= Stage 2/2: =============================
@@ -64,7 +65,7 @@ data:extend({
   }
 })
 
-
+--[[
 data:extend({
   {
     type = "recipe",
@@ -91,6 +92,7 @@ data:extend({
     },       
   }
 })
+  ]]
 
 -- ============================ End of file =============================
 

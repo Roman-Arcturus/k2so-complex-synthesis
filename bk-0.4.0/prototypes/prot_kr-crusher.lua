@@ -9,7 +9,7 @@ if not crushing_lib and not crushing_lib.make_recipe then return end
 
 local k2_assets = "__Krastorio2Assets__" -- K2 graphics, temporary
 local mod_name = "__k2so-rx__"
-local rx_assets = mod_name .. "/graphics/icons"
+local rx_assets = mod_name .. "/graphics"
 
 -- ============================= Stage 1/3: ============================= 
 -- ========================== Define new items ==========================
@@ -18,7 +18,7 @@ data:extend({
   {
     type = "item",
     name = "rx-crushed-wood",
-    icon = rx_assets .. "/rx-crushed-wood.png",
+    icon = rx_assets .. "/icons/rx-crushed-wood.png",
     subgroup = "intermediate-product",
     -- order = "a[wood]-b[wood-chips]",
     stack_size = 200,
@@ -31,7 +31,7 @@ data:extend({
   {
     type = "item",
     name = "rx-crushed-coal",
-    icon = rx_assets .. "/rx-crushed-coal.png",
+    icon = rx_assets .. "/icons/rx-crushed-coal.png",
     subgroup = "intermediate-product",
     order = "a[coal]-b[crushed]",
     stack_size = 200,
@@ -44,10 +44,11 @@ data:extend({
   {
     type = "item",
     name = "rx-crushed-iron-ore",
-    icon = rx_assets .. "/rx-crushed-iron-ore.png",
+    icon = rx_assets .. "/items/rx-crushed-iron-ore.png",
+    icon_size = 128,
     subgroup = "intermediate-product",
     stack_size = 200,
-    weight = 0.625 * kg,
+    weight = 0.5 * kg,
     default_request_amount = 50,    
   }
 })
@@ -56,7 +57,7 @@ data:extend({
   {
     type = "item",
     name = "rx-crushed-copper-ore",
-    icon = rx_assets .. "/rx-crushed-copper-ore.png",
+    icon = rx_assets .. "/icons/rx-crushed-copper-ore.png",
     subgroup = "intermediate-product",
     stack_size = 200,
     weight = 0.625 * kg,
@@ -69,7 +70,7 @@ data:extend({
   {
     type = "item",
     name = "rx-crushed-rare-metal-ore",
-    icon = rx_assets .. "/rx-crushed-rare-metal-ore.png",
+    icon = rx_assets .. "/icons/rx-crushed-rare-metal-ore.png",
     subgroup = "intermediate-product",
     stack_size = 200,
     weight = 0.625 * kg,
@@ -81,7 +82,7 @@ data:extend({
   {
     type = "item",
     name = "rx-crushed-uranium-ore",
-    icon = rx_assets .. "/rx-crushed-uranium-ore.png",
+    icon = rx_assets .. "/icons/rx-crushed-uranium-ore.png",
     subgroup = "intermediate-product",
     -- order = "a[wood]-b[wood-chips]",
     stack_size = 200,

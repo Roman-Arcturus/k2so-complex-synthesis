@@ -12,10 +12,9 @@ local match_k2_sorting = require("rx-util").match_k2_sorting
 
 
 if mods["aai-industry"] then
---[[    
     require("overrides.aai_chemical-plant")
     require("overrides.kr-electrolysis-plant")
-
+--[[    
     require("overrides.aai-industry.aai-logistics")
     require("overrides.aai-industry.aai-combinators")
     require("overrides.aai-industry.aai-furnaces")
