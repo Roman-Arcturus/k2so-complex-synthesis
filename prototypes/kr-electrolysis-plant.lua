@@ -19,7 +19,7 @@ data:extend({
     type = "fluid",
     name = "rx-wood-pulp", 
     subgroup = "intermediate-product",    
-    icon = rx_fx .. "/fluids/rx-wood-pulp.png", 
+    icon = rx_fx .. "/fluid/rx-wood-pulp.png", 
     icon_size = 128,
     subgroup = "fluid",
     default_temperature = 20,
@@ -35,7 +35,7 @@ data:extend({
     type = "item",
     name = "rx-crude-guncotton",
     subgroup = "intermediate-product",    
-    icon = rx_fx .. "/items/rx-crude-guncotton.png",
+    icon = rx_fx .. "/item/rx-crude-guncotton.png",
     icon_size = 128,
     stack_size = 200,
     weight = 1 * kg,
@@ -50,7 +50,7 @@ data:extend({
     type = "item",
     name = "rx-nitrocellulose",
     subgroup = "intermediate-product",    
-    icon = rx_fx .. "/items/rx-nitrocellulose.png",
+    icon = rx_fx .. "/item/rx-nitrocellulose.png",
     icon_size = 128,
     stack_size = 200,
     weight = 2 * kg,
@@ -64,7 +64,7 @@ data:extend({
   {
     type = "item",
     name = "rx-bakelite", 
-    icon = rx_fx .. "/items/rx-bakelite.png", 
+    icon = rx_fx .. "/item/rx-bakelite.png", 
     icon_size = 128,
     subgroup = "intermediate-product",
     stack_size = 200,
@@ -153,7 +153,7 @@ data:extend({
     },       
   }
 })
-match_k2_sorting("rx-crude-guncotton", "explosives", "-a[advanced]")
+match_k2_sorting("rx-nitrocellulose", "explosives", "-a[advanced]")
 
 data:extend({
   {
@@ -171,7 +171,7 @@ data:extend({
     main_product = "rx-bakelite",
     energy_required = 3,
 
-    icon = rx_fx .. "/items/rx-bakelite.png", 
+    icon = rx_fx .. "/item/rx-bakelite.png", 
     icon_size = 128,
     enabled = true,
     allow_productivity = true, 

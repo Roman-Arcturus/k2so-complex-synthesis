@@ -17,14 +17,14 @@ local rx_fx = "__k2so-rx__" .. "/graphics"
 
 
 -- ============================= Stage 1/3: ============================= 
--- ========================== Define new items ==========================
+-- ========================== Define new item ==========================
 
 
 data:extend({
   {
     type = "item",
     name = "rx-crushed-iron-ore",
-    icon = rx_fx .. "/items/rx-crushed-iron-ore.png",
+    icon = rx_fx .. "/item/rx-crushed-iron-ore.png",
     icon_size = 128,
     subgroup = "intermediate-product",
     stack_size = 200,
@@ -37,7 +37,7 @@ data:extend({
   {
     type = "item",
     name = "rx-crushed-copper-ore",
-    icon = rx_fx .. "/items/rx-crushed-copper-ore.png",
+    icon = rx_fx .. "/item/rx-crushed-copper-ore.png",
     icon_size = 128,    
     subgroup = "intermediate-product",
     stack_size = 200,
@@ -50,7 +50,7 @@ data:extend({
   {
     type = "item",
     name = "rx-crushed-rare-metal-ore",
-    icon = rx_fx .. "/items/rx-crushed-rare-metal-ore.png",
+    icon = rx_fx .. "/item/rx-crushed-rare-metal-ore.png",
     icon_size = 128,    
     subgroup = "intermediate-product",
     stack_size = 200,
@@ -64,7 +64,7 @@ data:extend({
   {
     type = "item",
     name = "rx-crushed-uranium-ore",
-    icon = rx_fx .. "/items/rx-crushed-uranium-ore.png",
+    icon = rx_fx .. "/item/rx-crushed-uranium-ore.png",
     icon_size = 128,
     subgroup = "intermediate-product",
     stack_size = 200,
@@ -77,7 +77,7 @@ data:extend({
   {
     type = "item",
     name = "rx-crushed-coal",
-    icon = rx_fx .. "/items/rx-crushed-coal.png",
+    icon = rx_fx .. "/item/rx-crushed-coal.png",
     icon_size = 128,
     subgroup = "intermediate-product",
     stack_size = 200,
@@ -90,7 +90,7 @@ data:extend({
   {
     type = "item",
     name = "rx-crushed-wood",
-    icon = rx_fx .. "/items/rx-crushed-wood.png",
+    icon = rx_fx .. "/item/rx-crushed-wood.png",
     icon_size = 128,
     subgroup = "intermediate-product",
     stack_size = 200,

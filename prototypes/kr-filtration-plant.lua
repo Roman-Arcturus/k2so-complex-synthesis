@@ -23,7 +23,7 @@ data:extend({
   {
     type = "fluid",
     name = "rx-waste-liquid", 
-    icon = rx_fx .. "/fluids/rx-waste-liquid.png", 
+    icon = rx_fx .. "/fluid/rx-waste-liquid.png", 
     icon_size = 128,
     subgroup = "intermediate-product",
     default_temperature = 20,
@@ -41,7 +41,7 @@ data:extend({
     type = "item",
     name = "rx-waste-solid",
     subgroup = "intermediate-product",    
-    icon = rx_fx .. "/items/rx-waste-solid.png",
+    icon = rx_fx .. "/item/rx-waste-solid.png",
     icon_size = 128,
     subgroup = "intermediate-product",
     stack_size = 200,
@@ -76,12 +76,13 @@ data:extend({
     main_product = "kr-dirty-water",
     energy_required = 12,
     enabled = true, 
-    icon = rx_fx .. "/fluids/rx-waste-liquid.png", 
+    icon = rx_fx .. "/fluid/rx-waste-liquid.png", 
     icon_size = 128,
     allow_productivity = true,     
     allow_decomposition = false,
   }
 })
+match_k2_sorting("rx-waste-liquid", "kr-dirty-water", "-b" )
 
 --- --- ---
 
@@ -103,12 +104,13 @@ data:extend({
     main_product = "kr-dirty-water",
     energy_required = 12,
     enabled = true, 
-    icon = rx_fx .. "/items/rx-waste-solid.png", 
+    icon = rx_fx .. "/item/rx-waste-solid.png", 
     icon_size = 128,
     allow_productivity = true,     
     allow_decomposition = false,
   }
 })
+match_k2_sorting("rx-waste-solid", "kr-dirty-water", "-c" )
 
 -- ============================ End of File: ============================
 

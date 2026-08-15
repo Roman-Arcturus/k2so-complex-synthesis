@@ -5,6 +5,7 @@ if mods["Krastorio2"] then
     require("prototypes.kr-crusher")   
     require("prototypes.kr-electrolysis-plant")
     require("prototypes.kr-filtration-plant")
+    require("prototypes.advanced-furnace")
 
     --[[
     require("prototypes.prot_kr-greenhouse")
@@ -12,7 +13,7 @@ if mods["Krastorio2"] then
     
     require("prototypes.prot_chemical-plant")
     require("prototypes.prot_centrifuge")
-    require("prototypes.pt_smelting-t4")
+    
 ]]
     
     -- require("prototypes.rx_logistics_belts")       -- Logistics / belts
