@@ -55,23 +55,23 @@ data:extend({
 -- ============================= Stage 2/2: =============================
 -- ======================== Define new recipes: =========================
 
-
 data:extend({
   {
     type = "recipe",
     name = "rx-waste-liquid",
     categories = {"kr-fluid-filtration"},
     ingredients = {
-        { type = "fluid", name = "rx-waste-liquid",         amount = 72 },
-        --{ type = "fluid", name = "steam", amount = 40 },
-        { type = "item",  name = "rx-crushed-coal",         amount = 6 },
+      { type = "fluid", name = "rx-waste-liquid", amount = 72 },
+      { type = "fluid", name = "sulfuric-acid",   amount = 24 },
+      { type = "item",  name = "rx-crushed-coal", amount = 6 },
     },
     results = {
-        { type = "fluid", name = "kr-dirty-water",          amount = 48 },
-        -- { type = "fluid", name = "kr-hydrogen-chloride", amount = 30 },
-        { type = "item",  name = "kr-sand",                 amount = 6 },
-        { type = "item",  name = "rx-crushed-iron-ore",     amount = 12 },
-        { type = "item",  name = "rx-crushed-copper-ore",   amount = 12 },
+      { type = "fluid", name = "kr-dirty-water", amount = 48 },
+      { type = "fluid", name = "kr-hydrogen-chloride", amount = 24 },
+      { type = "item",  name = "kr-sand", amount = 6 },
+      { type = "item",  name = "rx-crushed-iron-ore", amount = 3 },
+      { type = "item",  name = "rx-crushed-copper-ore", amount = 3 },
+      { type = "item",  name = "rx-crushed-rare-metal-ore", amount = 2 },
     },
     main_product = "kr-dirty-water",
     energy_required = 12,
@@ -92,14 +92,17 @@ data:extend({
     name = "rx-waste-solid",
     categories = {"kr-fluid-filtration"},
     ingredients = {
-		{ type = "item",  name = "rx-waste-solid",              amount = 12 },
-		{ type = "item",  name = "kr-rare-metals",				amount = 1 },
-		{ type = "fluid", name = "sulfuric-acid",				amount = 24 },	      
+      { type = "item",  name = "rx-waste-solid",            amount = 12 },
+      { type = "fluid", name = "kr-hydrogen-chloride",      amount = 24 },
+      { type = "fluid", name = "kr-nitric-acid",            amount = 24 },
     },
     results = {
-        { type = "fluid", name = "kr-dirty-water",              amount = 48 },
-        { type = "item",  name = "kr-sand",                     amount = 6 },
-        { type = "item",  name = "rx-crushed-rare-metal-ore",   amount = 12 },
+      { type = "fluid", name = "kr-dirty-water",            amount = 36 },
+      { type = "fluid", name = "sulfuric-acid",             amount = 12 },
+      { type = "item",  name = "kr-quartz",                 amount = 4 },
+      { type = "item",  name = "rx-crushed-rare-metal-ore", amount = 3 },
+      { type = "item",  name = "rx-crushed-copper-ore",     amount = 4 },
+      { type = "item",  name = "kr-sand",                   amount = 6 },
     },
     main_product = "kr-dirty-water",
     energy_required = 12,

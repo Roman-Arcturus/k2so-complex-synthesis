@@ -3,8 +3,9 @@
 
 
 
-if not mods["aai-industry"] then return end
+if not mods["aai-industry"] and not mods["Krastorio2"] then return end
 
+-- tech map
 local tech_unlock_map = {
     ["burner-mechanics"] = {
         "stone-tablet",
@@ -92,3 +93,70 @@ for tech_name, recipe_list in pairs(tech_removal_map) do
     end
 end
 ]]
+
+-- Change kr-filtration-plant to accept two fluids and output two fluids.
+local filtration_plant = data.raw["assembling-machine"]["kr-filtration-plant"]
+
+if filtration_plant then
+	-- Set property on the entity itself, NOT inside fluid_boxes array
+	filtration_plant.off_when_no_fluid_recipe = false
+
+	filtration_plant.fluid_boxes = {
+		-- Input 1 (Top / North)
+		{
+			production_type = "input",
+			pipe_covers = pipecoverspictures(),
+			pipe_picture = require("__Krastorio2__.prototypes.buildings.pipe-picture"),
+			volume = 1000,
+			pipe_connections = {
+					{
+							flow_direction = "input",
+							direction = defines.direction.north,
+							position = { 0, -3 }
+					}
+			}
+		},
+		-- Input 2 (Left / West)
+		{
+				production_type = "input",
+				pipe_covers = pipecoverspictures(),
+				pipe_picture = require("__Krastorio2__.prototypes.buildings.pipe-picture"),
+				volume = 1000,
+				pipe_connections = {
+						{
+							flow_direction = "input",
+							direction = defines.direction.west,
+							position = { -3, 0 }
+						}
+				}
+		},
+		-- Output 1 (Bottom / South)
+		{
+				production_type = "output",
+				pipe_covers = pipecoverspictures(),
+				pipe_picture = require("__Krastorio2__.prototypes.buildings.pipe-picture"),
+				volume = 1000,
+				pipe_connections = {
+					{
+						flow_direction = "output",
+						direction = defines.direction.south,
+						position = { 0, 3 }
+					}
+				}
+		},
+		-- Output 2 (Right / East)
+		{
+				production_type = "output",
+				pipe_covers = pipecoverspictures(),
+				pipe_picture = require("__Krastorio2__.prototypes.buildings.pipe-picture"),
+				volume = 1000,
+				pipe_connections = {
+					{
+						flow_direction = "output",
+						direction = defines.direction.east,
+						position = { 3, 0 }
+					}
+				}
+		}
+	}
+end
