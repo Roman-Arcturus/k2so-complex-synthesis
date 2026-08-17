@@ -8,26 +8,24 @@ local match_k2_sorting = require("rx-util").match_k2_sorting
 
 -- Check if a mod is active via the global `mods` table.
 
-    
-
 
 if mods["aai-industry"] then
 --[[    
-    require("overrides.aai_chemical-plant")
-    require("overrides.kr-electrolysis-plant")
+	require("overrides.aai_chemical-plant")
+	require("overrides.kr-electrolysis-plant")
 
-    require("overrides.aai-industry.aai-logistics")
-    require("overrides.aai-industry.aai-combinators")
-    require("overrides.aai-industry.aai-furnaces")
-    require("overrides.aai-industry.aai-mining")
-    require("overrides.aai-industry.aai-assembler-machines")
-    require("overrides.aai-industry.aai-power-distribution")
-    require("overrides.aai-industry.aai-power-generation")
-    require("overrides.aai-industry.aai-buildings")
-    require("overrides.aai-industry.aai-labs")
-    require("overrides.aai-industry.aai-robotics")
-    require("overrides.aai-industry.aai-military")
-    require("overrides.aai-industry.aai-tiles")
+	require("overrides.aai-industry.aai-logistics")
+	require("overrides.aai-industry.aai-combinators")
+	require("overrides.aai-industry.aai-furnaces")
+	require("overrides.aai-industry.aai-mining")
+	require("overrides.aai-industry.aai-assembler-machines")
+	require("overrides.aai-industry.aai-power-distribution")
+	require("overrides.aai-industry.aai-power-generation")
+	require("overrides.aai-industry.aai-buildings")
+	require("overrides.aai-industry.aai-labs")
+	require("overrides.aai-industry.aai-robotics")
+	require("overrides.aai-industry.aai-military")
+	require("overrides.aai-industry.aai-tiles")
 ]]    
 end
 
@@ -37,16 +35,19 @@ end
 
 
 if mods["Krastorio2"] then
-    -- require("overrides.krastorio2.k2-native-items")   
-    -- require("overrides.krastorio2.k2-smelting-t1")
-    -- require("overrides.krastorio2.k2-smelting-t2")
-    -- require("overrides.krastorio2.k2-filtration")    
-    
-      
-    -- require("overrides.krastorio2.k2-intermediaries")
-    -- require("overrides.krastorio2.k2-fluids") -- 
-    -- require("overrides.krastorio2.k2-buildings")
-    -- require("overrides.krastorio2.k2-science")
+	require("override.kr-electrolysis-plant")
+	require("override.kr-filtration-plant")
+	-- require("override.kr-atmospheric-condenser")
+			
+	-- require("overrides.krastorio2.k2-smelting-t1")
+	-- require("overrides.krastorio2.k2-smelting-t2")
+	-- require("overrides.krastorio2.k2-filtration")    
+	
+		
+	-- require("overrides.krastorio2.k2-intermediaries")
+	-- require("overrides.krastorio2.k2-fluids") -- 
+	-- require("overrides.krastorio2.k2-buildings")
+	-- require("overrides.krastorio2.k2-science")
 end
 
 if mods["advanced-centrifuge"] then

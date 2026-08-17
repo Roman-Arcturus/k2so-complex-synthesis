@@ -1,4 +1,4 @@
--- File: prototypes/kr-crusher.lua
+-- File: prototype/kr-crusher.lua
 
 -- New tech is based on Krastorio2 buildings & intermediaries
 if not mods["Krastorio2"] then return end

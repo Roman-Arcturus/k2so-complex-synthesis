@@ -1,4 +1,4 @@
--- File: prototypes/industrial-furnace.lua
+-- File: prototype/industrial-furnace.lua
 
 --[[Prototypes and recipes produced in #industrial-furnace. 
 `categories = { "smelting" }`

@@ -1,4 +1,4 @@
--- file: /prototypes/kr-electrolysis-plant.lua
+-- file: /prototype/kr-electrolysis-plant.lua
 
 --[[Prototypes and recipes produced in #kr-electrolysis-plant. 
 `categories = { "kr-electrolysis" }`
@@ -18,7 +18,7 @@ data:extend({
   {
     type = "fluid",
     name = "rx-wood-pulp", 
-    subgroup = "intermediate-product",    
+    --subgroup = "intermediate-product",    
     icon = rx_fx .. "/fluid/rx-wood-pulp.png", 
     icon_size = 128,
     subgroup = "fluid",
@@ -42,6 +42,7 @@ data:extend({
     default_request_amount = 50,    
   }
 })
+match_k2_sorting("rx-crude-guncotton", "explosives", "-b[crude]")
 
 --- --- ---
 
@@ -57,6 +58,7 @@ data:extend({
     default_request_amount = 50,    
   }
 })
+match_k2_sorting("rx-nitrocellulose", "explosives", "-a[advanced]")
 
 --- --- ---
 
@@ -72,8 +74,25 @@ data:extend({
     default_request_amount = 50,    
   }
 })
+match_k2_sorting("rx-bakelite", "plastic-bar", "-b[crude]")
 
 --- --- ---
+
+data:extend({
+  {
+    type = "item",
+    name = "rx-filter-gas",
+    subgroup = "intermediate-product",    
+    icon = rx_fx .. "/item/rx-filter-gas.png",
+    icon_size = 128,
+    subgroup = "intermediate-product",
+    stack_size = 200,
+    weight = 2 * kg,
+    default_request_amount = 50,    
+  }
+})
+match_k2_sorting("rx-filter-gas", "kr-pollution-filter", "-b" )
+
 
 
 -- ============================= Stage 2/2: =============================
@@ -127,7 +146,6 @@ data:extend({
     },       
   }
 })
-match_k2_sorting("rx-crude-guncotton", "explosives", "-b[crude]")
 
 --- --- ---
 
@@ -153,7 +171,7 @@ data:extend({
     },       
   }
 })
-match_k2_sorting("rx-nitrocellulose", "explosives", "-a[advanced]")
+
 
 data:extend({
   {
@@ -181,7 +199,35 @@ data:extend({
     },    
   }
 })
-match_k2_sorting("rx-bakelite", "plastic-bar", "-b[crude]")
+
+
+--- --- ---
+
+
+data:extend({
+  {
+    type = "recipe",
+    name = "rx-filter-gas",
+    categories = { "kr-electrolysis" }, 
+    ingredients = {
+      { type = "item",  name = "kr-steel-beam",							amount = 2 },
+      { type = "item",  name = "rx-bakelite",								amount = 6 },			
+      { type = "fluid", name = "rx-wood-pulp",              amount = 36 },      
+      { type = "item",  name = "rx-crushed-coal",           amount = 12 },
+    },
+    results = {
+      { type = "item",  name = "rx-filter-gas",     amount = 1 },
+    },
+    main_product = "rx-filter-gas",
+    energy_required = 3,
+    enabled = true, 
+    icon = rx_fx .. "/item/rx-filter-gas.png", 
+    icon_size = 128,
+    allow_productivity = false,     
+    allow_decomposition = false,
+  }
+})
+
 
 -- ============================ End of File: ============================
 
