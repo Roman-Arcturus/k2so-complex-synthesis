@@ -16,16 +16,4 @@ With Space Age, I also want to make [[planet_Nauvis]] a planet that has it's uni
 
 [[planet_Nauvis]] has [[rc_rx_kr-greenhouse]] tech, so we need to make it an important and irreplaceable resource until [[planet_Gleba]] is secured.
 
-## Wood production overhaul
 
-
-
-
-
-
-
-
-
-
-
-2 [iron-ore](app://obsidian.md/iron-ore) → 1 [iron-plate](app://obsidian.md/iron-plate) ⏳**3.2s**, time_factor: 3.2s / 3 items total = **1.1**

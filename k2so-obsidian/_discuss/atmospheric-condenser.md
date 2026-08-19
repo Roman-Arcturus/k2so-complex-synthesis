@@ -132,3 +132,98 @@ To force a meaningful ratio puzzle where Argon is a valuable bottleneck:
     - `rx-filter-atmospheric`: **1** (60% chance)
     - `rx-used-filter-atmospheric`: **1** (40% chance)
 
+------
+
+Hello again. This chat will be dedicated to discussing chemical / technological recipes that are good for Factorio Krastorio2 Spaced Out game-play, but also have some physical sense.
+
+The current topic is extracting gases from the air in #facility_kr-atmospheric-condenser .
+K2 have three recipes that generate pure #fluid_kr-hydrogen , #fluid_kr-oxygen , #fluid_kr-nitrogen .
+
+I modified K2 to output all valid gases at once, but also require a constant supply of #item_rx-filter-gas.
+
+Now this facility produces:
+```lua
+data:extend({
+  {
+    type = "recipe",
+    categories = {"kr-atmosphere-condensation"},
+    name = "rx-gas-condensation",
+    ingredients = {
+      { type = "item", name = "rx-filter-gas", amount = 1 }
+    },
+    results = {
+      -- Output 1: Nitrogen (Maps to Fluid Box 1)
+      { type = "fluid", name = "kr-nitrogen", amount = 240 },
+      -- Output 2: Oxygen (Maps to Fluid Box 2)
+      { type = "fluid", name = "oxygen", amount = 60 },
+      -- Output 3: Argon (Maps to Fluid Box 3)
+      { type = "fluid", name = "rx-argon", amount = 6 },
+      -- Filter durability check
+      { type = "item",  name = "rx-filter-gas", amount = 1, independent_probability = 0.50 },
+      { type = "item",  name = "rx-filter-gas-used", amount = 1, independent_probability = 0.40 },
+      -- 10% that filter is destroyed
+    },
+    icon = rx_fx .. "/recipe/rx-gas-condensation.png",
+    icon_size = 128,
+    item_group = "intermediate-product",
+    energy_required = 18.0,
+    enabled = true,
+  }
+})
+```
+The proportions are somewhat realistic. I removed #fluid_kr-hydrogen as its extraction from air is unrealistic. I created a new gas #fluid_rx-argon that is going to be used in advanced metallurgy, silicon and glass production.
+
+Please acknowledge the context.
+
+
+I made a city-block in MapEditor to check how this recipe works in game. A cluster of #facility_kr-atmospheric-condenser slowly accumulate gases into #logistics_kr-big-storage-tank and #logistics_kr-huge-storage-tank. I also set up a mock-up of gas-filter building and washing the used ones.
+The #fluid_kr-nitrogen is accumulating fast and the Player must decide what to do with it to keep production working. In regular game fluids are easily burned out if not needed, but now these gases are not for free. The filters are somewhat expensive. 
+
+So I have to modify the game recipes to require more #fluid_kr-nitrogen (currently it used only for #fluid_kr-ammonia ), or modify "rx-gas-condensation" recipe to generate more #fluid_rx-argon .
+Please give me your insights on how I could incorporate #fluid_kr-nitrogen more.
+
+---
+
+
+
+1. Nitric Acid Pipeline #fluid_kr-nitric-acid. 
+Current K2 recipe: ⏳5.0s  
+→ 50 #fluid_kr-ammonia + 1 #item_kr-rare-metals + 25 #fluid_kr-mineral-water 
+← 50 #fluid_kr-nitric-acid
+We will change this recipe later on.
+
+2. Silicon Nitride Ceramics ($Si_3N_4$)
+This is an interesting idea. To mix #item_kr-silicon with large amount of #fluid_kr-nitrogen .
+
+3. Inert Purging & Annealing (Bulk Sink)
+using #fluid_kr-nitrogen as inert gas to annealing - is interesting. It will work in #facility_industrial-furnace , because only this furnace accepts fluids as inputs/outputs while smelting.
+
+4. Filter Regeneration Loop
+Great option. I will have to use #fluid_kr-nitrogen for restoring used up versions of #item_rx-filter-gas , #item_rx-filter-liquid and #item_kr-pollution-filter
+
+5. Cryogenics & Thermal Management
+We will have to think of this possibility, without delving into cryogenics technology tree that is unlocked on another planet. 
+
+6. Military & Explosives Overhaul
+I already have created #item_rx-nitrocellulose but didn't delve deep into military tech yet.
+
+----
+
+### Recommendation Matrix
+
+| **Use Case**             | **Consumption Volume**          | **Implementation Complexity**      | **Primary Target**                  |
+| ------------------------ | ------------------------------- | ---------------------------------- | ----------------------------------- |
+| **Filter Washing Purge** | Medium (Scales with automation) | Low (Single recipe modification)   | `#item_rx-filter-gas-used`          |
+| **Nitric Acid Pickling** | High (Continuous)               | Medium (New chemical recipes)      | `#fluid_rx-waste-liquid` / Smelting |
+| **Annealing Cover Gas**  | Very High (Continuous)          | Medium (Modifying existing smelts) | Tier 2–4 Smelting                   |
+| **Cryogenic Cooling**    | Variable                        | High (New fluid + cryo mechanic)   | High-tier facilities                |
+
+
+
+
+
+
+
+
+
+

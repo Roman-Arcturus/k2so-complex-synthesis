@@ -163,6 +163,33 @@ data:extend({
 })
 
 
+--- --- ---
+
+
+data:extend({
+	{
+		type = "recipe",
+		name = "rx-restore-filter-liquid",
+		categories = {"kr-fluid-filtration"},
+		ingredients = {
+			{ type = "item",  name = "rx-filter-liquid-used", amount = 1 },
+			{ type = "fluid", name = "rx-wood-pulp",        	amount = 36 },
+			{ type = "item",  name = "rx-crushed-coal",     	amount = 12 },
+			{ type = "fluid", name = "water",									amount = 72 },
+		},
+		results = {
+			{ type = "item",  name = "rx-filter-liquid",      amount = 1 },
+			{ type = "fluid", name = "kr-dirty-water",      	amount = 72 },
+		},
+		main_product = "rx-filter-liquid",
+		energy_required = 3,
+		enabled = true,
+		icon = rx_fx .. "/recipe/rx-restore-filter-liquid.png",
+		icon_size = 128,
+		allow_productivity = false,
+		allow_decomposition = false,
+	}
+})
 
 
 -- ============================ End of File: ============================

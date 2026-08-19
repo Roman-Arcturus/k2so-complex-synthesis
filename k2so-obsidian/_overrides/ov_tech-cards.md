@@ -41,7 +41,7 @@ RX: ⏳s, 📚
 
 ### 🔱  ![[kr-biter-research-data.png|32]] #recipe_kr-biter-research-data
 K2: ⏳40s, 📚200/1000 
-→ 5 #item_kr-coke  + 10 #item_kr-biomass + 5 #item_steelplate
+→ 5 #item_kr-coke  + 10 #item_kr-biomass + 5 #item_steel-plate
 ← 5 #item_kr-biter-research-data
 
 RX: ⏳s, 📚

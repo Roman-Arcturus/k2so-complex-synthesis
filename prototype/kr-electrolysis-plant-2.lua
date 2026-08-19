@@ -91,8 +91,39 @@ data:extend({
     default_request_amount = 50,    
   }
 })
-match_k2_sorting("rx-filter-gas", "kr-pollution-filter", "-b" )
+match_k2_sorting("rx-filter-gas", "kr-pollution-filter", "-b[gas]" )
 
+--- --- ---
+
+data:extend({
+  {
+    type = "item",
+    name = "rx-filter-liquid",
+    subgroup = "intermediate-product",    
+    icon = rx_fx .. "/item/rx-filter-liquid.png",
+    icon_size = 128,
+    subgroup = "intermediate-product",
+    stack_size = 200,
+    weight = 2 * kg,
+    default_request_amount = 50,    
+  }
+})
+match_k2_sorting("rx-filter-liquid", "kr-pollution-filter", "-b[liquid]" )
+
+data:extend({
+  {
+    type = "item",
+    name = "rx-filter-liquid-used",
+    subgroup = "intermediate-product",    
+    icon = rx_fx .. "/item/rx-filter-liquid-used.png",
+    icon_size = 128,
+    subgroup = "intermediate-product",
+    stack_size = 200,
+    weight = 2 * kg,
+    default_request_amount = 50,    
+  }
+})
+--match_k2_sorting("rx-filter-liquid-used", "kr-pollution-filter", "-b[liquid]" )
 
 
 -- ============================= Stage 2/2: =============================
@@ -119,7 +150,7 @@ data:extend({
     allow_decomposition = false,
   }
 })
--- match_k2_sorting("rx-wood-pulp", "water", "-b[pulp]")
+match_k2_sorting("rx-wood-pulp", "wood", "-b[pulp]")
 
 --- --- ---
 
@@ -146,6 +177,7 @@ data:extend({
     },       
   }
 })
+match_k2_sorting("rx-crude-guncotton", "explosives", "-b[crude]")
 
 --- --- ---
 
@@ -171,7 +203,9 @@ data:extend({
     },       
   }
 })
+match_k2_sorting("rx-nitrocellulose", "explosives", "-b[nitro]")
 
+--- --- ---
 
 data:extend({
   {
@@ -200,9 +234,7 @@ data:extend({
   }
 })
 
-
 --- --- ---
-
 
 data:extend({
   {
@@ -228,6 +260,65 @@ data:extend({
   }
 })
 
+--- --- ---
+
+
+data:extend({
+  {
+    type = "recipe",
+    name = "rx-filter-liquid",
+    categories = { "kr-electrolysis" }, 
+    ingredients = {
+      { type = "item",  name = "kr-steel-beam",							amount = 2 },
+      { type = "item",  name = "rx-bakelite",								amount = 6 },			
+      { type = "fluid", name = "rx-wood-pulp",              amount = 36 },      
+      { type = "item",  name = "rx-crushed-coal",           amount = 12 },
+    },
+    results = {
+      { type = "item",  name = "rx-filter-liquid",     amount = 1 },
+    },
+    main_product = "rx-filter-liquid",
+    energy_required = 3,
+    enabled = true, 
+    icon = rx_fx .. "/item/rx-filter-liquid.png", 
+    icon_size = 128,
+    allow_productivity = false,     
+    allow_decomposition = false,
+  }
+})
+
+--- --- ---
+  
+data:extend({
+  {
+    type = "recipe",
+    name = "rx-purify-argon",
+    categories = { "kr-electrolysis" }, 
+    energy_required = 12.0,
+    ingredients = {
+      { type = "fluid", name = "rx-argon",              amount = 24 },
+      { type = "fluid", name = "kr-hydrogen",           amount = 72 },
+      { type = "item",  name = "kr-rare-metals",        amount = 1 }, -- Noble metal catalyst
+      { type = "item",  name = "rx-filter-liquid",      amount = 1 }, -- Dehydration filter
+    },
+    results = {
+      -- Fluids
+      { type = "fluid", name = "rx-argon",              amount = 72 },
+      { type = "fluid", name = "water",                 amount = 24 },
+      
+      -- Catalyst Loop (Guaranteed Return)
+      { type = "item",  name = "kr-rare-metals",        amount = 1 },
+      
+      -- Filter Loop (Degradation Check)
+      { type = "item",  name = "rx-filter-liquid",      amount = 1, independent_probability = 0.70 },
+      { type = "item",  name = "rx-filter-liquid-used", amount = 1, independent_probability = 0.20 },
+    },
+    icon = rx_fx .. "/recipe/rx-purify-argon.png",
+    icon_size = 128,
+    subgroup = "fluid-recipes",
+    enabled = true,
+  }
+})
 
 -- ============================ End of File: ============================
 
