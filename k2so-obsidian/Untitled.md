@@ -1,0 +1,1 @@
+![[kr-filtration-plant.png|146]]![[kr-greenhouse.png|158]]

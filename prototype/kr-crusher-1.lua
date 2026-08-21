@@ -15,9 +15,8 @@ local k2_fx = "__Krastorio2Assets__" .. "/icons"
 local rx_fx = "__k2so-rx__" .. "/graphics"
 
 
-
--- ============================= Stage 1/3: ============================= 
--- ========================== Define new item ==========================
+-- ============================= Stage 1/2: ============================= 
+-- ========================== Define new item ===========================
 
 
 data:extend({
@@ -32,6 +31,7 @@ data:extend({
     default_request_amount = 50,    
   }
 })
+match_k2_sorting("rx-crushed-iron-ore", "iron-ore", "-b[crushed]")
 
 data:extend({
   {
@@ -45,6 +45,7 @@ data:extend({
     default_request_amount = 50,    
   }
 })
+match_k2_sorting("rx-crushed-copper-ore", "copper-ore", "-b[crushed]")
 
 data:extend({
   {
@@ -58,7 +59,7 @@ data:extend({
     default_request_amount = 50,    
   }
 })
-
+match_k2_sorting("rx-crushed-rare-metal-ore", "kr-rare-metal-ore", "-b[crushed]")
 
 data:extend({
   {
@@ -72,6 +73,7 @@ data:extend({
     default_request_amount = 50,    
   }
 })
+match_k2_sorting("rx-crushed-uranium-ore", "uranium-ore", "-b[crushed]")
 
 data:extend({
   {
@@ -85,6 +87,7 @@ data:extend({
     default_request_amount = 50,    
   }
 })
+match_k2_sorting("rx-crushed-coal", "coal", "-b[crushed]")
 
 data:extend({
   {
@@ -98,43 +101,81 @@ data:extend({
     default_request_amount = 50,    
   }
 })
+match_k2_sorting("rx-crushed-wood", "wood", "-b[crushed]")
 
-
--- ============================= Stage 2/3: ============================= 
--- ===== Register basic materials as usable input for kr-crusher ========
-
+-- ============================= Stage 2/2: ============================= 
+-- ========== Make recipe using Krastorio2 internal library =============
 
 crushing_lib.make_recipe(
   data.raw.item["iron-ore"], {
     subgroup = "intermediate-product",
-    energy_required = 2,
-    results = {{ type = "item", name = "rx-crushed-iron-ore", amount = 6 }},
+    energy_required = 3,
+    ingredients = {
+      { type = "item", name = "iron-ore", amount = 6 }
+    },
+    results = {
+        { type = "item", name = "rx-crushed-iron-ore", amount = 12 },
+        { type = "item", name = "kr-sand", amount = 6 },
+    },
+    main_result = "rx-crushed-iron-ore",
+    allow_productivity = true,
+    enabled = true,
   }
 )
 
 crushing_lib.make_recipe(
   data.raw.item["copper-ore"], {
     subgroup = "intermediate-product",
-    energy_required = 2,
-    results = {{ type = "item", name = "rx-crushed-copper-ore", amount = 6 }},
+    energy_required = 3,
+    ingredients = {
+      { type = "item", name = "iron-ore", amount = 6 }
+    },
+    results = {
+        { type = "item", name = "rx-crushed-copper-ore", amount = 12 },
+        { type = "item", name = "kr-sand", amount = 6 },
+    },
+    main_result = "rx-crushed-copper-ore",
+    allow_productivity = true,
+    enabled = true,
   }
 )
 
 crushing_lib.make_recipe(
   data.raw.item["kr-rare-metal-ore"], {
     subgroup = "intermediate-product",
-    energy_required = 2,
-    results = {{ type = "item", name = "rx-crushed-rare-metal-ore", amount = 6 }},
+    energy_required = 3,
+    ingredients = {
+      { type = "item", name = "kr-rare-metal-ore", amount = 6 }
+    },
+    results = {
+        { type = "item", name = "rx-crushed-rare-metal-ore", amount = 9 },
+        { type = "item", name = "rx-crushed-copper-ore", amount = 3 },
+        { type = "item", name = "kr-sand", amount = 3 },
+    },
+    main_result = "rx-crushed-rare-metal-ore",
+    allow_productivity = true,
+    enabled = true,
   }
 )
 
 crushing_lib.make_recipe(
   data.raw.item["uranium-ore"], {
     subgroup = "intermediate-product",
-    energy_required = 2,
-    results = {{ type = "item", name = "rx-crushed-uranium-ore", amount = 6 }},
+    energy_required = 3,
+    ingredients = {
+      { type = "item", name = "uranium-ore", amount = 6 }
+    },
+    results = {
+        { type = "item", name = "rx-crushed-uranium-ore", amount = 9 },
+        { type = "item", name = "rx-crushed-iron-ore", amount = 3 },
+        { type = "item", name = "kr-sand", amount = 3 },
+    },
+    main_result = "rx-crushed-uranium-ore",
+    allow_productivity = true,
+    enabled = true,
   }
 )
+
 
 crushing_lib.make_recipe(
   data.raw.item["coal"], {
@@ -144,114 +185,39 @@ crushing_lib.make_recipe(
   }
 )
 
+
 crushing_lib.make_recipe(
-  data.raw.item["wood"], {
+  data.raw.item["coal"], {
     subgroup = "intermediate-product",
-    energy_required = 2,
-    results = {{ type = "item", name = "rx-crushed-wood", amount = 6 }},
+    energy_required = 3,
+    ingredients = {
+      { type = "item", name = "coal", amount = 6 }
+    },
+    results = {
+        { type = "item", name = "rx-crushed-coal", amount = 12 },
+        { type = "item", name = "kr-sand", amount = 6 },
+    },
+    main_result = "rx-crushed-coal",
+    allow_productivity = true,
+    enabled = true,
   }
 )
 
--- ============================= Stage 3/3: =============================
--- ==== Update the newly created recipes with ingredients and amounts ===
-
-
-local raw_recipe = data.raw["recipe"]["kr-crush-iron-ore"]
-if raw_recipe then
-    raw_recipe.ingredients = {
-        { type = "item", name = "iron-ore", amount = 6 }
-    }
-    raw_recipe.results = {
-        { type = "item", name = "rx-crushed-iron-ore", amount = 12 },
-        { type = "item", name = "kr-sand", amount = 6 },
-    }
-    raw_recipe.main_result = "rx-crushed-iron-ore"    
-    raw_recipe.allow_productivity = true
-    raw_recipe.enabled = true
-end
-match_k2_sorting("rx-crushed-iron-ore", "iron-ore", "-b[crushed]")
-
---- --- ---
-
-local raw_recipe = data.raw["recipe"]["kr-crush-copper-ore"]
-if raw_recipe then
-    raw_recipe.ingredients = {
-        { type = "item", name = "copper-ore", amount = 6 }
-    }
-    raw_recipe.results = {
-        { type = "item", name = "rx-crushed-copper-ore", amount = 12 },
-        { type = "item", name = "kr-sand", amount = 6 },
-    }
-    raw_recipe.main_result = "rx-crushed-copper-ore"
-    raw_recipe.allow_productivity = true
-    raw_recipe.enabled = true
-end
-match_k2_sorting("rx-crushed-copper-ore", "copper-ore", "-b[crushed]")
-
---- --- ---
-
-local raw_recipe = data.raw["recipe"]["kr-crush-kr-rare-metal-ore"]
-if raw_recipe then
-    raw_recipe.ingredients = {
-        { type = "item", name = "kr-rare-metal-ore", amount = 6 }
-    }
-    raw_recipe.results = {
-        { type = "item", name = "rx-crushed-rare-metal-ore", amount = 12 },
-        { type = "item", name = "kr-sand", amount = 6 },
-    }
-    raw_recipe.main_result = "rx-crushed-rare-metal-ore"
-    raw_recipe.allow_productivity = true
-    raw_recipe.enabled = true
-end
-match_k2_sorting("rx-crushed-rare-metal-ore", "kr-rare-metal-ore", "-b[crushed]")
-
---- --- ---
-
-local raw_recipe = data.raw["recipe"]["kr-crush-uranium-ore"]
-if raw_recipe then
-    raw_recipe.ingredients = {
-        { type = "item", name = "uranium-ore", amount = 6 }
-    }
-    raw_recipe.results = {
-        { type = "item", name = "rx-crushed-uranium-ore", amount = 12 },
-        { type = "item", name = "kr-sand", amount = 6 },
-    }
-    raw_recipe.main_result = "rx-crushed-uranium-ore"
-    raw_recipe.allow_productivity = true
-    raw_recipe.enabled = true
-end
-match_k2_sorting("rx-crushed-uranium-ore", "uranium-ore", "-b[crushed]")
-
---- --- ---
-
-local raw_recipe = data.raw["recipe"]["kr-crush-coal"]
-if raw_recipe then
-    raw_recipe.ingredients = {
-        { type = "item", name = "coal", amount = 6 }
-    }
-    raw_recipe.results = {
-        { type = "item", name = "rx-crushed-coal", amount = 12 },
-        { type = "item", name = "kr-sand", amount = 6 },
-    }
-    raw_recipe.main_result = "rx-crushed-coal"
-    raw_recipe.allow_productivity = true
-    raw_recipe.enabled = true
-end
-match_k2_sorting("rx-crushed-coal", "coal", "-b[crushed]")
-
---- --- ---
-
-local raw_recipe = data.raw["recipe"]["kr-crush-wood"]
-if raw_recipe then
-  raw_recipe.ingredients = {
-    { type = "item", name = "wood", amount = 6 }
+crushing_lib.make_recipe(
+  data.raw.item["wood"], {
+    subgroup = "intermediate-product",
+    energy_required = 3,
+    ingredients = {
+      { type = "item", name = "wood", amount = 6 }
+    },
+    results = {
+      { type = "item", name = "rx-crushed-wood", amount = 18 },
+    },
+    main_result = "rx-crushed-wood",
+    allow_productivity = true,
+    enabled = true,
   }
-  raw_recipe.results = {
-    { type = "item", name = "rx-crushed-wood", amount = 18 }
-  }
-  raw_recipe.allow_productivity = true
-  raw_recipe.enabled = true
-end
-match_k2_sorting("rx-crushed-wood", "wood", "-b[crushed]")
+)
 
--- ============================ End of file =============================
+
+-- ============================= End of file ==============================

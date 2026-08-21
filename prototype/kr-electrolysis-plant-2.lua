@@ -18,7 +18,7 @@ data:extend({
   {
     type = "fluid",
     name = "rx-wood-pulp", 
-    --subgroup = "intermediate-product",    
+    subgroup = "intermediate-product",    
     icon = rx_fx .. "/fluid/rx-wood-pulp.png", 
     icon_size = 128,
     subgroup = "fluid",
@@ -96,6 +96,23 @@ match_k2_sorting("rx-filter-gas", "kr-pollution-filter", "-b[gas]" )
 --- --- ---
 
 data:extend({
+	{
+		type = "item",
+		name = "rx-filter-gas-used",
+		subgroup = "intermediate-product",
+		icon = rx_fx .. "/item/rx-filter-gas-used.png",
+		icon_size = 128,
+		subgroup = "intermediate-product",
+		stack_size = 200,
+		weight = 2 * kg,
+		default_request_amount = 50,
+	}
+})
+match_k2_sorting("rx-filter-gas-used", "kr-used-pollution-filter", "-b[gas]" )
+
+--- --- ---
+
+data:extend({
   {
     type = "item",
     name = "rx-filter-liquid",
@@ -123,7 +140,7 @@ data:extend({
     default_request_amount = 50,    
   }
 })
---match_k2_sorting("rx-filter-liquid-used", "kr-pollution-filter", "-b[liquid]" )
+match_k2_sorting("rx-filter-liquid-used", "kr-used-pollution-filter", "-b[liquid]" )
 
 
 -- ============================= Stage 2/2: =============================
@@ -242,10 +259,10 @@ data:extend({
     name = "rx-filter-gas",
     categories = { "kr-electrolysis" }, 
     ingredients = {
-      { type = "item",  name = "kr-steel-beam",							amount = 2 },
-      { type = "item",  name = "rx-bakelite",								amount = 6 },			
-      { type = "fluid", name = "rx-wood-pulp",              amount = 36 },      
-      { type = "item",  name = "rx-crushed-coal",           amount = 12 },
+      { type = "item",  name = "kr-steel-beam",    amount = 2 },  -- Fine stainless steel wire mesh
+      { type = "item",  name = "rx-bakelite",      amount = 6 },  -- Structural outer casing
+      { type = "fluid", name = "rx-wood-pulp",     amount = 12 }, -- Light porous binder matrix
+      { type = "item",  name = "rx-crushed-coal",  amount = 24 }, -- Activated carbon adsorption media (2x increase)
     },
     results = {
       { type = "item",  name = "rx-filter-gas",     amount = 1 },
@@ -269,13 +286,14 @@ data:extend({
     name = "rx-filter-liquid",
     categories = { "kr-electrolysis" }, 
     ingredients = {
-      { type = "item",  name = "kr-steel-beam",							amount = 2 },
-      { type = "item",  name = "rx-bakelite",								amount = 6 },			
-      { type = "fluid", name = "rx-wood-pulp",              amount = 36 },      
-      { type = "item",  name = "rx-crushed-coal",           amount = 12 },
+      { type = "item",  name = "kr-steel-beam",    amount = 2 },  -- High-pressure support grid
+      { type = "item",  name = "rx-bakelite",      amount = 8 },  -- Reinforced acid-resistant housing
+      { type = "fluid", name = "rx-wood-pulp",     amount = 64 }, -- Dense cellulose filter pad (1.6x increase)
+      { type = "item",  name = "kr-sand",          amount = 12 }, -- Mineral depth filter bed (coarse pre-filter)
+      { type = "item",  name = "rx-crushed-coal",  amount = 6 },  -- Minor chemical trapping      
     },
     results = {
-      { type = "item",  name = "rx-filter-liquid",     amount = 1 },
+      { type = "item",  name = "rx-filter-liquid", amount = 1 },
     },
     main_product = "rx-filter-liquid",
     energy_required = 3,
@@ -292,33 +310,71 @@ data:extend({
 data:extend({
   {
     type = "recipe",
-    name = "rx-purify-argon",
+    name = "rx-purify-noble-gases",
     categories = { "kr-electrolysis" }, 
     energy_required = 12.0,
     ingredients = {
-      { type = "fluid", name = "rx-argon",              amount = 24 },
-      { type = "fluid", name = "kr-hydrogen",           amount = 72 },
-      { type = "item",  name = "kr-rare-metals",        amount = 1 }, -- Noble metal catalyst
+      { type = "fluid", name = "rx-noble-gases",        amount = 24 },
+      { type = "fluid", name = "kr-hydrogen",           amount = 96 }, -- 72 + 24 for high pressure
+      { type = "item",  name = "kr-rare-metals",        amount = 2 }, -- Noble metal catalyst
       { type = "item",  name = "rx-filter-liquid",      amount = 1 }, -- Dehydration filter
     },
     results = {
-      -- Fluids
-      { type = "fluid", name = "rx-argon",              amount = 72 },
+      { type = "fluid", name = "rx-noble-gases",        amount = 72 },
       { type = "fluid", name = "water",                 amount = 24 },
       
-      -- Catalyst Loop (Guaranteed Return)
-      { type = "item",  name = "kr-rare-metals",        amount = 1 },
-      
-      -- Filter Loop (Degradation Check)
-      { type = "item",  name = "rx-filter-liquid",      amount = 1, independent_probability = 0.70 },
-      { type = "item",  name = "rx-filter-liquid-used", amount = 1, independent_probability = 0.20 },
+      -- Catalyst Loop (May degrade)
+      { type = "item",  name = "kr-rare-metals",        amount = 2, 
+          independent_probability = 0.90 },
+      -- Filter Loop (Degradation Check, 10% of filter loss)
+      { type = "item",  name = "rx-filter-liquid",      amount = 1, 
+          independent_probability = 0.50 },
+      { type = "item",  name = "rx-filter-liquid-used", amount = 1, 
+          independent_probability = 0.40 },
     },
-    icon = rx_fx .. "/recipe/rx-purify-argon.png",
+    main_product = "rx-noble-gases",
+    icon = rx_fx .. "/recipe/rx-purify-noble-gases.png",
     icon_size = 128,
     subgroup = "fluid-recipes",
     enabled = true,
   }
 })
+
+--- ================================================================
+
+data:extend({
+  {
+    type = "recipe",
+    categories = { "kr-electrolysis" }, 
+    name = "rx-purify-sulfuric-acid",
+    ingredients = {
+      { type = "fluid", name = "kr-nitrogen", 	amount = 200 },
+      { type = "fluid", name = "kr-oxygen", 	  amount = 100 },
+      -- { type = "fluid", name = "kr-hydrogen", 	amount = 100 },
+      { type = "item",  name = "sulfur", 			  amount = 4 },			
+    },
+    results = {
+      { type = "fluid", name = "sulfuric-acid", amount = 250 },
+    },
+    crafting_machine_tint = {
+      primary = { r = 0.85, g = 0.75, b = 0.20, a = 1.0 },
+      secondary = { r = 0.30, g = 0.50, b = 0.30, a = 1.0 },
+    },
+    energy_required = 4.0,
+    enabled = true,
+    icon = rx_fx .. "/recipe/rx-purify-sulfuric-acid.png",
+    icon_size = 128,
+
+    item_group = "intermediate-product",
+    subgroup = "fluid-recipes",
+    -- order = "a[fluid]-b[sulfuric-acid-nitrosyl]"
+
+    allow_productivity = true,         
+    allow_decomposition = false,		
+  }
+})
+match_k2_sorting("rx-purify-sulfuric-acid", "sulfuric-acid", "-b[nitrosyl]")
+
 
 -- ============================ End of File: ============================
 
